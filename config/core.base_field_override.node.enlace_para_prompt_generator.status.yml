@@ -1,0 +1,22 @@
+uuid: 70778706-dfdd-4c29-971d-3db37929befe
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.enlace_para_prompt_generator
+id: node.enlace_para_prompt_generator.status
+field_name: status
+entity_type: node
+bundle: enlace_para_prompt_generator
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

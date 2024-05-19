@@ -1,0 +1,18 @@
+uuid: 546d2bbc-ac1c-40a5-b5bf-38b86b8f5538
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rpwvgyEURXLz_JjgMCrkS1rUv-0k3L79BpO-ReN7fDI
+id: node
+label: Content
+tags:
+  abstract: '[node:summary]'
+  al_web_url: saibher.com
+  author: Saibher
+  canonical_url: '[node:url]'
+  description: '[node:summary]'
+  google: 'notranslate, nositelinkssearchbox'
+  keywords: '[node:field_tags],[node:title]'
+  robots: 'index, follow'
+  title: '[node:title] | [site:name]'

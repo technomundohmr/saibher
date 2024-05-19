@@ -1,0 +1,11 @@
+uuid: 52699c67-6817-46fc-ae3c-5b9152d273ef
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.enlace_para_prompt_generator
+id: node.enlace_para_prompt_generator
+target_entity_type_id: node
+target_bundle: enlace_para_prompt_generator
+default_langcode: site_default
+language_alterable: false

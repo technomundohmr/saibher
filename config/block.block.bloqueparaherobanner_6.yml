@@ -1,0 +1,32 @@
+uuid: 0ee70511-f778-4635-aa77-f0be7a00a7a9
+langcode: es
+status: true
+dependencies:
+  module:
+    - saibher_components
+    - system
+  theme:
+    - saibher
+id: bloqueparaherobanner_6
+theme: saibher
+region: content
+weight: -13
+provider: null
+plugin: hero_banner_block
+settings:
+  id: hero_banner_block
+  label: 'hero portafolio'
+  label_display: '0'
+  provider: saibher_components
+  header: 'Detrás de cada gran aplicación: Cómo mi código backend lleva las ideas a la realidad'
+  body: '¡Convierte tus ideas en realidad! Ponte en contacto conmigo hoy mismo para discutir cómo llevar tu proyecto al siguiente nivel'
+  cta_link: 'https://api.whatsapp.com/send?phone=+573137732634&text=Hola%20Hablemos%20sobre%20tu%20portafolio'
+  cta_text: ¡Hablemos!
+  hero_theme: '1'
+  main_img:
+    - '67'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /portafolio

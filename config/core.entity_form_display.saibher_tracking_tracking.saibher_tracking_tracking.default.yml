@@ -1,0 +1,72 @@
+uuid: 23e39e01-4021-420e-b97b-05432c9da4b9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.saibher_tracking_tracking.saibher_tracking_tracking.field_origin
+    - field.field.saibher_tracking_tracking.saibher_tracking_tracking.field_searched_term
+    - field.field.saibher_tracking_tracking.saibher_tracking_tracking.field_times
+  module:
+    - saibher_tracking
+id: saibher_tracking_tracking.saibher_tracking_tracking.default
+targetEntityType: saibher_tracking_tracking
+bundle: saibher_tracking_tracking
+mode: default
+content:
+  field_origin:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_searched_term:
+    type: string_textfield
+    weight: -1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_times:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  first_name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  role:
+    type: options_select
+    weight: -2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: -3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

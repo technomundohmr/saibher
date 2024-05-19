@@ -1,0 +1,4 @@
+services:
+  saibher_tracking.tracking:
+    class: Drupal\saibher_tracking\TrackingService
+    arguments: ['@entity_type.manager']

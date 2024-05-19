@@ -1,0 +1,22 @@
+uuid: 304bea89-bde9-40b2-8e55-89de80b47759
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.enlace_para_prompt_generator
+id: node.enlace_para_prompt_generator.promote
+field_name: promote
+entity_type: node
+bundle: enlace_para_prompt_generator
+label: 'Promocionado a la página principal'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

@@ -1,0 +1,11 @@
+uuid: c75a1665-d621-4895-9112-6a4f827eeb89
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tecnologias_o_lenguajes_de_progr
+id: taxonomy_term.tecnologias_o_lenguajes_de_progr
+target_entity_type_id: taxonomy_term
+target_bundle: tecnologias_o_lenguajes_de_progr
+default_langcode: site_default
+language_alterable: false

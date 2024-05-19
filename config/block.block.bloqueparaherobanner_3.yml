@@ -1,0 +1,32 @@
+uuid: 03fcbb12-e567-4884-8c5e-c7e89dc48a8e
+langcode: es
+status: true
+dependencies:
+  module:
+    - saibher_components
+    - system
+  theme:
+    - saibher
+id: bloqueparaherobanner_3
+theme: saibher
+region: content
+weight: -12
+provider: null
+plugin: hero_banner_block
+settings:
+  id: hero_banner_block
+  label: 'hero sistema de punto de ventas'
+  label_display: '0'
+  provider: saibher_components
+  header: 'Revoluciona tu negocio ¡Incrementa tus ventas y simplifica tus operaciones en minutos!'
+  body: 'Descubre cómo nuestro software intuitivo y personalizable se adapta a las necesidades únicas de tu negocio'
+  cta_link: 'https://api.whatsapp.com/send?phone=+573137732634&text=Hola%2C%20estoy%20interesado%20en%20una%20cotizacion'
+  cta_text: 'Lo quiero ahora'
+  hero_theme: '2'
+  main_img:
+    - '29'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /sistema-de-punto-de-ventas

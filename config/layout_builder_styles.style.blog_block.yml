@@ -1,0 +1,12 @@
+uuid: c1573818-c255-4a94-821e-2feca2ffd8bd
+langcode: es
+status: true
+dependencies: {  }
+id: blog_block
+label: blog-block
+classes: "p-5\r\nbg-white \r\n"
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

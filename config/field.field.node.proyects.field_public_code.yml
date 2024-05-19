@@ -1,0 +1,23 @@
+uuid: 88eae74d-61e1-4fde-b700-ecdcfa173651
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_public_code
+    - node.type.proyects
+id: node.proyects.field_public_code
+field_name: field_public_code
+entity_type: node
+bundle: proyects
+label: 'Código público'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

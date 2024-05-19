@@ -1,0 +1,32 @@
+uuid: dcfbdeb2-0d80-4c76-8c76-1ffa34252170
+langcode: es
+status: true
+dependencies:
+  module:
+    - saibher_components
+    - system
+  theme:
+    - saibher
+id: bloqueparaherobanner_5
+theme: saibher
+region: content
+weight: -14
+provider: null
+plugin: hero_banner_block
+settings:
+  id: hero_banner_block
+  label: 'hero de blog'
+  label_display: '0'
+  provider: saibher_components
+  header: 'Construyendo el éxito digital: Desarrollo web, Drupal y programación '
+  body: 'Descubre cómo estas herramientas pueden transformar tu negocio en línea y llevarte al siguiente nivel de crecimiento y éxito.'
+  cta_link: '#webform-submission-newsletter-suscription-node-13-add-form'
+  cta_text: 'Ver más'
+  hero_theme: '1'
+  main_img:
+    - '40'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /blog

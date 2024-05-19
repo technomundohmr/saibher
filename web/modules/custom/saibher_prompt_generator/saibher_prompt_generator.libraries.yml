@@ -1,0 +1,7 @@
+prompt_generator:
+  version: 1.x
+  js:
+    js/app.js: {}
+  css:
+    theme:
+      css/styles.css: {}

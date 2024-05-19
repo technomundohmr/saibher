@@ -1,0 +1,58 @@
+{{ attach_library('saibher_prompt_generator/prompt_generator') }}
+
+<div class="prompt-container">
+  <h2 class="prompt-title faqs-title">Prompt generado con éxito</h2>
+  <div class="row">
+    <div class="col-md-6">
+        <div class="prompt-text-container">
+          <textarea readonly id="prompt-text" class="prompt-text">{{prompt}}</textarea>
+          <button onclick="copyToClipboard()" id="prompt-copy-button" class="prompt-copy-button">Copiar</button>
+        </div>
+        <h3>
+            <strong><a href="/prompt_generator/">Crear otro prompt</a></strong>
+        </h3>
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">
+                    Para usar Chat GPT es necesario registrarse en la plataforma en la siguiente URL: <a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer">https://chat.openai.com/</a>. Es posible que exista una lista de espera para poder utilizar la herramienta debido a la alta demanda.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+      <ul class="prompt-list">
+        <li class="prompt-item">
+          <div class="card">
+            <div class="card-body">
+                <p class="card-text">
+                    Saibher no almacena registros de tu información personal. Sin embargo, para IAs como ChatGPT no se pueden garantizar la privacidad de tus datos, ya que no se conoce su funcionamiento interno.
+                </p>
+            </div>
+          </div>
+        </li>
+        <li class="prompt-item">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text">
+            Es importante recordar que si ChatGPT se detiene a la mitad de la redacción, se puede utilizar la palabra "continua" para que la IA continúe con el resto del texto.</p>
+            </div>
+          </div>
+        </li>
+        <li class="prompt-item">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text">En caso de que la respuesta no sea la deseada, se puede solicitar a ChatGPT que corrija una parte específica de la respuesta utilizando la frase "Por favor corrige el párrafo 'X', enfocándote en el tema 'Y'". Cambiando 'X' por la parte que no te gusta y 'Y' por lo que te gustaría recibir.</p>
+            </div>
+          </div>
+        </li>
+        <li class="prompt-item">
+          <div class="card">
+            <div class="card-body">
+              <p class="card-text">Esta herramienta es una herramienta útil para generar prompts más productivos y eficaces, pero es importante tener en cuenta que la información generada por la IA no está garantizada. En última instancia, la responsabilidad de verificar la exactitud y la calidad de la información generada recae en el usuario.</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+uuid: 0dbab234-feb9-4d60-9a06-311cda82ad32
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - saibher
+id: navegacionprincipal
+theme: saibher
+region: navigation
+weight: -2
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Navegación principal'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

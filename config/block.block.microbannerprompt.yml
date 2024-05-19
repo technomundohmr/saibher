@@ -1,0 +1,30 @@
+uuid: fa9a26f3-040f-4645-992f-5fed8e73fcd4
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:67c7a32a-52a2-4c2a-95eb-9016d73cf714'
+  module:
+    - block_content
+    - system
+  theme:
+    - saibher
+id: microbannerprompt
+theme: saibher
+region: content
+weight: -10
+provider: null
+plugin: 'block_content:67c7a32a-52a2-4c2a-95eb-9016d73cf714'
+settings:
+  id: 'block_content:67c7a32a-52a2-4c2a-95eb-9016d73cf714'
+  label: 'micro banner prompt'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/"

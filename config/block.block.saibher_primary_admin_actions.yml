@@ -1,0 +1,20 @@
+uuid: 209cc85c-9de0-43e2-84f6-5c220eedd8eb
+langcode: es
+status: false
+dependencies:
+  theme:
+    - saibher
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: saibher_primary_admin_actions
+theme: saibher
+region: top_header
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Acciones principales de administración'
+  label_display: '0'
+  provider: core
+visibility: {  }

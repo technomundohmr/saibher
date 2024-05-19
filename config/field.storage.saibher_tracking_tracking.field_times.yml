@@ -1,0 +1,21 @@
+uuid: 6c676eed-eb3d-4a10-8637-fad0c07058c6
+langcode: es
+status: true
+dependencies:
+  module:
+    - saibher_tracking
+id: saibher_tracking_tracking.field_times
+field_name: field_times
+entity_type: saibher_tracking_tracking
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,29 @@
+uuid: 0053fbe7-b823-40eb-9953-13fdf2cb8454
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tecnology
+    - node.type.proyects
+    - taxonomy.vocabulary.tecnologias_o_lenguajes_de_progr
+id: node.proyects.field_tecnology
+field_name: field_tecnology
+entity_type: node
+bundle: proyects
+label: tecnologíá
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tecnologias_o_lenguajes_de_progr: tecnologias_o_lenguajes_de_progr
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

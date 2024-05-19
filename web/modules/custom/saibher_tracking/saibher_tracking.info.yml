@@ -1,0 +1,5 @@
+name: Saibher Tracking
+type: module
+description: tracking tools for saibher usage
+package: Saibher
+core_version_requirement: ^9.4 || ^10

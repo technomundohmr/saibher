@@ -1,0 +1,16 @@
+# Define the menu links for tckinghis module
+
+entity.saibher_tracking_tracking.collection:
+  title: 'Content Entity Tracking'
+  route_name: entity.saibher_tracking_tracking.collection
+  description: 'List Tracking'
+saibher_tracking_tracking.admin.structure.settings:
+  title: 'Tracking settings'
+  description: 'Configure tracking entity'
+  route_name:  saibher_tracking.tracking_settings
+  parent: system.admin_structure
+saibher_tracking_tracking.admin.results:
+  title: 'Seguimiento de Búsqueda'
+  description: 'ver los resultados de Seguimiento de Búsqueda'
+  route_name:  entity.saibher_tracking_tracking.collection
+  parent: system.admin_content

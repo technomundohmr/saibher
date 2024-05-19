@@ -1,0 +1,23 @@
+uuid: 29e208d8-929d-488d-911d-f09a52769582
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_discount
+    - node.type.servicio
+id: node.servicio.field_discount
+field_name: field_discount
+entity_type: node
+bundle: servicio
+label: 'Tiene descuento'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

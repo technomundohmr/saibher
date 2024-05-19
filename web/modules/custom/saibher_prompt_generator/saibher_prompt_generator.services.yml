@@ -1,0 +1,4 @@
+services:
+  saibher_prompt_generator.output:
+    class: Drupal\saibher_prompt_generator\PromptGeneratorOutput
+    argumets: []

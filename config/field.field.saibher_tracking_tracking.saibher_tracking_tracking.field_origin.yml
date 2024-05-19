@@ -1,0 +1,20 @@
+uuid: e8dadb5a-e1a2-43f9-935f-1e25b36cd366
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.saibher_tracking_tracking.field_origin
+  module:
+    - saibher_tracking
+id: saibher_tracking_tracking.saibher_tracking_tracking.field_origin
+field_name: field_origin
+entity_type: saibher_tracking_tracking
+bundle: saibher_tracking_tracking
+label: origen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

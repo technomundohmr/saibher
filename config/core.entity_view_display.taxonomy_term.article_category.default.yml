@@ -1,0 +1,39 @@
+uuid: cfd5102c-0548-456e-81bb-574768f56052
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.article_category.field_image
+    - taxonomy.vocabulary.article_category
+  module:
+    - svg_image
+    - text
+id: taxonomy_term.article_category.default
+targetEntityType: taxonomy_term
+bundle: article_category
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

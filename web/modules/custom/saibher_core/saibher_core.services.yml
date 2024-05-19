@@ -1,0 +1,4 @@
+services:
+  saibher_core.url:
+    class: Drupal\Core\Url
+    arguments: ['@url_generator', 'fromRoute']

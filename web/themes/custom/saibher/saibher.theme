@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Implements template_preprocess_paragraph().
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - elements: An array of elements to display in view mode.
+ *   - paragraph: The paragraph object.
+ *   - view_mode: View mode; e.g., 'full', 'teaser'...
+ */
+function saibher_preprocess_paragraph(&$variables) {
+    if($variables['paragraph']->getType() == 'menu_item') {
+
+    }
+}

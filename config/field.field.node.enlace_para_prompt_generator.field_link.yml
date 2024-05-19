@@ -1,0 +1,19 @@
+uuid: a0a6012c-a99c-4c9a-8e89-ee90560d945a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.enlace_para_prompt_generator
+id: node.enlace_para_prompt_generator.field_link
+field_name: field_link
+entity_type: node
+bundle: enlace_para_prompt_generator
+label: Enlace
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

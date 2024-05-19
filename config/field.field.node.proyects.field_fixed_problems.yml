@@ -1,0 +1,21 @@
+uuid: 9056b476-2840-4c60-8d40-06f49ba6ad5a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fixed_problems
+    - node.type.proyects
+  module:
+    - text
+id: node.proyects.field_fixed_problems
+field_name: field_fixed_problems
+entity_type: node
+bundle: proyects
+label: 'Problemas solucionados'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

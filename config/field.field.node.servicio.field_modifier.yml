@@ -1,0 +1,19 @@
+uuid: 65138426-32e4-41b8-8eb3-1281e0e7a92d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_modifier
+    - node.type.servicio
+id: node.servicio.field_modifier
+field_name: field_modifier
+entity_type: node
+bundle: servicio
+label: Modificador
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

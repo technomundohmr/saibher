@@ -1,0 +1,25 @@
+uuid: c47885ac-67bb-4316-8daf-7b1a24f574ba
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:527e1259-9d3a-4bd4-8418-92f2566f04d4'
+  module:
+    - block_content
+  theme:
+    - saibher
+id: copyright
+theme: saibher
+region: footer
+weight: -14
+provider: null
+plugin: 'block_content:527e1259-9d3a-4bd4-8418-92f2566f04d4'
+settings:
+  id: 'block_content:527e1259-9d3a-4bd4-8418-92f2566f04d4'
+  label: copyright
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

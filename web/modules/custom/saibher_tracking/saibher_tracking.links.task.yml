@@ -1,0 +1,22 @@
+# Define the 'local' links for the module
+
+tracking.settings_tab:
+  route_name: saibher_tracking.tracking_settings
+  title: Settings
+  base_route: saibher_tracking.tracking_settings
+
+tracking.view:
+  route_name: entity.saibher_tracking_tracking.canonical
+  base_route: entity.saibher_tracking_tracking.canonical
+  title: View
+
+tracking.page_edit:
+  route_name: entity.saibher_tracking_tracking.edit_form
+  base_route: entity.saibher_tracking_tracking.canonical
+  title: Edit
+
+tracking.delete_confirm:
+  route_name:  entity.saibher_tracking_tracking.delete_form
+  base_route:  entity.saibher_tracking_tracking.canonical
+  title: Delete
+  weight: 10

@@ -1,0 +1,48 @@
+uuid: 6d8d286f-8028-4b54-8c06-ca5ed58d8e1d
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.enlace_para_prompt_generator.field_image
+    - field.field.node.enlace_para_prompt_generator.field_link
+    - node.type.enlace_para_prompt_generator
+  module:
+    - svg_image
+    - user
+id: node.enlace_para_prompt_generator.teaser
+targetEntityType: node
+bundle: enlace_para_prompt_generator
+mode: teaser
+content:
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_link:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  langcode: true

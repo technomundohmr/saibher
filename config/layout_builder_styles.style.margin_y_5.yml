@@ -1,0 +1,12 @@
+uuid: 050584df-6610-49b4-9d43-d6f5c3d47216
+langcode: es
+status: true
+dependencies: {  }
+id: margin_y_5
+label: 'margin y 5'
+classes: my-5
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,22 @@
+uuid: bfa05fd5-b7cb-4aa7-8549-553e5875602a
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - saibher
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: saibher_content
+theme: saibher
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenido principal de la página'
+  label_display: '0'
+  provider: system
+visibility: {  }

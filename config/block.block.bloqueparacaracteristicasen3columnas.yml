@@ -1,0 +1,38 @@
+uuid: f4f2a0a1-be0c-4c62-a05e-3054c540d37c
+langcode: es
+status: true
+dependencies:
+  module:
+    - saibher_components
+    - system
+  theme:
+    - saibher
+id: bloqueparacaracteristicasen3columnas
+theme: saibher
+region: content
+weight: -9
+provider: null
+plugin: three_cols_features
+settings:
+  id: three_cols_features
+  label: 'Bloque para características en 3 columnas'
+  label_display: '0'
+  provider: saibher_components
+  header: 'Sistema de puntos de ventas'
+  body: 'Simplifique su negocio con nuestro sistema de POS fácil de usar. Realice transacciones rápidas y administre su inventario.'
+  header_1: 'Desarrollo Web A Medida'
+  body_1: 'Destaca en línea con nuestra ayuda. Diseño y desarrollo web personalizado para tu negocio. Contáctanos hoy para una cotización.'
+  header_2: 'Desarrollador experto en Drupal'
+  body_2: 'Soluciones web personalizadas y escalables con nuestro servicio de desarrollo de Drupal. Contáctanos hoy para saber más'
+  theme: '1'
+  main_img:
+    - '6'
+  main_img_1:
+    - '7'
+  main_img_2:
+    - '9'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

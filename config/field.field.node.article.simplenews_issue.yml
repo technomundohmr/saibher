@@ -1,0 +1,23 @@
+uuid: 52641dd8-a169-4e40-9bbf-3367fd0acc8c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.simplenews_issue
+    - node.type.article
+  module:
+    - simplenews
+id: node.article.simplenews_issue
+field_name: simplenews_issue
+entity_type: node
+bundle: article
+label: Incidencia
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:simplenews_newsletter'
+  handler_settings: {  }
+field_type: simplenews_issue

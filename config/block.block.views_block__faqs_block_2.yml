@@ -1,0 +1,29 @@
+uuid: 88dde533-3751-4709-a03b-a372b47b25bc
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.faqs
+  module:
+    - system
+    - views
+  theme:
+    - saibher
+id: views_block__faqs_block_2
+theme: saibher
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:faqs-block_2'
+settings:
+  id: 'views_block:faqs-block_2'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /sistema-de-punto-de-ventas

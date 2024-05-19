@@ -1,0 +1,8 @@
+uuid: d34e7832-4fd8-4dc1-a9cf-17453ad80f09
+langcode: es
+status: true
+dependencies: {  }
+name: 'Tecnologías o lenguajes de programacion'
+vid: tecnologias_o_lenguajes_de_progr
+description: ''
+weight: 0

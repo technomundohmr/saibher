@@ -1,0 +1,29 @@
+uuid: b00d8e06-3154-4130-8b8f-4e4c81f01765
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.last_articles
+  module:
+    - system
+    - views
+  theme:
+    - saibher
+id: views_block__last_articles_negocios
+theme: saibher
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:last_articles-negocios'
+settings:
+  id: 'views_block:last_articles-negocios'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: '2'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

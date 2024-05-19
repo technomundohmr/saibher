@@ -1,0 +1,32 @@
+uuid: e3c6ac24-17c4-473c-b290-ce9013ba6418
+langcode: es
+status: true
+dependencies:
+  module:
+    - saibher_components
+    - system
+  theme:
+    - saibher
+id: bloqueparaherobanner_4
+theme: saibher
+region: content
+weight: -15
+provider: null
+plugin: hero_banner_block
+settings:
+  id: hero_banner_block
+  label: 'banner para servicios drupal '
+  label_display: '0'
+  provider: saibher_components
+  header: 'Desata todo el potencial de tu sitio web con Drupal: la plataforma líder en personalización, flexibilidad y seguridad'
+  body: 'Descubre cómo Drupal puede ayudarte a crear un sitio web único y escalable que se adapte a las necesidades de tu negocio'
+  cta_link: 'https://api.whatsapp.com/send?phone=+573137732634&text=Hola%2C%20estoy%20interesado%20en%20una%20cotizacion'
+  cta_text: 'Quiero una cotización'
+  hero_theme: '2'
+  main_img:
+    - '38'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /servicios-drupal

@@ -1,0 +1,20 @@
+uuid: abc0ca34-bddf-4f1f-a61e-9a0afb092c52
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.saibher_tracking_tracking.field_searched_term
+  module:
+    - saibher_tracking
+id: saibher_tracking_tracking.saibher_tracking_tracking.field_searched_term
+field_name: field_searched_term
+entity_type: saibher_tracking_tracking
+bundle: saibher_tracking_tracking
+label: 'termino buscado'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,32 @@
+uuid: ff2792e8-75dd-4d77-bd6f-048370733be7
+langcode: es
+status: true
+dependencies:
+  module:
+    - saibher_components
+    - system
+  theme:
+    - saibher
+id: bloqueparaherobanner_7
+theme: saibher
+region: content
+weight: -11
+provider: null
+plugin: hero_banner_block
+settings:
+  id: hero_banner_block
+  label: 'Hero banner de contacto'
+  label_display: '0'
+  provider: saibher_components
+  header: '¡Hola! En Saibher estamos aquí para ayudarte. '
+  body: 'Si necesitas asesoramiento sobre desarrollo web, una solución a medida para tu empresa o simplemente quieres decirnos hola, nues'
+  cta_link: 'https://api.whatsapp.com/send?phone=+573137732634&text=Hola%20Hablemos%20'
+  cta_text: ¡Hablemos!
+  hero_theme: '2'
+  main_img:
+    - '126'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /contactenos

@@ -1,0 +1,11 @@
+# All action links for this module
+
+saibher_tracking.tracking_add:
+  # Which route will be called by the link
+  route_name: saibher_tracking.tracking_add
+  title: 'Agregar término de seguimiento'
+
+  # Where will the link appear, defined by route name.
+  appears_on:
+    - entity.saibher_tracking_tracking.collection
+    - entity.saibher_tracking_tracking.canonical

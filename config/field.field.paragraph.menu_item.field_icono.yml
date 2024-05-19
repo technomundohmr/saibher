@@ -1,0 +1,31 @@
+uuid: 6225c74a-917f-487a-94ef-c8cbe241b39a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icono
+    - media.type.image
+    - media.type.svg
+    - paragraphs.paragraphs_type.menu_item
+id: paragraph.menu_item.field_icono
+field_name: field_icono
+entity_type: paragraph
+bundle: menu_item
+label: icono
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      svg: svg
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

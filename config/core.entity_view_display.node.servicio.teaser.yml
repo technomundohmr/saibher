@@ -1,0 +1,108 @@
+uuid: 4779f04c-4fdb-4610-899c-9677edad7273
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.servicio.body
+    - field.field.node.servicio.field_benefits
+    - field.field.node.servicio.field_cta_text
+    - field.field.node.servicio.field_discount
+    - field.field.node.servicio.field_feature
+    - field.field.node.servicio.field_galery
+    - field.field.node.servicio.field_main_image
+    - field.field.node.servicio.field_meta_tags
+    - field.field.node.servicio.field_modifier
+    - field.field.node.servicio.field_price
+    - field.field.node.servicio.field_sale_percentage
+    - field.field.node.servicio.field_unit
+    - field.field.node.servicio.field_yoast_seo
+    - node.type.servicio
+  module:
+    - text
+    - user
+id: node.servicio.teaser
+targetEntityType: node
+bundle: servicio
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 126
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_cta_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_discount:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_feature:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_modifier:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_price:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_sale_percentage:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_unit:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  addtoany: true
+  field_benefits: true
+  field_galery: true
+  field_main_image: true
+  field_meta_tags: true
+  field_yoast_seo: true
+  langcode: true

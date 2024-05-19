@@ -1,0 +1,15 @@
+name: saibher
+type: theme
+description: 'Saibher main theme'
+package: Saibher
+core_version_requirement: ^9 || ^10
+libraries:
+  - saibher/global
+base theme: false
+regions:
+  top_header: Top Header
+  navigation: Main navigation
+  content: Content
+  right_aside: Right
+  left_aside: Left
+  footer: Footer

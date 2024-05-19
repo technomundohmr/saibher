@@ -1,0 +1,32 @@
+uuid: 6d879670-dd4d-481c-9d79-5340bfbdadf9
+langcode: es
+status: true
+dependencies:
+  module:
+    - saibher_components
+    - system
+  theme:
+    - saibher
+id: bloqueparaherobanner_2
+theme: saibher
+region: content
+weight: -16
+provider: null
+plugin: hero_banner_block
+settings:
+  id: hero_banner_block
+  label: 'Hero paginas web'
+  label_display: '0'
+  provider: saibher_components
+  header: 'Un sitio web hecho a medida para ti: mejora tu presencia en línea'
+  body: 'Tu sitio web, hecho a medida. Diseño atractivo y funcionalidades personalizadas. ¡Destaca en línea ahora mismo!'
+  cta_link: 'https://api.whatsapp.com/send?phone=+573137732634&text=Hola%2C%20estoy%20interesado%20en%20una%20cotizacion'
+  cta_text: 'Quiero una cotización'
+  hero_theme: '2'
+  main_img:
+    - '28'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /desarrollo-web-saibher

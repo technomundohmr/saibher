@@ -1,0 +1,167 @@
+.prompt-container a{
+  font-style: italic;
+  color: var(--dark_blue) !important;
+}
+
+
+.prompt-container h3 a{
+  color: var(--main_red) !important;
+}
+
+.prompt-container h3{
+  border: 1px solid;
+  border-radius: 5px;
+  text-align: center;
+  margin: 25px auto !important;
+  font-size: 1.3rem !important;
+  width: fit-content;
+  padding: 5px 15px;
+
+}
+.prompt-generator-form {
+    background: white;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.prompt-generator-form form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .prompt-generator-form form .form-item {
+    width: calc(100% / 3 - 10px);
+    margin-bottom: 20px;
+  }
+  
+  .prompt-generator-form form .form-item .description{
+    font-size: 0.7rem;
+    color: gray;
+    font-style: italic;
+  }
+
+  /* Estilos responsivos para móvil */
+  @media (max-width: 768px) {
+    .prompt-generator-form form .form-item {
+      width: 100%;
+      margin-right: 0;
+    }
+    
+    .prompt-generator-form form .form-item:nth-child(3n+1) {
+      margin-right: 0;
+    }
+  }
+
+  .prompt-container .row{
+    display: flex;
+    gap: 20px;
+  }
+
+  .prompt-container .row .col-md-6{
+    width: calc(100% /2  - 20px);
+  }
+
+  .prompt-container textarea{
+    background-color: rgba(145, 148, 151, 0.267);
+  }
+
+  .prompt-container {
+    max-width: 90%;
+    margin: 20PX auto;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .prompt-title {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .prompt-text-container {
+    position: relative;
+  }
+  
+  .prompt-text {
+    width: 100%;
+    height: 200px;
+    resize: none;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .prompt-copy-button {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    padding: 10px;
+    border: none;
+    background-color: var(--main_blue);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .prompt-copy-button.copiado{
+    background-color: grey;
+  }
+  .prompt-copy-button:hover.copiado{
+    background-color: rgb(41, 41, 41);
+  }
+  
+  .prompt-copy-button:hover {
+    background-color: #0062cc;
+  }
+  
+  .prompt-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .prompt-item {
+    margin-bottom: 15px;
+  }
+  
+  .card {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-title {
+    font-weight: bold;
+  }
+  
+  .card-text {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .prompt-container {
+      padding: 0 15px;
+    }
+  
+    .row {
+      flex-direction: column;
+    }
+
+    .prompt-container .row .col-md-6{
+      width: 100%
+    }
+    .prompt-container {
+      max-width: 100%;
+      margin: 20px auto;
+      padding: 10px;
+      background-color: #fff;
+    }
+  }
+  

@@ -1,0 +1,29 @@
+uuid: 4ba505a1-e5d3-4990-9af4-e3738883c55d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faqs_category
+    - node.type.faqs
+    - taxonomy.vocabulary.categoria_faq
+id: node.faqs.field_faqs_category
+field_name: field_faqs_category
+entity_type: node
+bundle: faqs
+label: 'Categoría FAQs'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categoria_faq: categoria_faq
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

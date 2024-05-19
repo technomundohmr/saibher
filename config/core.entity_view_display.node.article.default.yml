@@ -1,0 +1,564 @@
+uuid: fd0fcbbd-6c62-4c8d-a3a1-d65907596fac
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.field_category
+    - field.field.node.article.field_image
+    - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_tags
+    - field.field.node.article.field_yoast_seo
+    - field.field.node.article.simplenews_issue
+    - image.style.wide
+    - node.type.article
+    - views.view.blog_categories
+    - views.view.last_articles
+    - views.view.services_promotions
+    - webform.webform.newsletter_suscription
+  module:
+    - comment
+    - layout_builder
+    - layout_discovery
+    - metatag
+    - svg_image
+    - text
+    - user
+    - views
+    - webform
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          custom_id: ''
+          custom_classes: ''
+          custom_class_choose: {  }
+          custom_styles: ''
+          custom_data_attributes: ''
+          regions:
+            content:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: ''
+              region_styles: ''
+              region_data: ''
+        components:
+          9d994cd3-23d7-46e2-a667-e0ffc087e634:
+            uuid: 9d994cd3-23d7-46e2-a667-e0ffc087e634
+            region: content
+            configuration:
+              id: 'field_block:node:article:field_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: wide
+                  image_loading:
+                    attribute: lazy
+                  svg_attributes:
+                    width: null
+                    height: null
+                  svg_render_as_image: true
+                third_party_settings: {  }
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                blog_block: blog_block
+                full_width: full_width
+          85ef5865-ece7-4a73-9875-c5705654dffc:
+            uuid: 85ef5865-ece7-4a73-9875-c5705654dffc
+            region: content
+            configuration:
+              id: 'field_block:node:article:title'
+              label: Título
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                title: title
+                blog_block: 0
+                full_width: 0
+          9d4ade8c-19ac-4ac7-b3aa-2dfce569862f:
+            uuid: 9d4ade8c-19ac-4ac7-b3aa-2dfce569862f
+            region: content
+            configuration:
+              id: 'field_block:node:article:field_meta_tags'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: metatag_empty_formatter
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          8e29c2ee-e6f9-4156-aafd-e112b292dfa1:
+            uuid: 8e29c2ee-e6f9-4156-aafd-e112b292dfa1
+            region: content
+            configuration:
+              id: 'field_block:node:article:field_yoast_seo'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_threecol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 25-50-25
+          custom_id: ''
+          custom_classes: ''
+          custom_class_choose: {  }
+          custom_styles: ''
+          custom_data_attributes: ''
+          regions:
+            first:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: ''
+              region_styles: ''
+              region_data: ''
+            second:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: ''
+              region_styles: ''
+              region_data: ''
+            third:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: ''
+              region_styles: ''
+              region_data: ''
+        components:
+          157c067f-e1a6-47be-9d89-d9026e6eb508:
+            uuid: 157c067f-e1a6-47be-9d89-d9026e6eb508
+            region: second
+            configuration:
+              id: 'field_block:node:article:body'
+              label: Cuerpo
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 4
+            additional:
+              layout_builder_styles_style:
+                blog_block: blog_block
+          6b2e02a6-19b7-4cd4-bafe-97c4152b3320:
+            uuid: 6b2e02a6-19b7-4cd4-bafe-97c4152b3320
+            region: second
+            configuration:
+              id: 'field_block:node:article:field_category'
+              label: Categoría
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style:
+                blog_block: blog_block
+          724c2ba2-7acf-48ae-9748-dbd63c6c3799:
+            uuid: 724c2ba2-7acf-48ae-9748-dbd63c6c3799
+            region: third
+            configuration:
+              id: 'views_block:last_articles-block_1'
+              label: 'Últimas entradas'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'Últimas entradas'
+              items_per_page: none
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                blog_block: 0
+                full_width: 0
+                h2_article: 0
+                padding_5: 0
+                title: 0
+          78901ed1-f6af-4e13-8f82-1bb95eb1471a:
+            uuid: 78901ed1-f6af-4e13-8f82-1bb95eb1471a
+            region: second
+            configuration:
+              id: webform_block
+              label: 'Suscrebete a nuestro boletin'
+              label_display: visible
+              provider: webform
+              context_mapping: {  }
+              webform_id: newsletter_suscription
+              default_data: ''
+              redirect: false
+            weight: 7
+            additional:
+              layout_builder_styles_style:
+                blog_block: blog_block
+                margin_y_5: margin_y_5
+                full_width: 0
+                h2_article: 0
+                padding_5: 0
+                title: 0
+          71235a8a-122c-44b0-a69a-bc16d936d51a:
+            uuid: 71235a8a-122c-44b0-a69a-bc16d936d51a
+            region: second
+            configuration:
+              id: 'field_block:node:article:title'
+              label: Título
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                blog_block: blog_block
+                h2_article: h2_article
+                full_width: 0
+                title: 0
+          8e603189-27dc-4f1b-92bb-51e51f5d7cb0:
+            uuid: 8e603189-27dc-4f1b-92bb-51e51f5d7cb0
+            region: first
+            configuration:
+              id: 'views_block:services_promotions-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 1
+            additional:
+              layout_builder_styles_style:
+                blog_block: blog_block
+                full_width: 0
+                h2_article: 0
+                title: 0
+          4be38118-eb38-42cd-af5c-107dc0c08185:
+            uuid: 4be38118-eb38-42cd-af5c-107dc0c08185
+            region: first
+            configuration:
+              id: 'inline_block:basic'
+              label: 'Te recomendamos'
+              label_display: '0'
+              provider: layout_builder
+              view_mode: full
+              context_mapping: {  }
+              block_revision_id: 10
+              block_serialized: null
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                h2_article: h2_article
+                blog_block: 0
+                full_width: 0
+                title: 0
+          e6ea2a11-f3bd-4509-b004-37ff17e3e21a:
+            uuid: e6ea2a11-f3bd-4509-b004-37ff17e3e21a
+            region: first
+            configuration:
+              id: 'inline_block:basic'
+              label: 'Contenido relacionado'
+              label_display: '0'
+              provider: layout_builder
+              view_mode: full
+              context_mapping: {  }
+              block_revision_id: 9
+              block_serialized: null
+            weight: 2
+            additional:
+              layout_builder_styles_style:
+                h2_article: h2_article
+                blog_block: 0
+                full_width: 0
+                title: 0
+          22cd3cb2-6c78-49a6-b31c-6805f823a0b3:
+            uuid: 22cd3cb2-6c78-49a6-b31c-6805f823a0b3
+            region: first
+            configuration:
+              id: 'views_block:blog_categories-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 4
+            additional:
+              layout_builder_styles_style:
+                blog_block: 0
+                full_width: 0
+                h2_article: 0
+                title: 0
+          ae46af06-68ed-4143-999c-f6f8249594b6:
+            uuid: ae46af06-68ed-4143-999c-f6f8249594b6
+            region: first
+            configuration:
+              id: 'field_block:node:article:field_tags'
+              label: Relacionado
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional:
+              layout_builder_styles_style:
+                blog_block: blog_block
+                full_width: 0
+                h2_article: 0
+                title: 0
+          0a5593b5-0906-437f-8b42-daccb7935dff:
+            uuid: 0a5593b5-0906-437f-8b42-daccb7935dff
+            region: second
+            configuration:
+              id: 'views_block:last_articles-block_2'
+              label: drupal
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: drupal
+              items_per_page: '2'
+            weight: 8
+            additional:
+              layout_builder_styles_style:
+                blog_block: 0
+                full_width: 0
+                h2_article: 0
+                padding_5: 0
+                title: 0
+          afd7e106-9fd3-4f57-ba1e-a0772b1ec555:
+            uuid: afd7e106-9fd3-4f57-ba1e-a0772b1ec555
+            region: second
+            configuration:
+              id: 'views_block:last_articles-block_php'
+              label: PHP
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: PHP
+              items_per_page: '2'
+            weight: 9
+            additional:
+              layout_builder_styles_style:
+                blog_block: 0
+                full_width: 0
+                h2_article: 0
+                padding_5: 0
+                title: 0
+          0e747b76-18bf-41fd-bcc3-ed8a4f633971:
+            uuid: 0e747b76-18bf-41fd-bcc3-ed8a4f633971
+            region: second
+            configuration:
+              id: 'views_block:last_articles-ia'
+              label: 'Inteligencia artificial'
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: 'Inteligencia artificial'
+              items_per_page: '2'
+            weight: 10
+            additional:
+              layout_builder_styles_style:
+                blog_block: 0
+                full_width: 0
+                h2_article: 0
+                padding_5: 0
+                title: 0
+          a474937b-34e8-4d9c-a20d-f1c0379c4e59:
+            uuid: a474937b-34e8-4d9c-a20d-f1c0379c4e59
+            region: second
+            configuration:
+              id: 'views_block:last_articles-negocios'
+              label: Negocios
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: Negocios
+              items_per_page: '2'
+            weight: 11
+            additional:
+              layout_builder_styles_style:
+                blog_block: 0
+                full_width: 0
+                h2_article: 0
+                padding_5: 0
+                title: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          b0a80d87-1d1a-4a68-a87e-f059c3017460:
+            uuid: b0a80d87-1d1a-4a68-a87e-f059c3017460
+            region: content
+            configuration:
+              id: 'extra_field_block:node:article:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 4
+            additional: {  }
+          d506df6b-a0f9-41d5-9be0-f3f70acb42c5:
+            uuid: d506df6b-a0f9-41d5-9be0-f3f70acb42c5
+            region: content
+            configuration:
+              id: 'field_block:node:article:comment'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: comment_default
+                label: above
+                settings:
+                  view_mode: default
+                  pager_id: 0
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+        third_party_settings: {  }
+_core:
+  default_config_hash: 7fb0j9HnIXfP9ndewzgPPzzeX_SV532wuYpkscrCMCk
+id: node.article.default
+targetEntityType: node
+bundle: article
+mode: default
+content:
+  addtoany:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  comment:
+    type: comment_default
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: wide
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_yoast_seo:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  simplenews_issue: true

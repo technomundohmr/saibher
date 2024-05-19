@@ -1,0 +1,24 @@
+uuid: bcc7b1db-f9cf-47fc-813b-aacc453a72a4
+langcode: es
+status: true
+dependencies:
+  module:
+    - addtoany
+  theme:
+    - saibher
+id: addtoanysharebuttons
+theme: saibher
+region: footer
+weight: -13
+provider: null
+plugin: addtoany_block
+settings:
+  id: addtoany_block
+  label: 'Comparte el contenido con las personas que amas'
+  label_display: visible
+  provider: addtoany
+  link_url: ''
+  link_title: ''
+  buttons_size: ''
+  addtoany_html: ''
+visibility: {  }

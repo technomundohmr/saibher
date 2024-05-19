@@ -1,0 +1,30 @@
+uuid: 9bc41457-c7fe-48e5-b707-cfdf3219edd0
+langcode: es
+status: true
+dependencies:
+  module:
+    - saibher_components
+    - system
+  theme:
+    - saibher
+id: bloqueparaseccionesen2columnas
+theme: saibher
+region: content
+weight: -8
+provider: null
+plugin: two_cols_section_block
+settings:
+  id: two_cols_section_block
+  label: 'Bloque para secciones en 2 columnas'
+  label_display: '0'
+  provider: saibher_components
+  header: '¿Quién está detrás de saibher?'
+  body: "Andrés Felipe Rincón,  desarrollador de Drupal con experiencia en la creación y personalización de sitios web y aplicaciones en la plataforma Drupal. Tengo experiencia en la creación de temas personalizados, la integración de módulos y la creación de funciones personalizadas en PHP.\r\n\r\nTambién tengo experiencia en el uso de herramientas de desarrollo como Git, Composer y Drush. Me apasiona mantenerme al día con las últimas tendencias en Drupal y seguir aprendiendo nuevas habilidades para mejorar mi trabajo. Soy un miembro colaborativo del equipo y siempre busco soluciones creativas para desafíos técnicos complejos."
+  theme: '1'
+  main_img:
+    - '10'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/\r\n<front>\r\n/portafolio"

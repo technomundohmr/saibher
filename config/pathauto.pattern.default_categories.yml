@@ -1,0 +1,25 @@
+uuid: c57b98fd-65a5-44f1-b338-f5a8e0f844e0
+langcode: es
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: default_categories
+label: 'categorías en general'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/[term:name]'
+selection_criteria:
+  26be1d93-3ecf-46d6-92f6-b979cc21ad64:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 26be1d93-3ecf-46d6-92f6-b979cc21ad64
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      article_category: article_category
+      categoria_faq: categoria_faq
+      tags: tags
+      tecnologias_o_lenguajes_de_progr: tecnologias_o_lenguajes_de_progr
+selection_logic: and
+weight: -5
+relationships: {  }

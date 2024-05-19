@@ -1,0 +1,79 @@
+<?php
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\saibher_tracking\TrackingService;
+
+/**
+ * Implements hook_form_alter().
+ */
+function saibher_core_form_alter(&$form, &$form_state, $form_id) {
+    if(isset($form['#webform_id'])){
+        if($form['#webform_id'] == 'newsletter_suscription'){
+            array_unshift($form['actions']['submit']['#submit'], 'saibher_core_form_submit_preprocess');
+        }
+        if($form['#webform_id'] == 'contact_form_pqr') {
+            array_unshift($form['actions']['submit']['#submit'], 'saibher_core_form_submit_preprocess');
+        }    
+    }
+    if($form['#id'] == 'views-exposed-form-search-results-page-1'){
+        $form['#attributes']['class'][] = 'search-form-page-styles';
+        $form['actions']['submit']['#value'] = 'Buscar';
+        $form['actions']['submit']['#attributes']['class'][] = 'btn-primary-red btn mb-1';
+        array_unshift($form['#submit'], 'saibher_core_form_submit_search_preprocess');
+    }
+
+}
+
+/**
+ * Callback para el evento #submit del formulario.
+ */
+function saibher_core_form_submit_preprocess($form, &$form_state) {
+   
+    if($form['#webform_id'] == 'contact_form_pqr'){
+
+        if($form_state->getValues()['deseo_suscribirme_a_su_boletin_de_noticias'] == 1){
+            $email = $form_state->getValues()['correo_electronico'];
+            suscribe_user($email);
+        }
+    }else{
+        $email = $form_state->getValues()['email'];
+        suscribe_user($email);
+    }
+}
+
+/**
+ * Callback para el evento #submit del formulario.
+ */
+function saibher_core_form_submit_search_preprocess($form, &$form_state) {
+    $title = $form_state->getValues()['title'];
+    $body = $form_state->getValues()['body_value'];
+    $category = $form_state->getValues()['field_category_target_id'];
+    if(!empty($title)){
+        $tracking_service = \Drupal::service('saibher_tracking.tracking');
+        $tracking_service->newTracking($title, 'Título en página de búsqueda');
+    }
+    if(!empty($body)){
+        $tracking_service = \Drupal::service('saibher_tracking.tracking');
+        $tracking_service->newTracking($body, 'Búsqueda dentro del cuerpo en página de búsqueda');
+    }
+    if($category != 'All'){
+        $taxonomy_name = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($category);
+        $category = $taxonomy_name->name->value;
+        $tracking_service = \Drupal::service('saibher_tracking.tracking');
+        $tracking_service->newTracking($category, 'Categoría en página de búsqueda');
+    }
+}
+
+function suscribe_user($email){
+    $subscription_manager = \Drupal::service('simplenews.subscription_manager');
+    $subscription_manager->subscribe($email, 'saibher_blog', FALSE, 'mass', 'es');
+}
+
+function saibher_core_theme($existing, $type, $theme, $path) {
+    return [
+      'search_form' => [
+        'variables' => [
+          'form' => NULL,
+        ],
+      ],
+    ];
+  }

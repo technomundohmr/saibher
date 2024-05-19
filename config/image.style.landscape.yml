@@ -1,0 +1,15 @@
+uuid: a1cfef90-fdee-4b76-a957-a253120d1f73
+langcode: es
+status: true
+dependencies: {  }
+name: landscape
+label: landscape
+effects:
+  a7b78e9d-5482-4703-9332-ccd872b338aa:
+    uuid: a7b78e9d-5482-4703-9332-ccd872b338aa
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 1200
+      height: 900
+      anchor: center-center

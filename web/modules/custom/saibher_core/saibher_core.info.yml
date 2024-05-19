@@ -1,0 +1,7 @@
+name: saibher core
+description: module to manage custom saibher functions
+package: Saibher
+core_version_requirement: ^9 || ^10
+type: module
+libraries: 
+  - saibher_core/global

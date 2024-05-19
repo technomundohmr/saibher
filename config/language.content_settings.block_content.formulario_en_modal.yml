@@ -1,0 +1,11 @@
+uuid: d91b31bd-f0e7-4659-b39e-a217efc5eb3a
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.formulario_en_modal
+id: block_content.formulario_en_modal
+target_entity_type_id: block_content
+target_bundle: formulario_en_modal
+default_langcode: site_default
+language_alterable: false

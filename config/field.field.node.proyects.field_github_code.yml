@@ -1,0 +1,19 @@
+uuid: fd841220-5c31-44da-9601-64bb3e7779df
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_github_code
+    - node.type.proyects
+id: node.proyects.field_github_code
+field_name: field_github_code
+entity_type: node
+bundle: proyects
+label: 'URL de github'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

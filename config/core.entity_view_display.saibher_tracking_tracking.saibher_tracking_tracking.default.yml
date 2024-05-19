@@ -1,0 +1,72 @@
+uuid: 8e125c5c-5885-4bd7-9ba2-554430dc85ba
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.saibher_tracking_tracking.saibher_tracking_tracking.field_origin
+    - field.field.saibher_tracking_tracking.saibher_tracking_tracking.field_searched_term
+    - field.field.saibher_tracking_tracking.saibher_tracking_tracking.field_times
+  module:
+    - saibher_tracking
+    - user
+id: saibher_tracking_tracking.saibher_tracking_tracking.default
+targetEntityType: saibher_tracking_tracking
+bundle: saibher_tracking_tracking
+mode: default
+content:
+  field_origin:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_searched_term:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -1
+    region: content
+  field_times:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  first_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -6
+    region: content
+  role:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -2
+    region: content
+  user_id:
+    type: author
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: -3
+    region: content
+hidden: {  }

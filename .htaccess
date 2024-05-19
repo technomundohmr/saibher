@@ -1,0 +1,21 @@
+<FilesMatch "\.(engine|inc|install|make|module|profile|po|sh|.*sql|theme|twig|tpl(\.php)?|xtmpl|yml)(~|\.sw[op]|\.bak|\.orig|\.save)?$|^(\.(?!well-known).*|Entries.*|Repository|Root|Tag|Template|composer\.(json|lock)|web\.config)$|^#.*#$|\.php(~|\.sw[op]|\.bak|\.orig|\.save)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+  </IfModule>
+</FilesMatch>
+
+RewriteEngine on
+# Change "saibher.com" to your own domain name:
+RewriteCond %{HTTP_HOST} ^(www.)?saibher.com$
+# Change "directory" to the directory where Site is installed:
+RewriteCond %{REQUEST_URI} !^/web/
+
+# Change "directory" to the directory where Site is installed:
+RewriteRule ^(.*)$ /web/$1
+# Change "saibher.com" to your own domain name:
+RewriteCond %{HTTP_HOST} ^(www.)?saibher.com$
+# Change "directory" to the directory where Site is installed:
+RewriteRule ^(/)?$ web/index.php [L]

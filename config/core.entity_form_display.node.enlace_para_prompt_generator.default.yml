@@ -1,0 +1,51 @@
+uuid: e5c7ed73-ea09-4f23-acb0-6a32d7230e43
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.enlace_para_prompt_generator.field_image
+    - field.field.node.enlace_para_prompt_generator.field_link
+    - image.style.thumbnail
+    - node.type.enlace_para_prompt_generator
+  module:
+    - svg_image
+id: node.enlace_para_prompt_generator.default
+targetEntityType: node
+bundle: enlace_para_prompt_generator
+mode: default
+content:
+  field_image:
+    type: image_image
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_link:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  publish_on: true
+  status: true
+  sticky: true
+  uid: true
+  unpublish_on: true
+  url_redirects: true

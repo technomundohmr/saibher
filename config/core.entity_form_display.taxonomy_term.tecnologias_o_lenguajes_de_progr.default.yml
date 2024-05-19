@@ -1,0 +1,36 @@
+uuid: 3419de67-e14a-4a62-8f05-d75c41cef188
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.tecnologias_o_lenguajes_de_progr.field_image
+    - image.style.thumbnail
+    - taxonomy.vocabulary.tecnologias_o_lenguajes_de_progr
+  module:
+    - svg_image
+id: taxonomy_term.tecnologias_o_lenguajes_de_progr.default
+targetEntityType: taxonomy_term
+bundle: tecnologias_o_lenguajes_de_progr
+mode: default
+content:
+  field_image:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true
+  status: true

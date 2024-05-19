@@ -1,0 +1,23 @@
+uuid: 291c9701-1645-4d1d-9253-4b721a1e3331
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.servicio
+  module:
+    - text
+id: node.servicio.body
+field_name: body
+entity_type: node
+bundle: servicio
+label: Body
+description: 'descripción completa del servicio'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,25 @@
+uuid: a4530721-355a-4037-8d3a-3d41f2369af0
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:formulario_en_modal:9efc11a8-967a-4ded-8a55-5b2e16d077d7'
+  module:
+    - block_content
+  theme:
+    - saibher
+id: contactoporservicio
+theme: saibher
+region: content
+weight: -18
+provider: null
+plugin: 'block_content:9efc11a8-967a-4ded-8a55-5b2e16d077d7'
+settings:
+  id: 'block_content:9efc11a8-967a-4ded-8a55-5b2e16d077d7'
+  label: 'contacto por servicio'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

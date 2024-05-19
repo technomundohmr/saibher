@@ -1,0 +1,22 @@
+uuid: fe697bdd-59ab-47ce-ac9f-e37effc3eee4
+langcode: es
+status: false
+dependencies:
+  theme:
+    - saibher
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: saibher_secondary_local_tasks
+theme: saibher
+region: top_header
+weight: -1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Solapas secundarias'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

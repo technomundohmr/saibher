@@ -1,0 +1,8 @@
+uuid: ac89b36b-3221-4ce1-a2d1-91ffb9ee1759
+langcode: es
+status: true
+dependencies: {  }
+name: 'categoría FAQ'
+vid: categoria_faq
+description: 'Categorías para poder ubicar las FAQ'
+weight: 0

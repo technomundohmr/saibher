@@ -1,0 +1,69 @@
+# This file brings everything together. Very nifty!
+
+# Route name can be used in several places; e.g. links, redirects, and local
+# actions.
+entity.saibher_tracking_tracking.canonical:
+  path: '/saibher_tracking_tracking/{saibher_tracking_tracking}'
+  defaults:
+    # Calls the view controller, defined in the annotation of the tracking
+    # entity. This marks this route as belonging to this entity type.
+    _entity_view: 'saibher_tracking_tracking'
+    _title: 'tracking content'
+  requirements:
+    # Calls the access controller of the entity, passing in the suffix ('view')
+    # as the $operation parameter to checkAccess().
+    _entity_access: 'saibher_tracking_tracking.view'
+
+entity.saibher_tracking_tracking.collection:
+  path: '/saibher_tracking_tracking/list'
+  defaults:
+  # Calls the list controller, defined in the annotation of the tracking entity.
+    _entity_list: 'saibher_tracking_tracking'
+    _title: 'tracking list'
+  requirements:
+  # Checks for permission directly.
+    _permission: 'view tracking entity'
+  options:
+    _admin_route: TRUE
+
+saibher_tracking.tracking_add:
+  path: '/saibher_tracking_tracking/add'
+  defaults:
+    # Calls the form.add controller, defined in the tracking entity.
+    _entity_form: saibher_tracking_tracking.default
+    _title: 'Add tracking'
+  requirements:
+    # Use the entity's access controller. _entity_create_access tells the router
+    # to use the access controller's checkCreateAccess() method instead of
+    # checkAccess().
+    _entity_create_access: 'saibher_tracking_tracking'
+
+entity.saibher_tracking_tracking.edit_form:
+  path: '/saibher_tracking_tracking/{saibher_tracking_tracking}/edit'
+  defaults:
+  # Calls the form.edit controller, defined in the tracking entity.
+    _entity_form: saibher_tracking_tracking.default
+    _title: 'Edit tracking'
+  requirements:
+    # Calls the access controller of the entity, passing in the suffix
+    # ('update') as the $operation parameter to checkAccess().
+    _entity_access: 'saibher_tracking_tracking.update'
+
+entity.saibher_tracking_tracking.delete_form:
+  path: '/tracking/{saibher_tracking_tracking}/delete'
+  defaults:
+    # Calls the form.delete controller, defined in the tracking entity.
+    _entity_form: saibher_tracking_tracking.delete
+    _title: 'Delete tracking'
+  requirements:
+    # Calls the access controller of the entity, passing in the suffix
+    # ('delete') as the $operation parameter to checkAccess().
+    _entity_access: 'saibher_tracking_tracking.delete'
+
+saibher_tracking.tracking_settings:
+  path: '/admin/structure/saibher_tracking_tracking_settings'
+  defaults:
+    _form: '\Drupal\saibher_tracking\Form\TrackingSettingsForm'
+    _title: 'tracking settings'
+  requirements:
+    _permission: 'administer tracking entity'

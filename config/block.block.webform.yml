@@ -1,0 +1,25 @@
+uuid: d7515d3c-551f-4bdc-a0f2-da8f44d59c11
+langcode: es
+status: true
+dependencies:
+  config:
+    - webform.webform.newsletter_suscription
+  module:
+    - webform
+  theme:
+    - saibher
+id: webform
+theme: saibher
+region: footer
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'suscribete a nuestro newsletter'
+  label_display: visible
+  provider: webform
+  webform_id: newsletter_suscription
+  default_data: ''
+  redirect: false
+visibility: {  }

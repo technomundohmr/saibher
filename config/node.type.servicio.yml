@@ -1,0 +1,18 @@
+uuid: ee8da91a-c1fe-4ed1-b8fd-3891b4f964a6
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Servicio
+type: servicio
+description: 'servicios ofrecidos por la empresa'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

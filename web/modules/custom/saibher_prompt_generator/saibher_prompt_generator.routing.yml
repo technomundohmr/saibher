@@ -1,0 +1,48 @@
+saibher_prompt_generator.article:
+  path: '/prompt_generator/articulo'
+  defaults:
+    _form: '\Drupal\saibher_prompt_generator\Form\ArticlePromptGeneratorForm'
+    _title: 'Generador de prompt para articulos'
+  requirements:
+    _permission: 'access content'
+
+saibher_prompt_generator.carta:
+  path: '/prompt_generator/carta'
+  defaults:
+    _form: '\Drupal\saibher_prompt_generator\Form\LetterPromptGeneratorForm'
+    _title: 'Generador de prompt para carta formal'
+  requirements:
+    _permission: 'access content'
+
+saibher_prompt_generator.code:
+  path: '/prompt_generator/codigo'
+  defaults:
+    _form: '\Drupal\saibher_prompt_generator\Form\CodePromptGeneratorForm'
+    _title: 'Generador de prompt para código'
+  requirements:
+    _permission: 'access content'
+
+saibher_prompt_generator.text:
+  path: '/prompt_generator/texto'
+  defaults:
+    _form: '\Drupal\saibher_prompt_generator\Form\TextPromptGeneratorForm'
+    _title: 'Generador de prompt para texto sin formato'
+  requirements:
+    _permission: 'access content'
+
+saibher_prompt_generator.professional_profile:
+  path: '/prompt_generator/perfil_profesional'
+  defaults:
+    _form: '\Drupal\saibher_prompt_generator\Form\ProfessionalProfilePromptGeneratorForm'
+    _title: 'Generador de prompt para perfil profesional'
+  requirements:
+    _permission: 'access content'
+
+saibher_prompt_generator.result:
+  path: '/prompt_generator/resultado'
+  defaults:
+    _controller: '\Drupal\saibher_prompt_generator\Controller\PromptResultController::handlePostRequest'
+    _title: 'Resultado del prompt'
+  #methods: [POST]
+  requirements:
+    _permission: 'access content'

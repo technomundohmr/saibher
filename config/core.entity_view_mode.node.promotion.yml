@@ -1,0 +1,10 @@
+uuid: 7b81be82-3022-4b76-b3c5-60ecc1792886
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.promotion
+label: promociones
+targetEntityType: node
+cache: true

@@ -1,0 +1,18 @@
+uuid: cf1635b0-49ef-465a-b4df-c4ffea460ef3
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 92bXZdyYJ5xqukdfmGRr_CYcwm1vfuS8b8aJ7X_G7E0
+id: taxonomy_term
+label: 'Taxonomy term'
+tags:
+  abstract: '[term:name] '
+  author: 'Andres Felipe Rincon'
+  canonical_url: '[term:url]'
+  description: '[term:description]'
+  google: 'notranslate, nositelinkssearchbox'
+  keywords: '[term:name] '
+  news_keywords: '[term:name] '
+  robots: 'index, follow'
+  title: '[term:name] | [site:name]'

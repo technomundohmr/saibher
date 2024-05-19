@@ -1,0 +1,12 @@
+uuid: 260fec65-e805-4534-b9c1-81b4bdb53167
+langcode: es
+status: true
+dependencies: {  }
+id: padding_5
+label: padding-5
+classes: p-5
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

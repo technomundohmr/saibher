@@ -1,0 +1,25 @@
+uuid: f71c0c79-8adf-450a-ac80-3915756724b3
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.menu_mobile
+    - field.field.block_content.menu_mobile.field_menu_item
+  module:
+    - entity_reference_revisions
+id: block_content.menu_mobile.default
+targetEntityType: block_content
+bundle: menu_mobile
+mode: default
+content:
+  field_menu_item:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

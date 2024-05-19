@@ -1,0 +1,22 @@
+uuid: 7519dabb-c69c-4a1c-850d-d80428c537ac
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: proyects
+label: Proyectos
+type: 'canonical_entities:node'
+pattern: '/proyecto/[node:title]'
+selection_criteria:
+  439ef865-adce-45da-b324-7356c87c6665:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 439ef865-adce-45da-b324-7356c87c6665
+    context_mapping:
+      node: node
+    bundles:
+      proyects: proyects
+selection_logic: and
+weight: -5
+relationships: {  }

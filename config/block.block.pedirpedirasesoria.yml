@@ -1,0 +1,25 @@
+uuid: df349314-3e7b-4216-b455-903d43110e18
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:558b740f-6645-4b24-a873-ad809591da09'
+  module:
+    - block_content
+  theme:
+    - saibher
+id: pedirpedirasesoria
+theme: saibher
+region: navigation
+weight: 0
+provider: null
+plugin: 'block_content:558b740f-6645-4b24-a873-ad809591da09'
+settings:
+  id: 'block_content:558b740f-6645-4b24-a873-ad809591da09'
+  label: 'pedir pedir asesoría'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

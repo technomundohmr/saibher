@@ -1,0 +1,12 @@
+uuid: b1f9611a-b17f-4637-bb5e-2dc231f760c2
+langcode: es
+status: true
+dependencies: {  }
+id: formulario_de_contacto_pqrs
+label: 'formulario de contacto pqrs'
+classes: pqrs-contact-form
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

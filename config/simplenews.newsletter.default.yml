@@ -1,0 +1,20 @@
+uuid: da4b35a7-abd6-439c-bf84-3a8c940d1ce1
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6wgXMbTWVfjhYZ3wFXLy3vAISxQeKEJz9SdNqt9SLMY
+name: 'Default newsletter'
+id: default
+description: 'This is an example newsletter. Change it.'
+format: plain
+priority: 0
+receipt: true
+from_name: saibher
+subject: '[[simplenews-newsletter:name]] [node:title]'
+from_address: developer@saibher.com
+hyperlinks: false
+allowed_handlers: {  }
+new_account: none
+access: default
+weight: 0

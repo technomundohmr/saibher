@@ -1,0 +1,12 @@
+uuid: 4980295b-7b41-4011-a534-5e0dba0cf396
+langcode: es
+status: true
+dependencies: {  }
+id: blog_body
+label: blog-body
+classes: blog-body
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

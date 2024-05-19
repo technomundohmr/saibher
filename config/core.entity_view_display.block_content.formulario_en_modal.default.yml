@@ -1,0 +1,24 @@
+uuid: 80756837-65f1-4a6c-8c91-6f603c205687
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.formulario_en_modal
+    - field.field.block_content.formulario_en_modal.field_modal_form
+  module:
+    - webform
+id: block_content.formulario_en_modal.default
+targetEntityType: block_content
+bundle: formulario_en_modal
+mode: default
+content:
+  field_modal_form:
+    type: webform_entity_reference_entity_view
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

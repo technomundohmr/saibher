@@ -1,0 +1,20 @@
+uuid: 32242ed9-3f00-4215-8313-4cb4ac45cc64
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_sale_percentage
+field_name: field_sale_percentage
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

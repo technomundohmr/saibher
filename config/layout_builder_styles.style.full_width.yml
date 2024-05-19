@@ -1,0 +1,12 @@
+uuid: 8b4c3153-cd5e-4655-93db-0560a2165328
+langcode: es
+status: true
+dependencies: {  }
+id: full_width
+label: 'image full width'
+classes: image-full-width
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,29 @@
+uuid: e9953477-e850-4db4-b035-774565299e8d
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.services
+  module:
+    - system
+    - views
+  theme:
+    - saibher
+id: views_block__services_block_1
+theme: saibher
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:services-block_1'
+settings:
+  id: 'views_block:services-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

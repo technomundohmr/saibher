@@ -1,0 +1,22 @@
+uuid: cd8735d9-47e8-4ceb-aef6-db3e09ca6ec3
+langcode: es
+status: true
+dependencies:
+  module:
+    - addtoany
+  theme:
+    - saibher
+id: addtoanyfollowbuttons
+theme: saibher
+region: footer
+weight: -15
+provider: null
+plugin: addtoany_follow_block
+settings:
+  id: addtoany_follow_block
+  label: 'Síguenos en '
+  label_display: visible
+  provider: addtoany
+  buttons_size: ''
+  addtoany_html: "<a class=\"a2a_button_youtube\" href=\"https://www.youtube.com/channel/UCh-v7gH7zPSK1qIjX5HzSSw\"></a>\r\n<a class=\"a2a_button_linkedin\" href=\"https://www.linkedin.com/in/andr%C3%A9s-felipe-rinc%C3%B3n-gracia-513982215/\"></a>"
+visibility: {  }

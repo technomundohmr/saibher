@@ -1,0 +1,19 @@
+uuid: d8059632-481f-4a28-bb6a-5004b42b0380
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_unit
+    - node.type.servicio
+id: node.servicio.field_unit
+field_name: field_unit
+entity_type: node
+bundle: servicio
+label: Unidad
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

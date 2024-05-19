@@ -1,0 +1,38 @@
+uuid: 8abc60ad-cf33-466a-8c4c-bb3c815b566a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_main_image
+    - node.type.servicio
+  module:
+    - image
+id: node.servicio.field_main_image
+field_name: field_main_image
+entity_type: node
+bundle: servicio
+label: 'Imanes principal'
+description: 'Imagen principal de referencia'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: true
+  title_field_required: true
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

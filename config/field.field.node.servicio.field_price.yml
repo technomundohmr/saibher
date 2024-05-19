@@ -1,0 +1,19 @@
+uuid: bbc55e83-e7a1-4dbe-a3f3-9d2c02e6ed7a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price
+    - node.type.servicio
+id: node.servicio.field_price
+field_name: field_price
+entity_type: node
+bundle: servicio
+label: Precio
+description: 'valor por el que vendes tu servicio'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

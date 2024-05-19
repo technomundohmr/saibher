@@ -1,0 +1,23 @@
+uuid: 94043602-902e-44a9-add7-8ea29adf657d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sale_percentage
+    - node.type.servicio
+id: node.servicio.field_sale_percentage
+field_name: field_sale_percentage
+entity_type: node
+bundle: servicio
+label: 'Porcentaje de descuento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,20 @@
+uuid: 4abfa857-b758-466b-8806-1f2be1cee3a2
+langcode: es
+status: true
+dependencies:
+  module:
+    - saibher_core
+  theme:
+    - saibher
+id: bloquedebusqueda
+theme: saibher
+region: top_header
+weight: 0
+provider: null
+plugin: SearchFormBlock
+settings:
+  id: SearchFormBlock
+  label: 'Bloque de búsqueda'
+  label_display: '0'
+  provider: saibher_core
+visibility: {  }

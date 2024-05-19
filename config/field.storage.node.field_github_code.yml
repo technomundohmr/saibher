@@ -1,0 +1,21 @@
+uuid: ed1919a9-b5f8-41c6-ab6a-54bcd7d06261
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_github_code
+field_name: field_github_code
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

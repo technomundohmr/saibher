@@ -1,0 +1,39 @@
+uuid: d78d8ad9-9275-4297-86cf-285e8270dbb6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.beneficios.field_icon
+    - field.field.paragraph.beneficios.field_title
+    - paragraphs.paragraphs_type.beneficios
+  module:
+    - svg_image
+id: paragraph.beneficios.default
+targetEntityType: paragraph
+bundle: beneficios
+mode: default
+content:
+  field_icon:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

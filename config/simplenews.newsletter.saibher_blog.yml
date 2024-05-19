@@ -1,0 +1,19 @@
+uuid: 3ce3ddb8-ff4f-4823-8159-5e6a6ea72947
+langcode: es
+status: true
+dependencies: {  }
+name: 'saibher blog'
+id: saibher_blog
+description: ''
+format: plain
+priority: 0
+receipt: true
+from_name: saibher
+subject: '[[simplenews-newsletter:name]] [node:title]'
+from_address: developer@saibher.com
+hyperlinks: true
+allowed_handlers:
+  simplenews_all: '0'
+new_account: 'on'
+access: default
+weight: 0

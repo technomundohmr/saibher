@@ -1,0 +1,12 @@
+uuid: 2a35a255-b72f-484a-ae7a-902e10dbcd98
+langcode: es
+status: true
+dependencies: {  }
+id: h2_article
+label: 'h2 article'
+classes: 'mb-2 text-lg font-semibold'
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

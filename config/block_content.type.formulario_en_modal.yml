@@ -1,0 +1,8 @@
+uuid: 750108df-16f4-4d66-b9f5-eacf798400dc
+langcode: es
+status: true
+dependencies: {  }
+id: formulario_en_modal
+label: 'Formulario en modal'
+revision: 0
+description: 'formulario en modal'

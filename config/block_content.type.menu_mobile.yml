@@ -1,0 +1,8 @@
+uuid: d19c9d13-92d7-471d-85da-f9c4974cb1d2
+langcode: es
+status: true
+dependencies: {  }
+id: menu_mobile
+label: 'menu movil'
+revision: 0
+description: 'menu para el footer en mobile'

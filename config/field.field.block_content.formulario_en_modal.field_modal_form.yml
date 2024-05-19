@@ -1,0 +1,25 @@
+uuid: d2ec7ff6-fa96-48b8-8a0c-76f17532f9d5
+langcode: es
+status: true
+dependencies:
+  config:
+    - block_content.type.formulario_en_modal
+    - field.storage.block_content.field_modal_form
+  module:
+    - webform
+id: block_content.formulario_en_modal.field_modal_form
+field_name: field_modal_form
+entity_type: block_content
+bundle: formulario_en_modal
+label: 'Formulario en modal'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

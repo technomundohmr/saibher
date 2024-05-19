@@ -1,0 +1,32 @@
+uuid: ec1cb460-2b9d-4e0c-835e-3d2ffdb18ecf
+langcode: es
+status: true
+dependencies:
+  module:
+    - saibher_components
+    - system
+  theme:
+    - saibher
+id: bloqueparaherobanner
+theme: saibher
+region: content
+weight: -17
+provider: null
+plugin: hero_banner_block
+settings:
+  id: hero_banner_block
+  label: 'Home banner'
+  label_display: '0'
+  provider: saibher_components
+  header: '¿Quieres un sitio web que destaque? ¡Déjanos ayudarte!'
+  body: 'Déjanos encargarnos de tus necesidades de servicios web para que puedas enfocarte en lo que realmente importa: tu negocio.'
+  cta_link: 'https://api.whatsapp.com/send?phone=+573137732634&text=Hola%2C%20estoy%20interesado%20en%20una%20cotizacion'
+  cta_text: 'Quiero una cotización'
+  main_img:
+    - '5'
+  hero_theme: '1'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

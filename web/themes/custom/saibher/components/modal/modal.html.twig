@@ -1,0 +1,12 @@
+<div class="modal-component d-none" id="ServiceModal">
+    <div class="modal-container">
+        <div class="relative w-full modal-close-btn" >
+            <img class="absolute w-6 right-2 top-2 hover:cursor-pointer" id="closeServiceModalBtn" src="{{ base_path ~ directory }}/img/close_icon.svg" alt="">
+        </div>
+        <div class="p-6 modal-content">
+            {% block modal_content %}
+                <h1>Contenido del modal</h1>
+            {% endblock %}
+        </div>
+    </div> 
+</div>

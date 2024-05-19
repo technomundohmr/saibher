@@ -1,0 +1,20 @@
+uuid: a4bbd208-b2c5-4ce0-a90f-50a76bed18fc
+langcode: es
+status: true
+dependencies:
+  module:
+    - sitemap
+  theme:
+    - saibher
+id: sitemap
+theme: saibher
+region: footer
+weight: -16
+provider: null
+plugin: sitemap
+settings:
+  id: sitemap
+  label: Sitemap
+  label_display: '0'
+  provider: sitemap
+visibility: {  }

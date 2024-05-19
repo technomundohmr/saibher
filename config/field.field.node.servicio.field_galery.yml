@@ -1,0 +1,27 @@
+uuid: cf8e5856-77d2-410a-bd9a-3d61214af25b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_galery
+    - node.type.servicio
+  module:
+    - file
+id: node.servicio.field_galery
+field_name: field_galery
+entity_type: node
+bundle: servicio
+label: Galeria
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png jpg jpeg svg'
+  max_filesize: ''
+  description_field: false
+field_type: file
