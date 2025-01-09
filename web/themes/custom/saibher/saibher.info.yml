@@ -2,7 +2,7 @@ name: saibher
 type: theme
 description: 'Saibher main theme'
 package: Saibher
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^9 || ^10 || ^11
 libraries:
   - saibher/global
 base theme: false

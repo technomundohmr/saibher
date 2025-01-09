@@ -1,7 +1,7 @@
 name: saibher components
 description: module to manage custom saibher components
 package: Saibher
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^9 || ^10 || ^11
 type: module
 libraries: 
   - saibher_components/global
