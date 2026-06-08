@@ -1,0 +1,13 @@
+uuid: 0cd01e85-fef2-45af-8612-4688c8e1a441
+langcode: es
+status: true
+dependencies:
+  config:
+    - canvas.component.js.sectionheader
+    - canvas.component.sdc.saibher.heroBanner
+name: headers
+configEntityTypeId: component
+weight: 0
+items:
+  - js.sectionheader
+  - sdc.saibher.heroBanner

@@ -1,0 +1,54 @@
+uuid: 49225d35-02fa-4cd4-8dc3-ec792993b968
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tickets.body
+    - field.field.node.tickets.field_adjuntos
+    - field.field.node.tickets.field_business_name
+    - field.field.node.tickets.field_email
+    - field.field.node.tickets.field_job_done
+    - field.field.node.tickets.field_name
+    - field.field.node.tickets.field_phone
+    - field.field.node.tickets.field_priority
+    - field.field.node.tickets.field_reference_image
+    - field.field.node.tickets.field_response
+    - field.field.node.tickets.field_status
+    - field.field.node.tickets.field_type
+    - node.type.tickets
+  module:
+    - text
+    - user
+id: node.tickets.teaser
+targetEntityType: node
+bundle: tickets
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  field_adjuntos: true
+  field_business_name: true
+  field_email: true
+  field_job_done: true
+  field_name: true
+  field_phone: true
+  field_priority: true
+  field_reference_image: true
+  field_response: true
+  field_status: true
+  field_type: true
+  langcode: true

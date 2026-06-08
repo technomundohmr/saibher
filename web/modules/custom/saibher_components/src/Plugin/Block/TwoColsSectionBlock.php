@@ -59,7 +59,9 @@ class TwoColsSectionBlock extends BlockBase implements ContainerFactoryPluginInt
       '#name' => 'main_image',
       '#upload_location' => 'public://content/img/',
       '#upload_validators' => [
-        'file_validate_extensions' => ['png jpg jpeg svg'],
+        'FileExtension' => [
+          'extensions' => 'png jpg jpeg svg',
+        ],
       ],
       '#description' => 'Imagen principal de la sección',
       '#default_value' => $this->configuration['main_img'],
@@ -105,7 +107,6 @@ class TwoColsSectionBlock extends BlockBase implements ContainerFactoryPluginInt
     if($values['main_img'] != $this->configuration['main_img']){
       if(!empty($values['main_img'][0])){
         $image = $this->entity_type_manager->getStorage('file')->load($values['main_img'][0]);
-        dump($image);
         $image->setPermanent();
         $image->save();
       }

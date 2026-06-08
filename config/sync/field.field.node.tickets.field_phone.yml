@@ -1,0 +1,19 @@
+uuid: 2c8252e5-17a2-4c03-9497-849536b5a1ac
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phone
+    - node.type.tickets
+id: node.tickets.field_phone
+field_name: field_phone
+entity_type: node
+bundle: tickets
+label: 'Teléfono de contacto'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

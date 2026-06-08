@@ -1,0 +1,17 @@
+uuid: da6a52fe-3e02-454d-adc9-ac4c96567f3c
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_order
+  enforced:
+    module:
+      - commerce_cart
+      - commerce_product
+_core:
+  default_config_hash: ypSSN1X1uBdbiUNh4rouzoALW6AYcE_WIMjZDoPOxdY
+id: commerce_order_item.add_to_cart
+label: 'Añadir a la cesta'
+description: null
+targetEntityType: commerce_order_item
+cache: true

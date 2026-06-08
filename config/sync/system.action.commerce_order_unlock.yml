@@ -1,0 +1,10 @@
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_order
+id: commerce_order_unlock
+label: 'Unlock order'
+type: commerce_order
+plugin: commerce_order_unlock
+configuration: {  }

@@ -1,0 +1,27 @@
+uuid: ef542def-c5c4-4a95-8c64-95aba817b998
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_adjuntos
+    - node.type.tickets
+  module:
+    - file
+id: node.tickets.field_adjuntos
+field_name: field_adjuntos
+entity_type: node
+bundle: tickets
+label: Adjuntos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf xlxs doc docs png jpg msg jpeg'
+  max_filesize: 2MB
+  description_field: false
+field_type: file

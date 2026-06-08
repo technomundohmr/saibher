@@ -1,0 +1,11 @@
+uuid: 4b2e9a03-f32d-4def-a764-e476612e8168
+langcode: es
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.saibher.section-columns
+name: layouts
+configEntityTypeId: component
+weight: -1
+items:
+  - sdc.saibher.section-columns

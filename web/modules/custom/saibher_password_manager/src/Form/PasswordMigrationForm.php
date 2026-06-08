@@ -66,7 +66,9 @@ class PasswordMigrationForm extends FormBase {
         '#name' => 'csv_file',
         '#upload_location' => 'public://content/csv_files/',
         '#upload_validators' => [
-          'file_validate_extensions' => ['csv'],
+          'FileExtension' => [
+            'extensions' => 'csv',
+          ],
         ],
         '#description' => 'Por favor cargar solo archivos con extension .csv',
       ];

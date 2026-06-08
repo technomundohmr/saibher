@@ -59,7 +59,9 @@ class ThreeColsFeatures extends BlockBase implements ContainerFactoryPluginInter
       '#name' => 'main_image',
       '#upload_location' => 'public://content/img/',
       '#upload_validators' => [
-        'file_validate_extensions' => ['png jpg jpeg svg'],
+        'FileExtension' => [
+          'extensions' => 'png jpg jpeg svg',
+        ],
       ],
       '#description' => 'Imagen principal para el hero banner',
       '#default_value' => $this->configuration['main_img'],
@@ -82,7 +84,9 @@ class ThreeColsFeatures extends BlockBase implements ContainerFactoryPluginInter
       '#name' => 'main_image',
       '#upload_location' => 'public://content/img/',
       '#upload_validators' => [
-        'file_validate_extensions' => ['png jpg jpeg svg'],
+        'FileExtension' => [
+          'extensions' => 'png jpg jpeg svg',
+        ],
       ],
       '#description' => 'Imagen principal para el hero banner',
       '#default_value' => $this->configuration['main_img_1'],
@@ -105,7 +109,9 @@ class ThreeColsFeatures extends BlockBase implements ContainerFactoryPluginInter
       '#name' => 'main_image',
       '#upload_location' => 'public://content/img/',
       '#upload_validators' => [
-        'file_validate_extensions' => ['png jpg jpeg svg'],
+        'FileExtension' => [
+          'extensions' => 'png jpg jpeg svg',
+        ],
       ],
       '#description' => 'Imagen principal para el hero banner',
       '#default_value' => $this->configuration['main_img_2'],

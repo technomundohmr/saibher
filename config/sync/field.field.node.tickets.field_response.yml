@@ -1,0 +1,19 @@
+uuid: 319e64e1-1809-4a2e-a238-9d20416cfcbf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_response
+    - node.type.tickets
+id: node.tickets.field_response
+field_name: field_response
+entity_type: node
+bundle: tickets
+label: Respuesta
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,133 @@
+uuid: dbe58665-ec9b-4c89-a38f-c71990e84768
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.tickets.body
+    - field.field.node.tickets.field_adjuntos
+    - field.field.node.tickets.field_business_name
+    - field.field.node.tickets.field_email
+    - field.field.node.tickets.field_job_done
+    - field.field.node.tickets.field_name
+    - field.field.node.tickets.field_phone
+    - field.field.node.tickets.field_priority
+    - field.field.node.tickets.field_reference_image
+    - field.field.node.tickets.field_response
+    - field.field.node.tickets.field_status
+    - field.field.node.tickets.field_type
+    - node.type.tickets
+  module:
+    - file
+    - options
+    - svg_image
+    - text
+    - user
+id: node.tickets.default
+targetEntityType: node
+bundle: tickets
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_adjuntos:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_business_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_job_done:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_phone:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_priority:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_reference_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_response:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_status:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  langcode: true

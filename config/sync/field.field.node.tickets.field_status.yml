@@ -1,0 +1,21 @@
+uuid: 2c1e2545-a634-460e-9e15-8f2af7942a7d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_status
+    - node.type.tickets
+  module:
+    - options
+id: node.tickets.field_status
+field_name: field_status
+entity_type: node
+bundle: tickets
+label: 'Estado de ticket'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: 0a239c0d-2e04-4341-b009-f70117974afe
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type
+    - node.type.tickets
+  module:
+    - options
+id: node.tickets.field_type
+field_name: field_type
+entity_type: node
+bundle: tickets
+label: 'Tipo de servicio '
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

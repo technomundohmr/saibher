@@ -1,0 +1,23 @@
+uuid: a5abff36-835a-46a3-a5a8-0c894d674537
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.tickets
+  module:
+    - text
+id: node.tickets.body
+field_name: body
+entity_type: node
+bundle: tickets
+label: 'Descripción detallada '
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

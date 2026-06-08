@@ -1,0 +1,75 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Hero Banner
+status: stable
+description: 'Banner principal con imagen de fondo, overlay azul, títulos en blanco y verde, subtítulo y CTAs opcionales.'
+category: Hero
+
+props:
+  type: object
+  required:
+    - title_white
+    - title_green
+    - subtitle
+  properties:
+
+    title_white:
+      type: string
+      title: 'Título principal (blanco)'
+      examples:
+        - 'Digitaliza tu negocio.'
+
+    title_green:
+      type: string
+      title: 'Título secundario (verde)'
+      examples:
+        - 'Sin complicaciones.'
+
+    subtitle:
+      type: string
+      title: 'Subtítulo'
+      examples:
+        - 'En Saibher creamos páginas web, software de gestión y puntos de venta para que tu comercio crezca en el mundo digital — de forma simple y cercana.'
+
+    image_url:
+      type: string
+      title: 'URL imagen de fondo'
+      description: 'URL directa de la imagen. Pégala desde la Media Library de Drupal.'
+      examples:
+        - '/sites/default/files/hero-bg.jpg'
+
+    image_alt:
+      type: string
+      title: 'Texto alternativo de la imagen'
+      examples:
+        - 'Persona trabajando en su negocio con tecnología'
+
+    eyebrow:
+      type: string
+      title: 'Eyebrow — texto pequeño sobre el título (opcional)'
+      examples:
+        - 'Tecnología para negocios reales'
+
+    cta_primary_text:
+      type: string
+      title: 'CTA primario — texto (opcional)'
+      examples:
+        - 'Conoce nuestros servicios'
+
+    cta_primary_url:
+      type: string
+      title: 'CTA primario — URL (opcional)'
+      examples:
+        - '#servicios'
+
+    cta_secondary_text:
+      type: string
+      title: 'CTA secundario — texto (opcional)'
+      examples:
+        - 'Ver portafolio'
+
+    cta_secondary_url:
+      type: string
+      title: 'CTA secundario — URL (opcional, abre en nueva pestaña si es externa)'
+      examples:
+        - 'https://andresrincon.dev'

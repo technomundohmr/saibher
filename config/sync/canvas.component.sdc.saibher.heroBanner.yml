@@ -1,0 +1,118 @@
+uuid: f9b40cf2-e5a0-4d07-a5be-2c3e99c0f07d
+langcode: es
+status: true
+dependencies:
+  theme:
+    - saibher
+active_version: 372e0e4c67fecb75
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title_white:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Digitaliza tu negocio.'
+          expression: ℹ︎string␟value
+        title_green:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Sin complicaciones.'
+          expression: ℹ︎string␟value
+        subtitle:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'En Saibher creamos páginas web, software de gestión y puntos de venta para que tu comercio crezca en el mundo digital — de forma simple y cercana.'
+          expression: ℹ︎string␟value
+        image_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: /sites/default/files/hero-bg.jpg
+          expression: ℹ︎string␟value
+        image_alt:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Persona trabajando en su negocio con tecnología'
+          expression: ℹ︎string␟value
+        eyebrow:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Tecnología para negocios reales'
+          expression: ℹ︎string␟value
+        cta_primary_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Conoce nuestros servicios'
+          expression: ℹ︎string␟value
+        cta_primary_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '#servicios'
+          expression: ℹ︎string␟value
+        cta_secondary_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Ver portafolio'
+          expression: ℹ︎string␟value
+        cta_secondary_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'https://andresrincon.dev'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Hero Banner'
+id: sdc.saibher.heroBanner
+provider: saibher
+source: sdc
+source_local_id: 'saibher:heroBanner'

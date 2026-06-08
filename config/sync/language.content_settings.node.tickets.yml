@@ -1,0 +1,11 @@
+uuid: 125f30a0-7753-4548-a84b-34a51e9fa55d
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.tickets
+id: node.tickets
+target_entity_type_id: node
+target_bundle: tickets
+default_langcode: site_default
+language_alterable: false

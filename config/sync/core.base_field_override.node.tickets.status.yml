@@ -1,0 +1,22 @@
+uuid: 032b8eda-ba97-4698-beca-d2e6dbd52fb7
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.tickets
+id: node.tickets.status
+field_name: status
+entity_type: node
+bundle: tickets
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

@@ -429,3 +429,28 @@ p{
     height: 60px;
     object-fit: cover;
 }
+
+.cart-custom-block {
+    line-height: 25px;
+    background-color: var(--dark_blue);
+    height: 100%;
+    padding: 20px 20px 10px;
+    position: relative;
+}
+
+.cart-custom-block .cart-block--summary__count {
+    right: 5px;
+    top: 6px;
+    padding: 4.5px;
+    background: var(--main_red);
+    color: white;
+    position: absolute;
+    border-radius: 50%;
+    line-height: 11px;
+}
+
+.cart-block--summary__icon img{
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}

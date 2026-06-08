@@ -1,0 +1,30 @@
+uuid: ce8a6e95-c578-46f6-974d-87806343d83b
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_type
+field_name: field_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Sistema de punto de ventas'
+      label: 'Sistema de punto de ventas'
+    -
+      value: 'Servicio de marketing digital'
+      label: 'Servicio de marketing digital'
+    -
+      value: 'Desarrollo web'
+      label: 'Desarrollo web'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

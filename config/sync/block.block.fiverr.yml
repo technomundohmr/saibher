@@ -1,0 +1,23 @@
+uuid: ba43874b-6c75-4e08-9a7a-4eb02d70fa0d
+langcode: es
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:3533a803-cd21-441e-87ac-bce2cd7761ea'
+  module:
+    - block_content
+  theme:
+    - saibher
+id: fiverr
+theme: saibher
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:3533a803-cd21-441e-87ac-bce2cd7761ea'
+settings:
+  id: 'block_content:3533a803-cd21-441e-87ac-bce2cd7761ea'
+  label: Fiverr
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

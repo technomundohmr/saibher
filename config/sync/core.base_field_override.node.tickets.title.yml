@@ -1,0 +1,18 @@
+uuid: 1033453e-ac51-429a-b0da-5ae5199e4d05
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.tickets
+id: node.tickets.title
+field_name: title
+entity_type: node
+bundle: tickets
+label: Asunto
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

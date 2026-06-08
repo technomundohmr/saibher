@@ -1,0 +1,68 @@
+{#
+/**
+ * @file heroBanner.twig
+ */
+#}
+
+<section
+  class="heroBanner"
+  {% if image_url %}style="--heroBanner-bg: url('{{ image_url }}');"{% endif %}
+  {% if image_alt %}aria-label="{{ image_alt }}"{% endif %}
+>
+
+  <div class="heroBanner__overlay" aria-hidden="true"></div>
+
+  <div class="heroBanner__content">
+
+    {% if eyebrow %}
+      <p class="heroBanner__eyebrow">
+        <span class="heroBanner__eyebrowIcon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+          </svg>
+        </span>
+        {{ eyebrow|upper }}
+      </p>
+    {% endif %}
+
+    <h1 class="heroBanner__title">
+      <span class="heroBanner__titleWhite">{{ title_white }}</span>
+      <span class="heroBanner__titleGreen">{{ title_green }}</span>
+    </h1>
+
+    <p class="heroBanner__subtitle">{{ subtitle }}</p>
+
+    {% if cta_primary_text or cta_secondary_text %}
+      <div class="heroBanner__actions">
+
+        {% if cta_primary_text %}
+          <a href="{{ cta_primary_url|default('#') }}" class="heroBanner__cta heroBanner__ctaPrimary">
+            {{ cta_primary_text }}
+          </a>
+        {% endif %}
+
+        {% if cta_secondary_text %}
+          <a
+            href="{{ cta_secondary_url|default('#') }}"
+            class="heroBanner__cta heroBanner__ctaSecondary"
+            {% if cta_secondary_url and 'http' in cta_secondary_url %}
+              target="_blank" rel="noopener noreferrer"
+            {% endif %}
+          >
+            {{ cta_secondary_text }}
+            <svg class="heroBanner__ctaIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+          </a>
+        {% endif %}
+
+      </div>
+    {% endif %}
+
+  </div>
+
+  <div class="heroBanner__decoration" aria-hidden="true"></div>
+
+</section>

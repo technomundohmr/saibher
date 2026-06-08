@@ -1,0 +1,13 @@
+uuid: e8417a89-0d07-4dfa-b163-efd9e8eeaa1b
+langcode: es
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.commerce.commerce-status-badge
+    - canvas.component.sdc.olivero.teaser
+name: Otro(s)
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.commerce.commerce-status-badge
+  - sdc.olivero.teaser

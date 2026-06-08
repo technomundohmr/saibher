@@ -1,0 +1,33 @@
+uuid: 717ca9af-7dd3-499a-bbda-f07478f36ed5
+langcode: es
+status: true
+dependencies:
+  module:
+    - saibher_password_manager
+    - system
+    - user
+  theme:
+    - claro
+id: bloquedegeneraciondecontrasenas
+theme: claro
+region: content
+weight: -3
+provider: null
+plugin: PasswordGenerateBlock
+settings:
+  id: PasswordGenerateBlock
+  label: 'Generación de contraseñas'
+  label_display: visible
+  provider: saibher_password_manager
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /admin/password-manager
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator

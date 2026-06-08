@@ -1,0 +1,12 @@
+_core:
+  default_config_hash: ylcsF3ZfWc6Ua1nUaTXyVy2TNwupiRAtBA6w_whTMGg
+untrusted_roles: {  }
+log: true
+skipped:
+  account_creation:
+    skipped: true
+    skipped_by: '1'
+    skipped_on: 1780792265
+views_access:
+  hushed_views: {  }
+configured: false

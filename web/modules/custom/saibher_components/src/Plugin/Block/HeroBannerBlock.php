@@ -59,7 +59,9 @@ class HeroBannerBlock extends BlockBase implements ContainerFactoryPluginInterfa
       '#name' => 'main_image',
       '#upload_location' => 'public://content/img/',
       '#upload_validators' => [
-        'file_validate_extensions' => ['png jpg jpeg svg'],
+        'FileExtension' => [
+          'extensions' => 'png jpg jpeg svg',
+        ],
       ],
       '#description' => 'Imagen principal para el hero banner',
       '#default_value' => $this->configuration['main_img'],
