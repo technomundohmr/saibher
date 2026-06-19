@@ -1,0 +1,22 @@
+uuid: 331ad3ff-d791-41fc-b606-015b24151091
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+active_version: 0011c8a433acf9a0
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: system_breadcrumb_block
+        label: 'Enlaces de ayuda a la navegación'
+        label_display: '0'
+        provider: system
+    fallback_metadata:
+      slot_definitions: null
+label: 'Enlaces de ayuda a la navegación'
+id: block.system_breadcrumb_block
+provider: system
+source: block
+source_local_id: system_breadcrumb_block

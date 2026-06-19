@@ -1,0 +1,25 @@
+uuid: f1397150-4268-41bc-985a-db2e102e39b1
+langcode: es
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:67c7a32a-52a2-4c2a-95eb-9016d73cf714'
+  module:
+    - block_content
+active_version: a622270c9acc22a7
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'block_content:67c7a32a-52a2-4c2a-95eb-9016d73cf714'
+        label: 'micro banner prompt'
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+label: 'micro banner prompt'
+id: block.block_content.67c7a32a-52a2-4c2a-95eb-9016d73cf714
+provider: block_content
+source: block
+source_local_id: 'block_content:67c7a32a-52a2-4c2a-95eb-9016d73cf714'

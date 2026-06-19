@@ -17,11 +17,11 @@ provider: null
 plugin: 'views_block:last_articles-block_4'
 settings:
   id: 'views_block:last_articles-block_4'
-  label: ''
-  label_display: '0'
+  label: 'Últimas entradas por categoría  horizontal'
+  label_display: visible
   provider: views
-  views_label: ''
-  items_per_page: '3'
+  views_label: 'Últimas entradas por categoría  horizontal'
+  items_per_page: 3
 visibility:
   request_path:
     id: request_path

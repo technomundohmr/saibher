@@ -1,0 +1,26 @@
+uuid: 4760fe90-d663-4929-8ba1-cd4a7c84ec26
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.faqs
+  module:
+    - views
+active_version: 61a0acd650ffc5a8
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:faqs-block_1'
+        label: 'FAQs: home'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'FAQs: home'
+id: block.views_block.faqs-block_1
+provider: views
+source: block
+source_local_id: 'views_block:faqs-block_1'

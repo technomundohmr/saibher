@@ -1,0 +1,174 @@
+uuid: e483424b-41f3-42c0-9468-a330384cc888
+langcode: es
+status: true
+dependencies: {  }
+machineName: button
+name: button
+required:
+  - url
+  - label
+  - variant
+  - color
+props:
+  label:
+    type: string
+    title: label
+    examples:
+      - 'Ver mas'
+  url:
+    type: string
+    title: url
+    examples:
+      - '#'
+  target:
+    type: string
+    enum:
+      - _self
+      - _blank
+    'meta:enum':
+      _self: _self
+      _blank: _blank
+    title: target
+    examples:
+      - _self
+  variant:
+    type: string
+    enum:
+      - solid
+      - outline
+    'meta:enum':
+      solid: solid
+      outline: outline
+    title: variant
+    examples:
+      - outline
+  color:
+    type: string
+    enum:
+      - blue
+      - green
+      - red
+    'meta:enum':
+      blue: blue
+      green: green
+      red: red
+    title: color
+    examples:
+      - green
+slots: {  }
+js:
+  original: |-
+    const Component = ({
+      label,
+      url,
+      target,
+      variant,
+      color,
+    }) => {
+      return (
+       <a 
+          href={url}
+          target={target}
+          rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+          className={`btn btn--${variant} btn--${color}`}
+        >
+          {label}
+        </a>
+      );
+    };
+
+    export default Component;
+  compiled: |
+    import { jsx as _jsx } from "react/jsx-runtime";
+    const Component = ({ label, url, target, variant, color })=>{
+        return /*#__PURE__*/ _jsx("a", {
+            href: url,
+            target: target,
+            rel: target === '_blank' ? 'noopener noreferrer' : undefined,
+            className: `btn btn--${variant} btn--${color}`,
+            children: label
+        });
+    };
+    export default Component;
+css:
+  original: |-
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 32px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+
+    /* ── BLUE ── */
+    .btn--solid.btn--blue {
+      background: #1242E6;
+      border-color: #1242E6;
+      color: #FFFFFF;
+    }
+    .btn--solid.btn--blue:hover {
+      background: transparent;
+      color: #1242E6;
+    }
+
+    .btn--outline.btn--blue {
+      background: transparent;
+      border-color: #1242E6;
+      color: #1242E6;
+    }
+    .btn--outline.btn--blue:hover {
+      background: #1242E6;
+      color: #FFFFFF;
+    }
+
+    /* ── GREEN ── */
+    .btn--solid.btn--green {
+      background: #83E612;
+      border-color: #83E612;
+      color: #FFFFFF;
+    }
+    .btn--solid.btn--green:hover {
+      background: transparent;
+      color: #83E612;
+    }
+
+    .btn--outline.btn--green {
+      background: transparent;
+      border-color: #83E612;
+      color: #4A8A00;
+    }
+    .btn--outline.btn--green:hover {
+      background: #83E612;
+      color: #FFFFFF;
+    }
+
+    /* ── RED ── */
+    .btn--solid.btn--red {
+      background: #E64012;
+      border-color: #E64012;
+      color: #FFFFFF;
+    }
+    .btn--solid.btn--red:hover {
+      background: transparent;
+      color: #E64012;
+    }
+
+    .btn--outline.btn--red {
+      background: transparent;
+      border-color: #E64012;
+      color: #E64012;
+    }
+    .btn--outline.btn--red:hover {
+      background: #E64012;
+      color: #FFFFFF;
+    }
+  compiled: |-
+    /*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */
+    .btn{cursor:pointer;border:2px solid #0000;border-radius:10px;justify-content:center;align-items:center;padding:10px 32px;font-size:15px;font-weight:600;text-decoration:none;transition:background .2s,color .2s,border-color .2s;display:inline-flex}.btn--solid.btn--blue{color:#fff;background:#1242e6;border-color:#1242e6}.btn--solid.btn--blue:hover{color:#1242e6;background:0 0}.btn--outline.btn--blue{color:#1242e6;background:0 0;border-color:#1242e6}.btn--outline.btn--blue:hover{color:#fff;background:#1242e6}.btn--solid.btn--green{color:#fff;background:#83e612;border-color:#83e612}.btn--solid.btn--green:hover{color:#83e612;background:0 0}.btn--outline.btn--green{color:#4a8a00;background:0 0;border-color:#83e612}.btn--outline.btn--green:hover{color:#fff;background:#83e612}.btn--solid.btn--red{color:#fff;background:#e64012;border-color:#e64012}.btn--solid.btn--red:hover{color:#e64012;background:0 0}.btn--outline.btn--red{color:#e64012;background:0 0;border-color:#e64012}.btn--outline.btn--red:hover{color:#fff;background:#e64012}
+dataDependencies: {  }

@@ -1,0 +1,26 @@
+uuid: a492790d-e484-4d40-a663-f51a9949e03c
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.blog_categories
+  module:
+    - views
+active_version: a7c834423cb64e51
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:blog_categories-block_2'
+        label: 'blog categories: tecnologíás portafolio'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'blog categories: tecnologíás portafolio'
+id: block.views_block.blog_categories-block_2
+provider: views
+source: block
+source_local_id: 'views_block:blog_categories-block_2'

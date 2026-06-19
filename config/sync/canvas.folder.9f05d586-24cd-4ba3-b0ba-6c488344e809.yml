@@ -1,0 +1,11 @@
+uuid: 9f05d586-24cd-4ba3-b0ba-6c488344e809
+langcode: es
+status: true
+dependencies:
+  config:
+    - canvas.component.js.paragraph
+name: Text
+configEntityTypeId: component
+weight: -3
+items:
+  - js.paragraph

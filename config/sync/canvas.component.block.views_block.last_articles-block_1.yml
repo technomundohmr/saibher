@@ -1,0 +1,26 @@
+uuid: e6d87e60-fdbf-4dc2-a624-0b87b4b63a9b
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.last_articles
+  module:
+    - views
+active_version: ab1305996cd8e175
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:last_articles-block_1'
+        label: nAME
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: nAME
+id: block.views_block.last_articles-block_1
+provider: views
+source: block
+source_local_id: 'views_block:last_articles-block_1'

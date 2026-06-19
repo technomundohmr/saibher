@@ -1,0 +1,22 @@
+uuid: a905d1b4-d387-437a-8006-8d93074acb08
+langcode: es
+status: false
+dependencies:
+  module:
+    - saibher_components
+active_version: dd4f71a3033d7d95
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: hero_banner_block
+        label: 'Bloque para hero banner'
+        label_display: '0'
+        provider: saibher_components
+    fallback_metadata:
+      slot_definitions: null
+label: 'Bloque para hero banner'
+id: block.hero_banner_block
+provider: saibher_components
+source: block
+source_local_id: hero_banner_block

@@ -1,0 +1,11 @@
+uuid: 5bea57a4-304f-4639-a7f9-4168df69e98e
+langcode: es
+status: true
+dependencies:
+  config:
+    - canvas.component.block.sitemap
+name: Sitemap
+configEntityTypeId: component
+weight: 0
+items:
+  - block.sitemap

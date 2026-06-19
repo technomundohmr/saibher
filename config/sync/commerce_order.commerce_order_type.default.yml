@@ -9,6 +9,7 @@ label: Default
 traits: {  }
 locked: false
 workflow: order_default
+showOrderEditLinks: null
 numberPattern: order_default
 refresh_mode: customer
 refresh_frequency: 300

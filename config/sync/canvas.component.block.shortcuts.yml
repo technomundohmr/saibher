@@ -1,0 +1,22 @@
+uuid: 1a07638e-2a72-476a-875d-5be10af96191
+langcode: es
+status: false
+dependencies:
+  module:
+    - shortcut
+active_version: e82af917c66520df
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: shortcuts
+        label: Atajos
+        label_display: '0'
+        provider: shortcut
+    fallback_metadata:
+      slot_definitions: null
+label: Atajos
+id: block.shortcuts
+provider: shortcut
+source: block
+source_local_id: shortcuts

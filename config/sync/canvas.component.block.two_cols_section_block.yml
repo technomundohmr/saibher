@@ -1,0 +1,22 @@
+uuid: 112bf3b4-1540-4b9d-a039-eb2f2f9d4e35
+langcode: es
+status: false
+dependencies:
+  module:
+    - saibher_components
+active_version: 0c30d7efcf87b76a
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: two_cols_section_block
+        label: 'Bloque para secciones en 2 columnas'
+        label_display: '0'
+        provider: saibher_components
+    fallback_metadata:
+      slot_definitions: null
+label: 'Bloque para secciones en 2 columnas'
+id: block.two_cols_section_block
+provider: saibher_components
+source: block
+source_local_id: two_cols_section_block

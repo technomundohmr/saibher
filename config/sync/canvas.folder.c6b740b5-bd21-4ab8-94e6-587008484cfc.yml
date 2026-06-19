@@ -1,0 +1,11 @@
+uuid: c6b740b5-bd21-4ab8-94e6-587008484cfc
+langcode: es
+status: true
+dependencies:
+  config:
+    - canvas.component.block.commerce_checkout_progress
+name: Comercio
+configEntityTypeId: component
+weight: 0
+items:
+  - block.commerce_checkout_progress

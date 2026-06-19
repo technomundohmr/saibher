@@ -1,0 +1,26 @@
+uuid: 3f93af29-d435-47a0-884c-3c65f721b65a
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.last_articles
+  module:
+    - views
+active_version: d940048c45a3a7d2
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:last_articles-canvas_test'
+        label: nAME
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: nAME
+id: block.views_block.last_articles-canvas_test
+provider: views
+source: block
+source_local_id: 'views_block:last_articles-canvas_test'

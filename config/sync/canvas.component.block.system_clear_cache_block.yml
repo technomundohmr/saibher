@@ -1,0 +1,22 @@
+uuid: 73825b84-2b59-432e-a022-f4ef657ebf0c
+langcode: es
+status: false
+dependencies:
+  module:
+    - system
+active_version: cc200f2bfe5d0790
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: system_clear_cache_block
+        label: 'Vaciar caché'
+        label_display: '0'
+        provider: system
+    fallback_metadata:
+      slot_definitions: null
+label: 'Vaciar caché'
+id: block.system_clear_cache_block
+provider: system
+source: block
+source_local_id: system_clear_cache_block

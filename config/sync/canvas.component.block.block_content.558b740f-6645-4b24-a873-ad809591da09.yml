@@ -1,0 +1,25 @@
+uuid: 131d344e-f6d3-4851-b4f1-20fb301a3c05
+langcode: es
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:558b740f-6645-4b24-a873-ad809591da09'
+  module:
+    - block_content
+active_version: 96763754832fb7a1
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'block_content:558b740f-6645-4b24-a873-ad809591da09'
+        label: 'pedir pedir asesoría'
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+label: 'pedir pedir asesoría'
+id: block.block_content.558b740f-6645-4b24-a873-ad809591da09
+provider: block_content
+source: block
+source_local_id: 'block_content:558b740f-6645-4b24-a873-ad809591da09'

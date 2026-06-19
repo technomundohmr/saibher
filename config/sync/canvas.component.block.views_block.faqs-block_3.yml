@@ -1,0 +1,26 @@
+uuid: f4534a57-7298-4e26-b0ee-db403a655ba4
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.faqs
+  module:
+    - views
+active_version: 5b5bafea331e18df
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:faqs-block_3'
+        label: 'FAQs: Drupal'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'FAQs: Drupal'
+id: block.views_block.faqs-block_3
+provider: views
+source: block
+source_local_id: 'views_block:faqs-block_3'

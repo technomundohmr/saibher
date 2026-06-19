@@ -1,0 +1,11 @@
+uuid: 43ebaa59-abd1-4fb5-9559-228100a27e41
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.canv_card
+label: 'Tarjeta artículo canvas'
+description: null
+targetEntityType: node
+cache: true

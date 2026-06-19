@@ -1,0 +1,26 @@
+uuid: 488740ad-7fc7-40bd-a52a-ddedb8091f0a
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.services_promotions
+  module:
+    - views
+active_version: 715a3993dad48c20
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:services_promotions-block_1'
+        label: 'Promoción de servicios'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Promoción de servicios'
+id: block.views_block.services_promotions-block_1
+provider: views
+source: block
+source_local_id: 'views_block:services_promotions-block_1'

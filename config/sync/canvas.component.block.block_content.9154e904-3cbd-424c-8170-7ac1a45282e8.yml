@@ -1,0 +1,25 @@
+uuid: 162dc519-5c21-4377-87ef-8e1201f37752
+langcode: es
+status: false
+dependencies:
+  content:
+    - 'block_content:menu_mobile:9154e904-3cbd-424c-8170-7ac1a45282e8'
+  module:
+    - block_content
+active_version: 7a067bae59f39e28
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'block_content:9154e904-3cbd-424c-8170-7ac1a45282e8'
+        label: 'Menu del movil'
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+label: 'Menu del movil'
+id: block.block_content.9154e904-3cbd-424c-8170-7ac1a45282e8
+provider: block_content
+source: block
+source_local_id: 'block_content:9154e904-3cbd-424c-8170-7ac1a45282e8'

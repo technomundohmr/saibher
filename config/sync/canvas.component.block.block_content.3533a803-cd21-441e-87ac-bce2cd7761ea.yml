@@ -1,0 +1,25 @@
+uuid: 1b35f813-24be-4b53-9f2c-c3ca904ea3a0
+langcode: es
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:3533a803-cd21-441e-87ac-bce2cd7761ea'
+  module:
+    - block_content
+active_version: 4b4c4c77213f0798
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'block_content:3533a803-cd21-441e-87ac-bce2cd7761ea'
+        label: Fiverr
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+label: Fiverr
+id: block.block_content.3533a803-cd21-441e-87ac-bce2cd7761ea
+provider: block_content
+source: block
+source_local_id: 'block_content:3533a803-cd21-441e-87ac-bce2cd7761ea'

@@ -1,0 +1,26 @@
+uuid: 18f3be7b-2ee2-4ad7-8cf6-2cb3d522c654
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.last_articles
+  module:
+    - views
+active_version: 0a48188146cd584f
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:last_articles-block_php'
+        label: 'bloque por categoria'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'bloque por categoria'
+id: block.views_block.last_articles-block_php
+provider: views
+source: block
+source_local_id: 'views_block:last_articles-block_php'

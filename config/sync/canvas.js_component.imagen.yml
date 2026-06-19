@@ -1,0 +1,170 @@
+uuid: 9ef725d2-cbda-41c8-8926-42a50c172a8f
+langcode: es
+status: true
+dependencies: {  }
+machineName: imagen
+name: Imagen
+required:
+  - image
+  - aspectRatio
+props:
+  image:
+    type: object
+    $ref: 'json-schema-definitions://canvas.module/image'
+    title: image
+    examples:
+      -
+        src: 'https://placehold.co/600x600@2x.png?alternateWidths=https%3A%2F%2Fplacehold.co%2F%7Bwidth%7Dx%7Bheight%7D%402x.png'
+        alt: 'Example image placeholder'
+        width: 600
+        height: 600
+  linkUrl:
+    type: string
+    title: link_url
+  linkTarget:
+    type: string
+    enum:
+      - _self
+      - _blank
+    'meta:enum':
+      _self: _self
+      _blank: _blank
+    title: link_target
+    examples:
+      - _self
+  aspectRatio:
+    type: string
+    enum:
+      - 16/9
+      - 4/3
+      - 3/4
+      - 2/1
+      - 1/2
+      - 3/2
+      - 2/3
+      - 21/9
+      - 1/1
+    'meta:enum':
+      16/9: 16/9
+      4/3: 4/3
+      3/4: 3/4
+      2/1: 2/1
+      1/2: 1/2
+      3/2: 3/2
+      2/3: 2/3
+      21/9: 21/9
+      1/1: 1/1
+    title: aspectRatio
+    examples:
+      - 1/1
+slots: {  }
+js:
+  original: |-
+    const Component = ({
+      image = null,
+      aspectRatio,
+      link_url = '',
+      link_target = '_self',
+    }) => {
+      const ratioClass = `imageBlock--ratio-${aspectRatio.replace('/', 'x')}`;
+
+      if (!image || !image.src) {
+        return <div className="imageBlock--empty"></div>;
+      }
+
+      const img = (
+        <div className={`imageBlock ${ratioClass}`}>
+          <img
+            className="imageBlock__img"
+            src={image.src}
+            alt={image.alt || ''}
+            width='100%'
+          />
+        </div>
+      );
+
+      if (link_url) {
+        return (
+          <a
+            href={link_url}
+            target={link_target}
+            rel={link_target === '_blank' ? 'noopener noreferrer' : undefined}
+            className="imageBlock__link"
+          >
+            {img}
+          </a>
+        );
+      }
+
+      return img;
+    };
+
+    export default Component;
+  compiled: |
+    import { jsx as _jsx } from "react/jsx-runtime";
+    const Component = ({ image = null, aspectRatio, link_url = '', link_target = '_self' })=>{
+        const ratioClass = `imageBlock--ratio-${aspectRatio.replace('/', 'x')}`;
+        if (!image || !image.src) {
+            return /*#__PURE__*/ _jsx("div", {
+                className: "imageBlock--empty"
+            });
+        }
+        const img = /*#__PURE__*/ _jsx("div", {
+            className: `imageBlock ${ratioClass}`,
+            children: /*#__PURE__*/ _jsx("img", {
+                className: "imageBlock__img",
+                src: image.src,
+                alt: image.alt || '',
+                width: "100%"
+            })
+        });
+        if (link_url) {
+            return /*#__PURE__*/ _jsx("a", {
+                href: link_url,
+                target: link_target,
+                rel: link_target === '_blank' ? 'noopener noreferrer' : undefined,
+                className: "imageBlock__link",
+                children: img
+            });
+        }
+        return img;
+    };
+    export default Component;
+css:
+  original: |-
+    .imageBlock--empty {
+      display: none;
+    }
+
+    .imageBlock__link {
+      display: block;
+      width: 100%;
+    }
+
+    .imageBlock {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .imageBlock--ratio-16x9  { aspect-ratio: 16 / 9; }
+    .imageBlock--ratio-4x3   { aspect-ratio: 4 / 3; }
+    .imageBlock--ratio-3x4   { aspect-ratio: 3 / 4; }
+    .imageBlock--ratio-1x1   { aspect-ratio: 1 / 1; }
+    .imageBlock--ratio-3x2   { aspect-ratio: 3 / 2; }
+    .imageBlock--ratio-21x9  { aspect-ratio: 21 / 9; }
+    .imageBlock--ratio-1x2   { aspect-ratio: 1 / 2; }
+    .imageBlock--ratio-2x1   { aspect-ratio: 2 / 1; }
+    .imageBlock--ratio-2x3   { aspect-ratio: 2 / 3; }
+
+
+    .imageBlock__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+  compiled: |-
+    /*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */
+    .imageBlock--empty{display:none}.imageBlock__link{width:100%;display:block}.imageBlock{width:100%;overflow:hidden}.imageBlock--ratio-16x9{aspect-ratio:16/9}.imageBlock--ratio-4x3{aspect-ratio:4/3}.imageBlock--ratio-3x4{aspect-ratio:3/4}.imageBlock--ratio-1x1{aspect-ratio:1}.imageBlock--ratio-3x2{aspect-ratio:3/2}.imageBlock--ratio-21x9{aspect-ratio:21/9}.imageBlock--ratio-1x2{aspect-ratio:1/2}.imageBlock--ratio-2x1{aspect-ratio:2}.imageBlock--ratio-2x3{aspect-ratio:2/3}.imageBlock__img{object-fit:cover;object-position:center;width:100%;height:100%;display:block}
+dataDependencies: {  }

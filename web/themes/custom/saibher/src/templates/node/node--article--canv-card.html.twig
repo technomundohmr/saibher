@@ -1,0 +1,18 @@
+{#
+/**
+ * @file node--article--canv-card.html.twig
+ *
+ * Renders the article node in canv_card view mode
+ * using the teaserCard SDC component.
+ */
+#}
+
+{% include 'saibher:teaserCard' with {
+  card_title:     node.title.value,
+  card_url:       url,
+  card_date:      node.created.value|date('d/m/Y'),
+  card_excerpt:   node.body.summary|default(node.body.value|striptags|slice(0, 200)),
+  card_category:  node.field_category.entity.name.value|default(''),
+  card_image_url: file_url(node.field_image.entity.uri.value)|default(''),
+  card_image_alt: node.field_image.alt|default(''),
+} only %}

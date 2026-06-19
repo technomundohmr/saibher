@@ -1,0 +1,26 @@
+uuid: c8c23b9a-bf2a-4756-beaa-8e816a12734d
+langcode: es
+status: false
+dependencies:
+  config:
+    - views.view.comments_recent
+  module:
+    - views
+active_version: 0ac7a5afadbd9d8c
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:comments_recent-block_1'
+        label: 'Comentarios recientes'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Comentarios recientes'
+id: block.views_block.comments_recent-block_1
+provider: views
+source: block
+source_local_id: 'views_block:comments_recent-block_1'

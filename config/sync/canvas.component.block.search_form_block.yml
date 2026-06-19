@@ -1,0 +1,23 @@
+uuid: 70d1fa22-fcc8-4cb6-b827-725ef91ac500
+langcode: es
+status: false
+dependencies:
+  module:
+    - search
+active_version: 223b6213cc972bc9
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: search_form_block
+        label: 'Formulario de búsqueda'
+        label_display: '0'
+        provider: search
+        page_id: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Formulario de búsqueda'
+id: block.search_form_block
+provider: search
+source: block
+source_local_id: search_form_block

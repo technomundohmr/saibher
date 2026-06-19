@@ -1,0 +1,21 @@
+uuid: 9fbb1dbb-9b58-448b-9762-5953df533059
+langcode: es
+status: true
+dependencies:
+  config:
+    - canvas.component.block.block_content.3533a803-cd21-441e-87ac-bce2cd7761ea
+    - canvas.component.block.block_content.527e1259-9d3a-4bd4-8418-92f2566f04d4
+    - canvas.component.block.block_content.558b740f-6645-4b24-a873-ad809591da09
+    - canvas.component.block.block_content.67c7a32a-52a2-4c2a-95eb-9016d73cf714
+    - canvas.component.block.block_content.9154e904-3cbd-424c-8170-7ac1a45282e8
+    - canvas.component.block.block_content.9efc11a8-967a-4ded-8a55-5b2e16d077d7
+name: 'Content block'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.block_content.3533a803-cd21-441e-87ac-bce2cd7761ea
+  - block.block_content.527e1259-9d3a-4bd4-8418-92f2566f04d4
+  - block.block_content.558b740f-6645-4b24-a873-ad809591da09
+  - block.block_content.67c7a32a-52a2-4c2a-95eb-9016d73cf714
+  - block.block_content.9154e904-3cbd-424c-8170-7ac1a45282e8
+  - block.block_content.9efc11a8-967a-4ded-8a55-5b2e16d077d7

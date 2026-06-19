@@ -1,0 +1,60 @@
+{#
+/**
+ * @file teaserCard.twig
+ *
+ * Teaser card for article nodes in canv_card view mode.
+ *
+ * Variables:
+ *   - card_title: Node title.
+ *   - card_url: Relative node URL.
+ *   - card_date: Formatted date (dd/mm/yyyy).
+ *   - card_excerpt: Body summary or trimmed body.
+ *   - card_category: First taxonomy term name.
+ *   - card_image_url: Absolute image URL.
+ *   - card_image_alt: Image alt text.
+ */
+#}
+<a href="{{ card_url }}" class="teaserCard__link">
+
+<article class="teaserCard">
+
+  {% if card_image_url %}
+    <div class="teaserCard__image">
+      <img
+        class="teaserCard__img"
+        src="{{ card_image_url }}"
+        alt="{{ card_image_alt|default('') }}"
+        loading="lazy"
+      />
+    </div>
+  {% endif %}
+
+  <div class="teaserCard__body">
+
+    {% if card_category %}
+      <span class="teaserCard__category">{{ card_category }}</span>
+    {% endif %}
+
+    {% if card_title %}
+      <h3 class="teaserCard__title">{{ card_title }}</h3>
+    {% endif %}
+
+    {% if card_excerpt %}
+      <p class="teaserCard__excerpt">{{ card_excerpt }}</p>
+    {% endif %}
+
+    <div class="teaserCard__footer">
+      {% if card_date %}
+        <span class="teaserCard__meta">{{ card_date }}</span>
+      {% endif %}
+      {% if card_url %}
+        <a href="{{ card_url }}" class="teaserCard__link">
+          Leer artículo →
+        </a>
+      {% endif %}
+    </div>
+
+  </div>
+
+</article>
+</a>
