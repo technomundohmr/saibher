@@ -1,0 +1,25 @@
+uuid: a7a9374b-7e23-4e87-99f3-ecdd8b796537
+langcode: es
+status: false
+dependencies:
+  content:
+    - 'block_content:formulario_en_modal:9efc11a8-967a-4ded-8a55-5b2e16d077d7'
+  module:
+    - block_content
+active_version: 042d67b2af70dd75
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'block_content:9efc11a8-967a-4ded-8a55-5b2e16d077d7'
+        label: 'contacto por servicio'
+        label_display: '0'
+        provider: block_content
+        view_mode: full
+    fallback_metadata:
+      slot_definitions: null
+label: 'contacto por servicio'
+id: block.block_content.9efc11a8-967a-4ded-8a55-5b2e16d077d7
+provider: block_content
+source: block
+source_local_id: 'block_content:9efc11a8-967a-4ded-8a55-5b2e16d077d7'

@@ -1,0 +1,22 @@
+uuid: b9b1a7e9-c02f-4f89-aa40-5dceb0b55e8e
+langcode: es
+status: true
+dependencies:
+  module:
+    - saibher_core
+active_version: ebd36f1f30fd5046
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: SearchFormBlock
+        label: 'Bloque de búsqueda'
+        label_display: '0'
+        provider: saibher_core
+    fallback_metadata:
+      slot_definitions: null
+label: 'Bloque de búsqueda'
+id: block.SearchFormBlock
+provider: saibher_core
+source: block
+source_local_id: SearchFormBlock

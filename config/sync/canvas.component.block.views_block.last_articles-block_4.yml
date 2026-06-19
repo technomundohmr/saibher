@@ -1,0 +1,26 @@
+uuid: 0a3a7935-e93a-482e-a8a4-f94eba54f1de
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.last_articles
+  module:
+    - views
+active_version: 0cc7aac1a0c2a0b8
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:last_articles-block_4'
+        label: 'Últimas entradas: Últimas entradas por categoría  horizontal'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Últimas entradas: Últimas entradas por categoría  horizontal'
+id: block.views_block.last_articles-block_4
+provider: views
+source: block
+source_local_id: 'views_block:last_articles-block_4'

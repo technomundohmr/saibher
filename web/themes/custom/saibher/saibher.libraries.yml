@@ -5,3 +5,4 @@ global:
   css:
     theme:
       dist/css/style.css: {}
+      https://fonts.googleapis.com/icon?family=Material+Icons: { type: external, minified: true }

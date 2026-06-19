@@ -1,0 +1,15 @@
+uuid: a305f0b6-9c50-4861-94ea-ad4e01c737a4
+langcode: es
+status: true
+dependencies:
+  config:
+    - canvas.component.block.hero_banner_block
+    - canvas.component.block.three_cols_features
+    - canvas.component.block.two_cols_section_block
+name: 'saibher components'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.hero_banner_block
+  - block.three_cols_features
+  - block.two_cols_section_block

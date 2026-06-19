@@ -1,0 +1,11 @@
+uuid: 937c5393-40da-495a-849a-b63f308ab2b2
+langcode: es
+status: true
+dependencies:
+  config:
+    - canvas.component.js.featuredcard
+name: Cards
+configEntityTypeId: component
+weight: -2
+items:
+  - js.featuredcard

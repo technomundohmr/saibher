@@ -1,0 +1,11 @@
+uuid: a55d83bd-2585-460c-b96f-805199f92835
+langcode: es
+status: true
+dependencies:
+  config:
+    - canvas.component.block.SearchFormBlock
+name: 'saibher core'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.SearchFormBlock

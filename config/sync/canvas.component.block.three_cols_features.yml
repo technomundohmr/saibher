@@ -1,0 +1,22 @@
+uuid: 72cf75a7-77f5-441f-af29-50fff772cc7b
+langcode: es
+status: false
+dependencies:
+  module:
+    - saibher_components
+active_version: 8825a34578744a1b
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: three_cols_features
+        label: 'Bloque para características en 3 columnas'
+        label_display: '0'
+        provider: saibher_components
+    fallback_metadata:
+      slot_definitions: null
+label: 'Bloque para características en 3 columnas'
+id: block.three_cols_features
+provider: saibher_components
+source: block
+source_local_id: three_cols_features

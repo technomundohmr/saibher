@@ -1,0 +1,26 @@
+uuid: 7f6b52ef-6359-4351-92dd-fb016831c458
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.last_articles
+  module:
+    - views
+active_version: 9a1ad677d6bef6ae
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:last_articles-block_3'
+        label: 'Últimas entradas: ultimos proyectos'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Últimas entradas: ultimos proyectos'
+id: block.views_block.last_articles-block_3
+provider: views
+source: block
+source_local_id: 'views_block:last_articles-block_3'

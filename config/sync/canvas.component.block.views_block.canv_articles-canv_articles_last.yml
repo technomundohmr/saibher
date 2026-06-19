@@ -1,0 +1,26 @@
+uuid: 9721e000-ed5e-4b80-b53d-4212df5cf58b
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.canv_articles
+  module:
+    - views
+active_version: 9145611bc1b4d1c9
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:canv_articles-canv_articles_last'
+        label: 'Últimos 3 artículos de block'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Últimos 3 artículos de block'
+id: block.views_block.canv_articles-canv_articles_last
+provider: views
+source: block
+source_local_id: 'views_block:canv_articles-canv_articles_last'

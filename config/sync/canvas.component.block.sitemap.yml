@@ -1,0 +1,22 @@
+uuid: cf1cace0-7da1-483f-ba10-7de4faeed621
+langcode: es
+status: true
+dependencies:
+  module:
+    - sitemap
+active_version: 963eefb70b66fd1a
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: sitemap
+        label: 'Mapa del sitio'
+        label_display: '0'
+        provider: sitemap
+    fallback_metadata:
+      slot_definitions: null
+label: 'Mapa del sitio'
+id: block.sitemap
+provider: sitemap
+source: block
+source_local_id: sitemap

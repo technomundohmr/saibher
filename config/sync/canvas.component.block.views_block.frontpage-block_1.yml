@@ -1,0 +1,26 @@
+uuid: 846ab51f-0848-4497-bcec-3ed62ef4f0be
+langcode: es
+status: false
+dependencies:
+  config:
+    - views.view.frontpage
+  module:
+    - views
+active_version: 744062977437cac8
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:frontpage-block_1'
+        label: 'Página inicio: Bloque blog-portafolio'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Página inicio: Bloque blog-portafolio'
+id: block.views_block.frontpage-block_1
+provider: views
+source: block
+source_local_id: 'views_block:frontpage-block_1'

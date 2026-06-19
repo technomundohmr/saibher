@@ -1,0 +1,24 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Teaser Card
+status: stable
+description: 'Tarjeta de previsualización de artículo para el modo de visualización canv_card.'
+category: Card
+
+props:
+  type: object
+  properties:
+    card_title:
+      type: string
+    card_url:
+      type: string
+    card_date:
+      type: string
+    card_excerpt:
+      type: string
+    card_category:
+      type: string
+    card_image_url:
+      type: string
+    card_image_alt:
+      type: string

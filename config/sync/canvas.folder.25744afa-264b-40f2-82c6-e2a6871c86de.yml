@@ -1,0 +1,55 @@
+uuid: 25744afa-264b-40f2-82c6-e2a6871c86de
+langcode: es
+status: true
+dependencies:
+  config:
+    - canvas.component.block.views_block.blog_categories-block_1
+    - canvas.component.block.views_block.blog_categories-block_2
+    - canvas.component.block.views_block.canv_articles-canv_articles_last
+    - canvas.component.block.views_block.comments_recent-block_1
+    - canvas.component.block.views_block.content_recent-block_1
+    - canvas.component.block.views_block.faqs-block_1
+    - canvas.component.block.views_block.faqs-block_2
+    - canvas.component.block.views_block.faqs-block_3
+    - canvas.component.block.views_block.faqs-block_4
+    - canvas.component.block.views_block.frontpage-block_1
+    - canvas.component.block.views_block.last_articles-block_1
+    - canvas.component.block.views_block.last_articles-block_2
+    - canvas.component.block.views_block.last_articles-block_3
+    - canvas.component.block.views_block.last_articles-block_4
+    - canvas.component.block.views_block.last_articles-block_5
+    - canvas.component.block.views_block.last_articles-block_php
+    - canvas.component.block.views_block.last_articles-canvas_test
+    - canvas.component.block.views_block.last_articles-ia
+    - canvas.component.block.views_block.last_articles-negocios
+    - canvas.component.block.views_block.prompt_generator-block_1
+    - canvas.component.block.views_block.services-block_1
+    - canvas.component.block.views_block.services_promotions-block_1
+    - canvas.component.block.views_block.who_s_online-who_s_online_block
+name: 'Listas (Views)'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.views_block.blog_categories-block_1
+  - block.views_block.blog_categories-block_2
+  - block.views_block.canv_articles-canv_articles_last
+  - block.views_block.comments_recent-block_1
+  - block.views_block.content_recent-block_1
+  - block.views_block.faqs-block_1
+  - block.views_block.faqs-block_2
+  - block.views_block.faqs-block_3
+  - block.views_block.faqs-block_4
+  - block.views_block.frontpage-block_1
+  - block.views_block.last_articles-block_1
+  - block.views_block.last_articles-block_2
+  - block.views_block.last_articles-block_3
+  - block.views_block.last_articles-block_4
+  - block.views_block.last_articles-block_5
+  - block.views_block.last_articles-block_php
+  - block.views_block.last_articles-canvas_test
+  - block.views_block.last_articles-ia
+  - block.views_block.last_articles-negocios
+  - block.views_block.prompt_generator-block_1
+  - block.views_block.services-block_1
+  - block.views_block.services_promotions-block_1
+  - block.views_block.who_s_online-who_s_online_block

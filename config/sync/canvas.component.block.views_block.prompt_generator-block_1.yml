@@ -1,0 +1,26 @@
+uuid: cbad4393-ffbc-45c9-bdfd-3c72b7bacc7e
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.prompt_generator
+  module:
+    - views
+active_version: d0547ed33b5ad534
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:prompt_generator-block_1'
+        label: 'prompt generator'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'prompt generator'
+id: block.views_block.prompt_generator-block_1
+provider: views
+source: block
+source_local_id: 'views_block:prompt_generator-block_1'

@@ -1,0 +1,13 @@
+uuid: 4173bed0-942b-4174-bcd3-ef32474303eb
+langcode: es
+status: true
+dependencies:
+  config:
+    - canvas.component.js.button
+    - canvas.component.js.teasercard
+name: Other
+configEntityTypeId: component
+weight: 0
+items:
+  - js.button
+  - js.teasercard

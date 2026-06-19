@@ -122,7 +122,7 @@ css:
       font-size: clamp(15px, 1.5vw, 17px);
       font-weight: 400;
       color: #0A1A5C;
-      margin: 12px 0 0;
+      margin: auto !important;
       line-height: 1.65;
     }
 
@@ -132,5 +132,5 @@ css:
     }
   compiled: |-
     /*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */
-    .sectionHeader{width:100%}.sectionHeader--left{text-align:left}.sectionHeader--center{text-align:center}.sectionHeader--right{text-align:right}.sectionHeader__eyebrow{letter-spacing:.1em;text-transform:uppercase;color:#1242e6;margin:0 0 12px;font-size:12px;font-weight:600;line-height:1;display:inline-block}.sectionHeader__title{letter-spacing:-.02em;margin:0;font-size:clamp(28px,4vw,42px);font-weight:700;line-height:1.15}.sectionHeader--dark .sectionHeader__title{color:#0a1a5c}.sectionHeader--blue .sectionHeader__title{color:#1242e6}.sectionHeader--white .sectionHeader__title{color:#fff}.sectionHeader__subtitle{color:#0a1a5c;margin:12px 0 0;font-size:clamp(15px,1.5vw,17px);font-weight:400;line-height:1.65}.sectionHeader--center .sectionHeader__subtitle{max-width:600px;margin-inline:auto}
+    .sectionHeader{width:100%}.sectionHeader--left{text-align:left}.sectionHeader--center{text-align:center}.sectionHeader--right{text-align:right}.sectionHeader__eyebrow{letter-spacing:.1em;text-transform:uppercase;color:#1242e6;margin:0 0 12px;font-size:12px;font-weight:600;line-height:1;display:inline-block}.sectionHeader__title{letter-spacing:-.02em;margin:0;font-size:clamp(28px,4vw,42px);font-weight:700;line-height:1.15}.sectionHeader--dark .sectionHeader__title{color:#0a1a5c}.sectionHeader--blue .sectionHeader__title{color:#1242e6}.sectionHeader--white .sectionHeader__title{color:#fff}.sectionHeader__subtitle{color:#0a1a5c;font-size:clamp(15px,1.5vw,17px);font-weight:400;line-height:1.65;margin:auto!important}.sectionHeader--center .sectionHeader__subtitle{max-width:600px;margin-inline:auto}
 dataDependencies: {  }

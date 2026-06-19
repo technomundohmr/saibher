@@ -1,0 +1,292 @@
+uuid: aaa7036a-fa2c-4777-8c8d-54133e486ed6
+langcode: es
+status: true
+dependencies: {  }
+machineName: paragraph
+name: paragraph
+required: {  }
+props:
+  eyebrow:
+    type: string
+    title: eyebrow
+    examples:
+      - Antetitulo
+  eyebrowColor:
+    type: string
+    enum:
+      - green
+      - blue
+      - dark
+    'meta:enum':
+      green: green
+      blue: blue
+      dark: dark
+    title: eyebrowColor
+    examples:
+      - green
+  titleStart:
+    type: string
+    title: titleStart
+    examples:
+      - Titulo
+  titleHighlight:
+    type: string
+    title: titleHighlight
+    examples:
+      - Titulo
+  body:
+    type: string
+    contentMediaType: text/html
+    x-formatting-context: block
+    title: body
+    examples:
+      - |-
+        Bibendum magna massa suspendisse bibendum tristique dolor euismod massa cursus congue pellentesque leo nulla orci gravida pellentesque amet nec dolor elementum lorem gravida fusce ac.
+
+        A morbi nec erat sollicitudin quis euismod sollicitudin nisl tortor scelerisque erat metus maximus dolor eu portaest quisque molestie elit purus proin lorem placerat suspendisse.
+  chips:
+    type: array
+    items:
+      type: string
+    title: chips
+    examples:
+      -
+        - 'tag 1'
+        - 'tag 2'
+  chipsColor:
+    type: string
+    enum:
+      - green
+      - blue
+      - dark
+    'meta:enum':
+      green: green
+      blue: blue
+      dark: dark
+    title: chipsColor
+    examples:
+      - blue
+  linkText:
+    type: string
+    title: linkText
+    examples:
+      - 'Ver mas'
+  linkUrl:
+    type: string
+    title: linkUrl
+    examples:
+      - '#'
+  linkTarget:
+    type: string
+    enum:
+      - _self
+      - _blank
+    'meta:enum':
+      _self: _self
+      _blank: _blank
+    title: linkTarget
+    examples:
+      - _self
+slots: {  }
+js:
+  original: |-
+    const Component = ({
+      eyebrow,
+      eyebrowColor,
+      titleStart,
+      titleHighlight,
+      titleHighlightColor = 'blue',
+      body = 'aaaa',
+      chips,
+      chipsColor,
+      linkText = '',
+      linkUrl = '#',
+      linkTarget = '_self',
+    }) => {
+      const chipList = chips ? chips.map(c => c.trim()).filter(Boolean) : [];
+
+      return (
+        <div className="richText">
+          
+          {eyebrow && (
+            <span className={`richText__eyebrow richText__eyebrow--${eyebrowColor}`}>
+              {eyebrow}
+            </span>
+          )}
+
+          {(titleStart || titleHighlight) && (
+            <h2 className="richText__title">
+              {titleStart && <span className="richText__titleStart">{titleStart} </span>}
+              {titleHighlight && (
+                <span className={`richText__titleHighlight richText__titleHighlight--${titleHighlightColor}`}>
+                  {titleHighlight}
+                </span>
+              )}
+            </h2>
+          )}
+
+          {body && <p className="richText__body">{parce(body)}</p>}
+
+          {chipList.length > 0 && (
+            <div className="richText__chips">
+              {chipList.map((chip, i) => (
+                <span key={i} className={`richText__chip richText__chip--${chipsColor}`}>
+                  {chip}
+                </span>
+              ))}
+            </div>
+          )}
+
+          {linkText && (
+            <a
+              href={linkUrl}
+              target={linkTarget}
+              rel={linkTarget === '_blank' ? 'noopener noreferrer' : undefined}
+              className="richText__link"
+            >
+              {linkText} →
+            </a>
+          )}
+
+        </div>
+      );
+    };
+
+    export default Component;
+  compiled: |
+    import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+    const Component = ({ eyebrow, eyebrowColor, titleStart, titleHighlight, titleHighlightColor = 'blue', body = 'aaaa', chips, chipsColor, linkText = '', linkUrl = '#', linkTarget = '_self' })=>{
+        const chipList = chips ? chips.map((c)=>c.trim()).filter(Boolean) : [];
+        return /*#__PURE__*/ _jsxs("div", {
+            className: "richText",
+            children: [
+                eyebrow && /*#__PURE__*/ _jsx("span", {
+                    className: `richText__eyebrow richText__eyebrow--${eyebrowColor}`,
+                    children: eyebrow
+                }),
+                (titleStart || titleHighlight) && /*#__PURE__*/ _jsxs("h2", {
+                    className: "richText__title",
+                    children: [
+                        titleStart && /*#__PURE__*/ _jsxs("span", {
+                            className: "richText__titleStart",
+                            children: [
+                                titleStart,
+                                " "
+                            ]
+                        }),
+                        titleHighlight && /*#__PURE__*/ _jsx("span", {
+                            className: `richText__titleHighlight richText__titleHighlight--${titleHighlightColor}`,
+                            children: titleHighlight
+                        })
+                    ]
+                }),
+                body && /*#__PURE__*/ _jsx("p", {
+                    className: "richText__body",
+                    children: parce(body)
+                }),
+                chipList.length > 0 && /*#__PURE__*/ _jsx("div", {
+                    className: "richText__chips",
+                    children: chipList.map((chip, i)=>/*#__PURE__*/ _jsx("span", {
+                            className: `richText__chip richText__chip--${chipsColor}`,
+                            children: chip
+                        }, i))
+                }),
+                linkText && /*#__PURE__*/ _jsxs("a", {
+                    href: linkUrl,
+                    target: linkTarget,
+                    rel: linkTarget === '_blank' ? 'noopener noreferrer' : undefined,
+                    className: "richText__link",
+                    children: [
+                        linkText,
+                        " →"
+                    ]
+                })
+            ]
+        });
+    };
+    export default Component;
+css:
+  original: |-
+    .richText {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+    }
+
+    /* Eyebrow */
+    .richText__eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      width: fit-content;
+    }
+
+    .richText__eyebrow--green {color: #4A8A00; }
+    .richText__eyebrow--blue  {color: #1242E6; }
+    .richText__eyebrow--dark  {color: #0A1A5C; }
+
+    /* Título */
+    .richText__title {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      color: #0A1A5C;
+      margin: 0;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .richText__titleStart {
+      color: #0A1A5C;
+    }
+
+    .richText__titleHighlight--blue  { color: #1242E6; }
+    .richText__titleHighlight--green { color: #83E612; }
+    .richText__titleHighlight--dark  { color: #0A1A5C; }
+
+    /* Body */
+    .richText__body {
+      font-size: clamp(15px, 1.5vw, 17px);
+      color: #2D3A6B;
+      margin: 0;
+      line-height: 1.75;
+    }
+
+    /* Chips */
+    .richText__chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .richText__chip {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: 100px;
+      border: 1px solid transparent;
+    }
+
+    .richText__chip--blue  { background: #F4F6FF; color: #1242E6; border-color: #C5CFFA; }
+    .richText__chip--green { background: #e8f9d0; color: #4A8A00; border-color: #b8f07a; }
+    .richText__chip--dark  { background: #F4F6FF; color: #0A1A5C; border-color: #D0D7F5; }
+
+    /* Link */
+    .richText__link {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1242E6;
+      text-decoration: none;
+      width: fit-content;
+      transition: color 0.2s ease;
+    }
+
+    .richText__link:hover {
+      color: #052699;
+    }
+  compiled: |-
+    /*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */
+    .richText{flex-direction:column;gap:16px;width:100%;display:flex}.richText__eyebrow{letter-spacing:.08em;text-transform:uppercase;width:fit-content;font-size:12px;font-weight:600;display:inline-block}.richText__eyebrow--green{color:#4a8a00}.richText__eyebrow--blue{color:#1242e6}.richText__eyebrow--dark{color:#0a1a5c}.richText__title{color:#0a1a5c;letter-spacing:-.02em;margin:0;font-size:clamp(28px,4vw,42px);font-weight:700;line-height:1.15}.richText__titleStart{color:#0a1a5c}.richText__titleHighlight--blue{color:#1242e6}.richText__titleHighlight--green{color:#83e612}.richText__titleHighlight--dark{color:#0a1a5c}.richText__body{color:#2d3a6b;margin:0;font-size:clamp(15px,1.5vw,17px);line-height:1.75}.richText__chips{flex-wrap:wrap;gap:8px;display:flex}.richText__chip{border:1px solid #0000;border-radius:100px;padding:6px 14px;font-size:13px;font-weight:500}.richText__chip--blue{color:#1242e6;background:#f4f6ff;border-color:#c5cffa}.richText__chip--green{color:#4a8a00;background:#e8f9d0;border-color:#b8f07a}.richText__chip--dark{color:#0a1a5c;background:#f4f6ff;border-color:#d0d7f5}.richText__link{color:#1242e6;width:fit-content;font-size:15px;font-weight:700;text-decoration:none;transition:color .2s}.richText__link:hover{color:#052699}
+dataDependencies: {  }

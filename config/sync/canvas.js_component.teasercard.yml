@@ -1,0 +1,305 @@
+uuid: ed3f3630-5899-4c13-8ef4-7d85ba8ca594
+langcode: es
+status: true
+dependencies: {  }
+machineName: teasercard
+name: teaserCard
+required:
+  - category
+  - image
+  - title
+  - excerpt
+  - date
+  - linkUrl
+props:
+  image:
+    type: object
+    $ref: 'json-schema-definitions://canvas.module/image'
+    title: image
+    examples:
+      -
+        src: 'https://placehold.co/800x600@2x.png?alternateWidths=https%3A%2F%2Fplacehold.co%2F%7Bwidth%7Dx%7Bheight%7D%402x.png'
+        alt: 'Example image placeholder'
+        width: 800
+        height: 600
+  category:
+    type: string
+    title: category
+    examples:
+      - 'Example text'
+  title:
+    type: string
+    title: title
+    examples:
+      - 'Example text'
+  excerpt:
+    type: string
+    contentMediaType: text/html
+    x-formatting-context: block
+    title: excerpt
+    examples:
+      - |-
+        Nulla dolor vivamus elit erat nisi nec urna aliquam condimentum congue consectetur facilisis phasellus lorem eget tortor ex ut arcu urna gravida lacus urna nec.
+
+        Nisi magna fusce portaest urna tincidunt bibendum arcu euismod ac bibendum hendrerit ex vel consectetur proin aliquam condimentum quis nunc phasellus aliquam nisi quam vivamus.
+  date:
+    type: string
+    format: date
+    title: date
+    examples:
+      - '2026-01-25'
+  linkUrl:
+    type: string
+    title: linkUrl
+    examples:
+      - '#'
+  linkText:
+    type: string
+    title: linkText
+    examples:
+      - 'Leer artículo'
+  linkTarget:
+    type: string
+    enum:
+      - _self
+      - _target
+    'meta:enum':
+      _self: _self
+      _target: _target
+    title: linkTarget
+    examples:
+      - _self
+slots: {  }
+js:
+  original: |-
+    const Component = ({
+      image = null,
+      category = '',
+      title = '',
+      excerpt = '',
+      date = '',
+      readTime = '',
+      linkUrl = '#',
+      linkText = '',
+      linkTarget = '_self',
+    }) => {
+      return (
+        <div className="teaserCard">
+
+          {image && image.src && (
+            <div className="teaserCard__image">
+              <img
+                src={image.src}
+                alt={image.alt || title}
+                className="teaserCard__img"
+                width={image.width}
+                height={image.height}
+              />
+            </div>
+          )}
+
+          <div className="teaserCard__body">
+
+            {category && (
+              <span className="teaserCard__category">{category}</span>
+            )}
+
+            {title && (
+              <h3 className="teaserCard__title">{title}</h3>
+            )}
+
+            {excerpt && (
+              <p className="teaserCard__excerpt">{excerpt}</p>
+            )}
+
+            <div className="teaserCard__footer">
+              <span className="teaserCard__meta">
+                {date}{date && readTime && ' · '}{readTime}
+              </span>
+             <a 
+                href={linkUrl}
+                target={linkTarget}
+                rel={linkTarget === '_blank' ? 'noopener noreferrer' : undefined}
+                className="teaserCard__link"
+              >
+                {linkText} →
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      );
+    };
+
+    export default Component;
+  compiled: |
+    import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+    const Component = ({ image = null, category = '', title = '', excerpt = '', date = '', readTime = '', linkUrl = '#', linkText = '', linkTarget = '_self' })=>{
+        return /*#__PURE__*/ _jsxs("div", {
+            className: "teaserCard",
+            children: [
+                image && image.src && /*#__PURE__*/ _jsx("div", {
+                    className: "teaserCard__image",
+                    children: /*#__PURE__*/ _jsx("img", {
+                        src: image.src,
+                        alt: image.alt || title,
+                        className: "teaserCard__img",
+                        width: image.width,
+                        height: image.height
+                    })
+                }),
+                /*#__PURE__*/ _jsxs("div", {
+                    className: "teaserCard__body",
+                    children: [
+                        category && /*#__PURE__*/ _jsx("span", {
+                            className: "teaserCard__category",
+                            children: category
+                        }),
+                        title && /*#__PURE__*/ _jsx("h3", {
+                            className: "teaserCard__title",
+                            children: title
+                        }),
+                        excerpt && /*#__PURE__*/ _jsx("p", {
+                            className: "teaserCard__excerpt",
+                            children: excerpt
+                        }),
+                        /*#__PURE__*/ _jsxs("div", {
+                            className: "teaserCard__footer",
+                            children: [
+                                /*#__PURE__*/ _jsxs("span", {
+                                    className: "teaserCard__meta",
+                                    children: [
+                                        date,
+                                        date && readTime && ' · ',
+                                        readTime
+                                    ]
+                                }),
+                                /*#__PURE__*/ _jsxs("a", {
+                                    href: linkUrl,
+                                    target: linkTarget,
+                                    rel: linkTarget === '_blank' ? 'noopener noreferrer' : undefined,
+                                    className: "teaserCard__link",
+                                    children: [
+                                        linkText,
+                                        " →"
+                                    ]
+                                })
+                            ]
+                        })
+                    ]
+                })
+            ]
+        });
+    };
+    export default Component;
+css:
+  original: |-
+    .teaserCard {
+      background: #FFFFFF;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(18, 66, 230, 0.08);
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .teaserCard:hover {
+      box-shadow: 0 8px 32px rgba(18, 66, 230, 0.15);
+      transform: translateY(-3px);
+    }
+
+    .teaserCard__image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+
+    .teaserCard__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .teaserCard:hover .teaserCard__img {
+      transform: scale(1.04);
+    }
+
+    .teaserCard__body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .teaserCard__category {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #4A8A00;
+      background: #e8f9d0;
+      padding: 3px 10px;
+      border-radius: 100px;
+      width: fit-content;
+    }
+
+    .teaserCard__title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #0A1A5C;
+      margin: 0;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .teaserCard__excerpt {
+      font-size: 14px;
+      color: #2D3A6B;
+      margin: 0;
+      line-height: 1.65;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .teaserCard__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: 8px;
+    }
+
+    .teaserCard__meta {
+      font-size: 13px;
+      color: #8896BB;
+    }
+
+    .teaserCard__link {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1242E6;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .teaserCard__link:hover {
+      color: #052699;
+    }
+  compiled: |-
+    /*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */
+    .teaserCard{background:#fff;border-radius:12px;flex-direction:column;width:100%;transition:box-shadow .2s,transform .2s;display:flex;overflow:hidden;box-shadow:0 2px 8px #1242e614}.teaserCard:hover{transform:translateY(-3px);box-shadow:0 8px 32px #1242e626}.teaserCard__image{aspect-ratio:16/9;width:100%;overflow:hidden}.teaserCard__img{object-fit:cover;object-position:center;width:100%;height:100%;transition:transform .3s;display:block}.teaserCard:hover .teaserCard__img{transform:scale(1.04)}.teaserCard__body{flex-direction:column;flex:1;gap:10px;padding:20px;display:flex}.teaserCard__category{letter-spacing:.08em;text-transform:uppercase;color:#4a8a00;background:#e8f9d0;border-radius:100px;width:fit-content;padding:3px 10px;font-size:11px;font-weight:700;display:inline-block}.teaserCard__title{color:#0a1a5c;-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:0;font-size:17px;font-weight:700;line-height:1.4;display:-webkit-box;overflow:hidden}.teaserCard__excerpt{color:#2d3a6b;-webkit-line-clamp:2;-webkit-box-orient:vertical;margin:0;font-size:14px;line-height:1.65;display:-webkit-box;overflow:hidden}.teaserCard__footer{justify-content:space-between;align-items:center;margin-top:auto;padding-top:8px;display:flex}.teaserCard__meta{color:#8896bb;font-size:13px}.teaserCard__link{color:#1242e6;white-space:nowrap;font-size:13px;font-weight:700;text-decoration:none;transition:color .2s}.teaserCard__link:hover{color:#052699}
+dataDependencies: {  }

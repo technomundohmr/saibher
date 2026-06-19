@@ -1,0 +1,13 @@
+uuid: 279f1438-ebea-480b-9519-ef03970e7681
+langcode: es
+status: true
+dependencies:
+  config:
+    - canvas.component.block.search_form_block
+    - canvas.component.block.user_login_block
+name: Formularios
+configEntityTypeId: component
+weight: 0
+items:
+  - block.search_form_block
+  - block.user_login_block

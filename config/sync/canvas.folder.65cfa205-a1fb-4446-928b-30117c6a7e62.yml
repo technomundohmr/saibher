@@ -1,0 +1,11 @@
+uuid: 65cfa205-a1fb-4446-928b-30117c6a7e62
+langcode: es
+status: true
+dependencies:
+  config:
+    - canvas.component.block.PasswordGenerateBlock
+name: 'saibher password manager'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.PasswordGenerateBlock

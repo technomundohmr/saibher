@@ -1,0 +1,26 @@
+uuid: 0576ab95-04c8-4d3c-9b10-2352084deb65
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.last_articles
+  module:
+    - views
+active_version: 5f0806ad3003a9fd
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:last_articles-negocios'
+        label: 'bloque por categoria'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'bloque por categoria'
+id: block.views_block.last_articles-negocios
+provider: views
+source: block
+source_local_id: 'views_block:last_articles-negocios'

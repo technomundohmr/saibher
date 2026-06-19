@@ -1,0 +1,22 @@
+uuid: 9811df4b-a1cc-469e-8ce8-f1d0332bbea3
+langcode: es
+status: false
+dependencies:
+  module:
+    - user
+active_version: 686e1381378bbac6
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: user_login_block
+        label: 'Inicio de sesión'
+        label_display: '0'
+        provider: user
+    fallback_metadata:
+      slot_definitions: null
+label: 'Inicio de sesión'
+id: block.user_login_block
+provider: user
+source: block
+source_local_id: user_login_block

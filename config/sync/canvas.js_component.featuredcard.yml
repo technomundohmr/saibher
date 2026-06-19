@@ -1,0 +1,190 @@
+uuid: 14cd1965-3abf-4f20-b14c-227876edfd4d
+langcode: es
+status: true
+dependencies: {  }
+machineName: featuredcard
+name: featuredCard
+required:
+  - icon
+  - title
+  - linkText
+  - linkUrl
+props:
+  icon:
+    type: string
+    title: icon
+    examples:
+      - monitor
+  title:
+    type: string
+    title: title
+    examples:
+      - 'Título del servicio'
+  description:
+    type: string
+    title: description
+  linkText:
+    type: string
+    title: link_text
+    examples:
+      - 'click aquí'
+  linkUrl:
+    type: string
+    title: link_url
+    examples:
+      - '#'
+  target:
+    type: string
+    enum:
+      - _self
+      - _blank
+    'meta:enum':
+      _self: _self
+      _blank: _blank
+    title: target
+    examples:
+      - _self
+slots: {  }
+js:
+  original: |-
+    const Component = ({
+      icon = 'monitor',
+      title = 'Título del servicio',
+      description = 'Magna varius varius commodo euismod facilisis felis nisl consectetur condimentum ipsum accumsan tristique quisque a ut ac nunc morbi vivamus ut ut cursus adipiscing felis.',
+      link_text = 'click aquí',
+      link_url = '#',
+      target,
+    }) => {
+      return (
+        <div className="featureCard">
+          <div className="featureCard__iconWrapper">
+            <span className="material-icons featureCard__icon">{icon}</span>
+          </div>
+          <h3 className="featureCard__title">{title}</h3>
+          {description && <p className="featureCard__description">{description}</p>}
+          {link_text && (
+            <a href={link_url} target={target} className="featureCard__link">
+              {link_text} →
+            </a>
+          )}
+        </div>
+      );
+    };
+
+    export default Component;
+  compiled: |
+    import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+    const Component = ({ icon = 'monitor', title = 'Título del servicio', description = 'Magna varius varius commodo euismod facilisis felis nisl consectetur condimentum ipsum accumsan tristique quisque a ut ac nunc morbi vivamus ut ut cursus adipiscing felis.', link_text = 'click aquí', link_url = '#', target })=>{
+        return /*#__PURE__*/ _jsxs("div", {
+            className: "featureCard",
+            children: [
+                /*#__PURE__*/ _jsx("div", {
+                    className: "featureCard__iconWrapper",
+                    children: /*#__PURE__*/ _jsx("span", {
+                        className: "material-icons featureCard__icon",
+                        children: icon
+                    })
+                }),
+                /*#__PURE__*/ _jsx("h3", {
+                    className: "featureCard__title",
+                    children: title
+                }),
+                description && /*#__PURE__*/ _jsx("p", {
+                    className: "featureCard__description",
+                    children: description
+                }),
+                link_text && /*#__PURE__*/ _jsxs("a", {
+                    href: link_url,
+                    target: target,
+                    className: "featureCard__link",
+                    children: [
+                        link_text,
+                        " →"
+                    ]
+                })
+            ]
+        });
+    };
+    export default Component;
+css:
+  original: |-
+    .featureCard {
+      background: #FFFFFF;
+      border: 2px solid transparent;
+      border-radius: 12px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      box-shadow: 0 2px 8px rgba(18, 66, 230, 0.08);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+
+    .featureCard:hover {
+      border-color: var(--dark_blue);
+      box-shadow: 0 8px 32px rgba(18, 66, 230, 0.18);
+    }
+
+    /* Icon Wrapper */
+    .featureCard__iconWrapper {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      background: #C5CFFA;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease;
+    }
+
+    .featureCard:hover .featureCard__iconWrapper {
+      background: var(--dark_blue);
+    }
+
+    /* Icon */
+    .featureCard__icon {
+      font-size: 28px;
+      color: var(--dark_blue);
+      transition: color 0.2s ease;
+    }
+
+    .featureCard:hover .featureCard__icon {
+      color: #FFFFFF;
+    }
+
+    /* Title */
+    .featureCard__title {
+      font-size: 19px;
+      font-weight: 700;
+      color: #0A1A5C;
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    /* Description */
+    .featureCard__description {
+      font-size: 15px;
+      color: #2D3A6B;
+      margin: 0;
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    /* Link */
+    .featureCard__link {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--dark_blue);
+      text-decoration: none;
+      margin-top: 4px;
+      transition: color 0.2s ease;
+    }
+
+    .featureCard__link:hover {
+      color: #052699;
+    }
+  compiled: |-
+    /*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */
+    .featureCard{cursor:pointer;background:#fff;border:2px solid #0000;border-radius:12px;flex-direction:column;gap:16px;padding:32px 28px;transition:border-color .2s,box-shadow .2s;display:flex;box-shadow:0 2px 8px #1242e614}.featureCard:hover{border-color:var(--dark_blue);box-shadow:0 8px 32px #1242e62e}.featureCard__iconWrapper{background:#c5cffa;border-radius:12px;justify-content:center;align-items:center;width:56px;height:56px;transition:background .2s;display:flex}.featureCard:hover .featureCard__iconWrapper{background:var(--dark_blue)}.featureCard__icon{color:var(--dark_blue);font-size:28px;transition:color .2s}.featureCard:hover .featureCard__icon{color:#fff}.featureCard__title{color:#0a1a5c;margin:0;font-size:19px;font-weight:700;line-height:1.3}.featureCard__description{color:#2d3a6b;flex:1;margin:0;font-size:15px;line-height:1.65}.featureCard__link{color:var(--dark_blue);margin-top:4px;font-size:14px;font-weight:700;text-decoration:none;transition:color .2s}.featureCard__link:hover{color:#052699}
+dataDependencies: {  }

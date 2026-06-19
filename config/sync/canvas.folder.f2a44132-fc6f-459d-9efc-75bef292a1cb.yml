@@ -1,0 +1,11 @@
+uuid: f2a44132-fc6f-459d-9efc-75bef292a1cb
+langcode: es
+status: true
+dependencies:
+  config:
+    - canvas.component.js.imagen
+name: Media
+configEntityTypeId: component
+weight: 0
+items:
+  - js.imagen

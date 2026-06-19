@@ -1,0 +1,26 @@
+uuid: 7861c98f-f8a5-457e-828d-572668c7f747
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.services
+  module:
+    - views
+active_version: b17ea6d1ec1a9d07
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:services-block_1'
+        label: Servicios
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: Servicios
+id: block.views_block.services-block_1
+provider: views
+source: block
+source_local_id: 'views_block:services-block_1'

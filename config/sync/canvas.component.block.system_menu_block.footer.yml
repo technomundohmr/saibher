@@ -1,0 +1,27 @@
+uuid: ad880c26-ef7e-4cff-9cd9-99255457edf3
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+active_version: 421b68a7c820f5c1
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'system_menu_block:footer'
+        label: 'Pie de página'
+        label_display: '0'
+        provider: system
+        level: 1
+        depth: null
+        expand_all_items: false
+    fallback_metadata:
+      slot_definitions: null
+label: 'Pie de página'
+id: block.system_menu_block.footer
+provider: system
+source: block
+source_local_id: 'system_menu_block:footer'
