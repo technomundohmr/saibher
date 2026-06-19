@@ -29,6 +29,7 @@ module:
   commerce_product: 0
   commerce_store: 0
   config: 0
+  config_ignore: 0
   contact: 0
   content_entity_example: 0
   contextual: 0

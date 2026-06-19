@@ -96,4 +96,4 @@
 # Ignore .env files as they are personal
 /.env
 
-/config/sync/key.key.* 
+/config/sync/key*
