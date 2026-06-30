@@ -4,7 +4,8 @@ status: true
 dependencies: {  }
 machineName: paragraph
 name: paragraph
-required: {  }
+required:
+  - body
 props:
   eyebrow:
     type: string
@@ -41,9 +42,9 @@ props:
     title: body
     examples:
       - |-
-        Bibendum magna massa suspendisse bibendum tristique dolor euismod massa cursus congue pellentesque leo nulla orci gravida pellentesque amet nec dolor elementum lorem gravida fusce ac.
-
-        A morbi nec erat sollicitudin quis euismod sollicitudin nisl tortor scelerisque erat metus maximus dolor eu portaest quisque molestie elit purus proin lorem placerat suspendisse.
+        <p>Bibendum magna massa suspendisse bibendum tristique dolor euismod massa cursus congue pellentesque leo nulla orci gravida pellentesque amet nec dolor elementum lorem gravida fusce ac.
+        </p>
+        A morbi nec erat sollicitudin quis euismod sollicitudin nisl tortor scelerisque erat metus maximus dolor eu portaest quisque molestie elit purus proin lorem placerat suspendisse. <strong>text</strong
   chips:
     type: array
     items:
@@ -107,13 +108,11 @@ js:
 
       return (
         <div className="richText">
-          
           {eyebrow && (
             <span className={`richText__eyebrow richText__eyebrow--${eyebrowColor}`}>
               {eyebrow}
             </span>
           )}
-
           {(titleStart || titleHighlight) && (
             <h2 className="richText__title">
               {titleStart && <span className="richText__titleStart">{titleStart} </span>}
@@ -124,9 +123,12 @@ js:
               )}
             </h2>
           )}
-
-          {body && <p className="richText__body">{parce(body)}</p>}
-
+          {body && (
+            <p
+              className="richText__body"
+              dangerouslySetInnerHTML={{ __html: body }}
+            />
+          )}
           {chipList.length > 0 && (
             <div className="richText__chips">
               {chipList.map((chip, i) => (
@@ -136,7 +138,6 @@ js:
               ))}
             </div>
           )}
-
           {linkText && (
             <a
               href={linkUrl}
@@ -147,7 +148,6 @@ js:
               {linkText} →
             </a>
           )}
-
         </div>
       );
     };
@@ -182,7 +182,9 @@ js:
                 }),
                 body && /*#__PURE__*/ _jsx("p", {
                     className: "richText__body",
-                    children: parce(body)
+                    dangerouslySetInnerHTML: {
+                        __html: body
+                    }
                 }),
                 chipList.length > 0 && /*#__PURE__*/ _jsx("div", {
                     className: "richText__chips",

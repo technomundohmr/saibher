@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - canvas.component.js.button
+    - canvas.component.js.pricingcard
     - canvas.component.js.teasercard
 name: Other
 configEntityTypeId: component
 weight: 0
 items:
   - js.button
+  - js.pricingcard
   - js.teasercard

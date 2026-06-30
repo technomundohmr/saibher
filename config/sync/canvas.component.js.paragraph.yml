@@ -8,9 +8,243 @@ dependencies:
   module:
     - options
     - text
-active_version: 7966d09d434650c7
+active_version: d9d400f2b2c74eb6
 versioned_properties:
   active:
+    settings:
+      prop_field_definitions:
+        eyebrow:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Antetitulo
+          expression: ℹ︎string␟value
+        eyebrowColor:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: green
+          expression: ℹ︎list_string␟value
+        titleStart:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Titulo
+          expression: ℹ︎string␟value
+        titleHighlight:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Titulo
+          expression: ℹ︎string␟value
+        body:
+          required: true
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: |-
+                <p>Bibendum magna massa suspendisse bibendum tristique dolor euismod massa cursus congue pellentesque leo nulla orci gravida pellentesque amet nec dolor elementum lorem gravida fusce ac.
+                </p>
+                A morbi nec erat sollicitudin quis euismod sollicitudin nisl tortor scelerisque erat metus maximus dolor eu portaest quisque molestie elit purus proin lorem placerat suspendisse. <strong>text</strong
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+        chips:
+          required: false
+          field_type: string
+          cardinality: -1
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'tag 1'
+            -
+              value: 'tag 2'
+          expression: ℹ︎string␟value
+        chipsColor:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: blue
+          expression: ℹ︎list_string␟value
+        linkText:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Ver mas'
+          expression: ℹ︎string␟value
+        linkUrl:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '#'
+          expression: ℹ︎string␟value
+        linkTarget:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: _self
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+  3d9b6bceafb90d58:
+    settings:
+      prop_field_definitions:
+        eyebrow:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Antetitulo
+          expression: ℹ︎string␟value
+        eyebrowColor:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: green
+          expression: ℹ︎list_string␟value
+        titleStart:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Titulo
+          expression: ℹ︎string␟value
+        titleHighlight:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Titulo
+          expression: ℹ︎string␟value
+        body:
+          required: true
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: |-
+                Bibendum magna massa suspendisse bibendum tristique dolor euismod massa cursus congue pellentesque leo nulla orci gravida pellentesque amet nec dolor elementum lorem gravida fusce ac.
+
+                A morbi nec erat sollicitudin quis euismod sollicitudin nisl tortor scelerisque erat metus maximus dolor eu portaest quisque molestie elit purus proin lorem placerat suspendisse.
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+        chips:
+          required: false
+          field_type: string
+          cardinality: -1
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'tag 1'
+            -
+              value: 'tag 2'
+          expression: ℹ︎string␟value
+        chipsColor:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: blue
+          expression: ℹ︎list_string␟value
+        linkText:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Ver mas'
+          expression: ℹ︎string␟value
+        linkUrl:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '#'
+          expression: ℹ︎string␟value
+        linkTarget:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: _self
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+  7966d09d434650c7:
     settings:
       prop_field_definitions:
         eyebrow:

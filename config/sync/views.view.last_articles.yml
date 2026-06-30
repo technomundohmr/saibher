@@ -3,7 +3,7 @@ langcode: es
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.canv_card
     - node.type.article
     - node.type.proyects
     - taxonomy.vocabulary.article_category
@@ -235,7 +235,8 @@ display:
       row:
         type: 'entity:node'
         options:
-          view_mode: teaser
+          relationship: none
+          view_mode: canv_card
       query:
         type: views_query
         options:
@@ -260,7 +261,7 @@ display:
       tags: {  }
   block_1:
     id: block_1
-    display_title: Block
+    display_title: 'Últimos 3 artículos de block'
     display_plugin: block
     position: 1
     display_options:
@@ -301,11 +302,12 @@ display:
         filters: false
         filter_groups: false
       css_class: bg-white
+      display_description: ''
       display_extenders:
         metatag_display_extender:
           metatags: {  }
           tokenize: false
-      block_description: nAME
+      block_description: 'Últimos 3 artículos de block'
       allow:
         items_per_page: true
     cache_metadata:

@@ -6,9 +6,20 @@ dependencies:
     - views.view.last_articles
   module:
     - views
-active_version: ab1305996cd8e175
+active_version: 6dda8b4be255b309
 versioned_properties:
   active:
+    settings:
+      default_settings:
+        id: 'views_block:last_articles-block_1'
+        label: 'Últimos 3 artículos de block'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+  ab1305996cd8e175:
     settings:
       default_settings:
         id: 'views_block:last_articles-block_1'
@@ -19,7 +30,7 @@ versioned_properties:
         items_per_page: null
     fallback_metadata:
       slot_definitions: null
-label: nAME
+label: 'Últimos 3 artículos de block'
 id: block.views_block.last_articles-block_1
 provider: views
 source: block

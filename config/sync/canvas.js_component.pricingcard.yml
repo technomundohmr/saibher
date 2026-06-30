@@ -1,0 +1,306 @@
+uuid: e87b1935-83ca-4077-bca5-1f0dfad50330
+langcode: es
+status: true
+dependencies: {  }
+machineName: pricingcard
+name: pricingCard
+required: {  }
+props:
+  title:
+    type: string
+    title: title
+    examples:
+      - 'Sitio web'
+  description:
+    type: string
+    title: description
+    examples:
+      - 'Tu negocio online'
+  price:
+    type: string
+    title: price
+    examples:
+      - 'Desde $1.200.000'
+  itemList:
+    type: array
+    items:
+      type: string
+    title: itemList
+    examples:
+      -
+        - ' Diseño a medida'
+        - ' Responsive y rápido'
+        - ' SEO base incluido'
+        - ' 1 mes de soporte'
+  buttonText:
+    type: string
+    title: buttonText
+    examples:
+      - Cotizar
+  buttonUrl:
+    type: string
+    title: buttonUrl
+    examples:
+      - '#'
+  buttonTarget:
+    type: string
+    enum:
+      - _self
+      - _blank
+    'meta:enum':
+      _self: _self
+      _blank: _blank
+    title: buttonTarget
+    examples:
+      - _self
+  featured:
+    type: boolean
+    title: featured
+    examples:
+      - false
+slots: {  }
+js:
+  original: |-
+    const Component = ({
+      title = '',
+      description = '',
+      price = '',
+      previousPrice = '',
+      itemList = [],
+      featured = false,
+      featuredLabel = 'Más solicitado',
+      buttonText = '',
+      buttonUrl = '#',
+      buttonTarget = '_self',
+    }) => {
+
+      return (
+        <div className={`pricingCard ${featured ? 'pricingCard--featured' : ''}`}>
+
+          {featured && featuredLabel && (
+            <span className="pricingCard__badge">{featuredLabel}</span>
+          )}
+
+          <div className="pricingCard__header">
+            {title && <h3 className="pricingCard__title">{title}</h3>}
+            {description && <p className="pricingCard__description">{description}</p>}
+          </div>
+
+          <div className="pricingCard__pricing">
+            {previousPrice && (
+              <span className="pricingCard__previousPrice">{previousPrice}</span>
+            )}
+            {price && <p className="pricingCard__price">{price}</p>}
+          </div>
+
+          {itemList.length > 0 && (
+            <ul className="pricingCard__items">
+              {itemList.map((item, i) => (
+                <li key={i} className="pricingCard__item">
+                  <span className="pricingCard__itemIcon">✓</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {buttonText && (
+            <a
+              href={buttonUrl}
+              target={buttonTarget}
+              rel={buttonTarget === '_blank' ? 'noopener noreferrer' : undefined}
+              className="pricingCard__btn"
+            >
+              {buttonText}
+            </a>
+          )}
+
+        </div>
+      );
+    };
+
+    export default Component;
+  compiled: |
+    import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+    const Component = ({ title = '', description = '', price = '', previousPrice = '', itemList = [], featured = false, featuredLabel = 'Más solicitado', buttonText = '', buttonUrl = '#', buttonTarget = '_self' })=>{
+        return /*#__PURE__*/ _jsxs("div", {
+            className: `pricingCard ${featured ? 'pricingCard--featured' : ''}`,
+            children: [
+                featured && featuredLabel && /*#__PURE__*/ _jsx("span", {
+                    className: "pricingCard__badge",
+                    children: featuredLabel
+                }),
+                /*#__PURE__*/ _jsxs("div", {
+                    className: "pricingCard__header",
+                    children: [
+                        title && /*#__PURE__*/ _jsx("h3", {
+                            className: "pricingCard__title",
+                            children: title
+                        }),
+                        description && /*#__PURE__*/ _jsx("p", {
+                            className: "pricingCard__description",
+                            children: description
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ _jsxs("div", {
+                    className: "pricingCard__pricing",
+                    children: [
+                        previousPrice && /*#__PURE__*/ _jsx("span", {
+                            className: "pricingCard__previousPrice",
+                            children: previousPrice
+                        }),
+                        price && /*#__PURE__*/ _jsx("p", {
+                            className: "pricingCard__price",
+                            children: price
+                        })
+                    ]
+                }),
+                itemList.length > 0 && /*#__PURE__*/ _jsx("ul", {
+                    className: "pricingCard__items",
+                    children: itemList.map((item, i)=>/*#__PURE__*/ _jsxs("li", {
+                            className: "pricingCard__item",
+                            children: [
+                                /*#__PURE__*/ _jsx("span", {
+                                    className: "pricingCard__itemIcon",
+                                    children: "✓"
+                                }),
+                                item
+                            ]
+                        }, i))
+                }),
+                buttonText && /*#__PURE__*/ _jsx("a", {
+                    href: buttonUrl,
+                    target: buttonTarget,
+                    rel: buttonTarget === '_blank' ? 'noopener noreferrer' : undefined,
+                    className: "pricingCard__btn",
+                    children: buttonText
+                })
+            ]
+        });
+    };
+    export default Component;
+css:
+  original: |-
+    .pricingCard {
+      position: relative;
+      background: #FFFFFF;
+      border: 2px solid #e8ecf8;
+      border-radius: 12px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+
+    /* Hover — activa diseño destacado */
+    .pricingCard:hover,
+    .pricingCard--featured {
+      border-color: #1242E6;
+      box-shadow: 0 8px 32px rgba(18, 66, 230, 0.18);
+    }
+
+    /* Badge */
+    .pricingCard__badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #83E612;
+      color: #0A1A5C;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+
+    /* Header */
+    .pricingCard__title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #0A1A5C;
+      margin: 0 0 4px;
+    }
+
+    .pricingCard__description {
+      font-size: 14px;
+      color: #2D3A6B;
+      margin: 0;
+    }
+
+    /* Pricing */
+    .pricingCard__pricing {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .pricingCard__previousPrice {
+      font-size: 15px;
+      color: #8896BB;
+      text-decoration: line-through;
+    }
+
+    .pricingCard__price {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1242E6;
+      margin: 0;
+    }
+
+    /* Items */
+    .pricingCard__items {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .pricingCard__item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: #2D3A6B;
+    }
+
+    .pricingCard__itemIcon {
+      color: #83E612;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* Button */
+    .pricingCard__btn {
+      display: block;
+      text-align: center;
+      padding: 13px 24px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      border: 2px solid #1242E6;
+      color: #1242E6;
+      background: transparent;
+      transition: background 0.2s ease, color 0.2s ease;
+      margin-top: auto;
+    }
+
+    .pricingCard:hover .pricingCard__btn,
+    .pricingCard--featured .pricingCard__btn {
+      background: #1242E6;
+      color: #FFFFFF;
+    }
+  compiled: |-
+    /*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */
+    .pricingCard{cursor:pointer;background:#fff;border:2px solid #e8ecf8;border-radius:12px;flex-direction:column;gap:20px;width:100%;padding:32px 28px;transition:border-color .2s,box-shadow .2s;display:flex;position:relative}.pricingCard:hover,.pricingCard--featured{border-color:#1242e6;box-shadow:0 8px 32px #1242e62e}.pricingCard__badge{color:#0a1a5c;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;background:#83e612;border-radius:100px;padding:4px 14px;font-size:11px;font-weight:700;position:absolute;top:-14px;left:50%;transform:translate(-50%)}.pricingCard__title{color:#0a1a5c;margin:0 0 4px;font-size:22px;font-weight:700}.pricingCard__description{color:#2d3a6b;margin:0;font-size:14px}.pricingCard__pricing{flex-direction:column;gap:4px;display:flex}.pricingCard__previousPrice{color:#8896bb;font-size:15px;text-decoration:line-through}.pricingCard__price{color:#1242e6;margin:0;font-size:28px;font-weight:700}.pricingCard__items{flex-direction:column;flex:1;gap:10px;margin:0;padding:0;list-style:none;display:flex}.pricingCard__item{color:#2d3a6b;align-items:center;gap:10px;font-size:14px;display:flex}.pricingCard__itemIcon{color:#83e612;flex-shrink:0;font-weight:700}.pricingCard__btn{text-align:center;color:#1242e6;background:0 0;border:2px solid #1242e6;border-radius:8px;margin-top:auto;padding:13px 24px;font-size:15px;font-weight:600;text-decoration:none;transition:background .2s,color .2s;display:block}.pricingCard:hover .pricingCard__btn,.pricingCard--featured .pricingCard__btn{color:#fff;background:#1242e6}
+dataDependencies: {  }
