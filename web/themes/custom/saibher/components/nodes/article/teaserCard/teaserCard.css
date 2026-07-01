@@ -7,6 +7,7 @@
   flex-direction: column;
   width: 100%;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
+  margin: 20px auto;
 }
 
 .teaserCard:hover {

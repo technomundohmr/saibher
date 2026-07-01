@@ -1286,6 +1286,7 @@ input, select, textarea{
   align-items: center;
   display: flex;
   gap: 20px;
+  flex-direction: column;
 }
 
 .last-cards{
@@ -1592,4 +1593,181 @@ p{
   .md\:flex-row {
     flex-direction: row;
   }
+}
+
+
+.main-footer {
+  background-color: var(--main_blue);
+  color: #ffffff;
+  padding: 4rem 6rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  align-items: start;
+  justify-items: center;
+}
+
+.main-footer h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+.main-footer ul {
+  list-style: disclosure-closed;
+  padding: 0;
+  margin: 0 15px;
+}
+
+
+/* Comportamiento responsivo para las 3 columnas principales */
+@media (max-width: 992px) {
+  .main-footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-footer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* --- Elementos de la Columna 1: Brand / Identidad --- */
+.main-footer__brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.main-footer__brand-logo-icon {
+  background-color: var(--white);
+  color: var(--main_blue);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 1.2rem;
+}
+
+.main-footer__brand-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  max-width: 280px;
+}
+
+.main-footer__social-container {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.main-footer__social-link {
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.main-footer__social-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* --- Elementos de la Columna 2: Mapa del sitio / Navegación --- */
+.main-footer__nav-title {
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.main-footer__nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  /* Flexibilidad interna si se agregan más de 3 o 4 elementos */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.main-footer__nav-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.main-footer__nav-link:hover {
+  color: var(--white);
+}
+
+
+/* --- Elementos de la Columna 3: Newsletter --- */
+.main-footer__newsletter-title {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.main-footer__newsletter-text {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+.main-footer__newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 400px;
+}
+
+.main-footer__newsletter-input {
+  flex: 1;
+  background-color: var(--input-bg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  color: var(--white);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.main-footer__newsletter-input:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.main-footer__newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.main-footer__newsletter-button {
+  background-color: #1d4ed8; /* Azul complementario para el botón */
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.main-footer__newsletter-button:hover {
+  background-color: #2563eb;
 }

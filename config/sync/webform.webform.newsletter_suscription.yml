@@ -13,30 +13,36 @@ title: 'newsletter suscription'
 description: 'suscripci&oacute;n de usuarios a una nueva newsletter'
 categories: {  }
 elements: |-
-  email:
-    '#type': email
-    '#title': 'Correo electrónico'
-    '#title_display': none
-    '#placeholder': 'Correo electrónico'
-    '#required': true
-    '#required_error': 'por favor escribe tu correo electrónico para suscribirte a nuestro newsletter'
-    '#unique': true
-    '#unique_error': 'El correo ingresado ya está registrado en nuestra base de datos'
-  nombre:
-    '#type': textfield
-    '#title': Nombre
-    '#title_display': none
-    '#placeholder': Nombre
-    '#required': true
-    '#required_error': 'cual es tu nombre'
-  actions:
-    '#type': webform_actions
-    '#title': 'Submit button(s)'
-    '#submit__label': suscribirme
-    '#submit__attributes':
-      class:
-        - btn
-        - btn-primary-red
+  flexbox:
+    '#type': webform_flexbox
+    nombre:
+      '#type': textfield
+      '#title': Nombre
+      '#title_display': none
+      '#placeholder': Nombre
+      '#required': true
+      '#required_error': 'cual es tu nombre'
+  flexbox_01:
+    '#type': webform_flexbox
+    email:
+      '#type': email
+      '#title': 'Correo electrónico'
+      '#title_display': none
+      '#placeholder': 'Correo electrónico'
+      '#required': true
+      '#required_error': 'por favor escribe tu correo electrónico para suscribirte a nuestro newsletter'
+      '#unique': true
+      '#unique_error': 'El correo ingresado ya está registrado en nuestra base de datos'
+  flexbox_02:
+    '#type': webform_flexbox
+    actions:
+      '#type': webform_actions
+      '#title': 'Submit button(s)'
+      '#submit__label': suscribirme
+      '#submit__attributes':
+        class:
+          - btn
+          - btn-primary-red
 css: ''
 javascript: ''
 settings:

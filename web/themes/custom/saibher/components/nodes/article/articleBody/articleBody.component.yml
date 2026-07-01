@@ -1,0 +1,19 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Article Body
+status: stable
+description: 'Columna central del artículo completo. Renderiza categoría, título y cuerpo del artículo.'
+category: Content
+
+props:
+  type: object
+  properties:
+    category:
+      type: string
+      title: 'Categoría del artículo'
+    title:
+      type: string
+      title: 'Título del artículo'
+    body:
+      type: string
+      title: 'Cuerpo del artículo'

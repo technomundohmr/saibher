@@ -5,9 +5,11 @@ dependencies:
   config:
     - canvas.component.sdc.commerce.commerce-status-badge
     - canvas.component.sdc.olivero.teaser
+    - canvas.component.sdc.saibher.articleBody
 name: Otro(s)
 configEntityTypeId: component
 weight: 0
 items:
   - sdc.commerce.commerce-status-badge
   - sdc.olivero.teaser
+  - sdc.saibher.articleBody

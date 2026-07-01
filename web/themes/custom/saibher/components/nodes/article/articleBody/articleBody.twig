@@ -1,0 +1,62 @@
+{#
+/**
+ * @file articleBody.twig
+ *
+ * Central column for the article full view mode.
+ *
+ * Variables:
+ *   - category: First taxonomy term name.
+ *   - title: Node title.
+ *   - body: Full body field value.
+ */
+#}
+{% set articleBody %}
+<article class="articleBody">
+
+	{% if category %}
+		<span class="articleBody__category">{{ category }}</span>
+	{% endif %}
+
+
+	{% if body %}
+		<div class="articleBody__body">
+			{{ body|raw }}
+		</div>
+	{% endif %}
+
+</article>
+{% endset %}
+{% set articleHeader %}
+    <div class="articleHeader">
+    	<h1 class="articleBody__title">{{ title }}</h1>
+    </div>   
+{% endset %}
+
+{% set articleImage %}
+    {% if image %}
+    	<div class="articleFeaturedImage">
+    	    <img src="{{ file_url(image) }}" alt="{{ title }}" class="articleFeaturedImage__img" loading="lazy"/>
+    	</div>
+    {% endif %}
+{% endset %}
+
+{% include 'saibher:section-columns' with {
+  columns: 1,
+  background: 'white',
+  column_1:  articleHeader,
+} only %}
+
+{% include 'saibher:section-columns' with {
+  columns: 1,
+  background: 'white',
+  column_1:  articleImage,
+} only %}
+{# ── Section 3: 3 columnas 20-60-20 con embed ── #}
+{% include 'saibher:section-columns' with {
+  columns: 3,
+  layout: '20-60-20',
+  background: 'white',
+  column_1: drupal_view('services_promotions', 'block_1'),
+  column_3: drupal_view('last_articles', 'canvas_test'),
+  column_2: articleBody,
+} only %}
