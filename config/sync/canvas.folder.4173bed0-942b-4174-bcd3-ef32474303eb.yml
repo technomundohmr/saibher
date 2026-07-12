@@ -4,10 +4,14 @@ status: true
 dependencies:
   config:
     - canvas.component.js.button
+    - canvas.component.js.contactitem
+    - canvas.component.js.processsteps
     - canvas.component.js.teasercard
 name: Other
 configEntityTypeId: component
 weight: 0
 items:
   - js.button
+  - js.contactitem
+  - js.processsteps
   - js.teasercard

@@ -10,7 +10,7 @@ template: false
 archive: false
 id: formulario_de_contacto
 title: contact_form
-description: 'formulario de contacto para los servicios'
+description: '<p>formulario de contacto para los servicios</p>'
 categories: {  }
 elements: |-
   nombre:
@@ -78,7 +78,7 @@ elements: |-
 css: ''
 javascript: ''
 settings:
-  ajax: false
+  ajax: true
   ajax_scroll_top: form
   ajax_progress_type: ''
   ajax_effect: ''
@@ -116,6 +116,7 @@ settings:
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_file_limit_message: ''
   form_attributes:
     class:
       - contact-service-form
@@ -181,10 +182,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: message
-  confirmation_url: ''
+  confirmation_type: url
+  confirmation_url: /envo-exitoso
   confirmation_title: ''
-  confirmation_message: 'Hemos recibido su informaci&oacute;n con &eacute;xito, pronto nos comunicaremos con usted para brindarle m&aacute;s informaci&oacute;n'
+  confirmation_message: '<p>Hemos recibido su información con éxito, pronto nos comunicaremos con usted para brindarle más información</p>'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''

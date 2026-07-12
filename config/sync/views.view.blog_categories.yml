@@ -124,7 +124,13 @@ display:
             operator_limit_selection: false
             operator_list: {  }
       style:
-        type: default
+        type: grid_responsive
+        options:
+          uses_fields: false
+          columns: 4
+          cell_min_width: 100
+          grid_gutter: 10
+          alignment: horizontal
       row:
         type: 'entity:taxonomy_term'
         options:
@@ -139,7 +145,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      css_class: cards-services
+      css_class: ''
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -157,7 +163,10 @@ display:
     position: 1
     display_options:
       display_description: ''
-      display_extenders: {  }
+      display_extenders:
+        metatag_display_extender:
+          metatags: {  }
+          tokenize: false
     cache_metadata:
       max-age: -1
       contexts:

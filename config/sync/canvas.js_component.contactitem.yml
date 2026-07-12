@@ -1,0 +1,187 @@
+uuid: b7345850-6dd0-49d9-935e-5472477e22e4
+langcode: es
+status: true
+dependencies: {  }
+machineName: contactitem
+name: ContactItem
+required:
+  - label
+  - value
+  - icon
+  - color
+props:
+  label:
+    type: string
+    title: label
+    examples:
+      - Correo
+  value:
+    type: string
+    title: value
+    examples:
+      - emai@example.com
+  icon:
+    type: string
+    title: icon
+    examples:
+      - mail
+  color:
+    type: string
+    enum:
+      - '#1242E6'
+      - '#83E612'
+    'meta:enum':
+      '#1242E6': Blue
+      '#83E612': Green
+    title: color
+    examples:
+      - '#1242E6'
+  link:
+    type: string
+    title: link
+  target:
+    type: string
+    enum:
+      - _blank
+      - _self
+    'meta:enum':
+      _blank: _blank
+      _self: _self
+    title: target
+    examples:
+      - _self
+slots: {  }
+js:
+  original: |-
+    const ContactItem = ({ link, target, label, value, icon, color }) => {
+      const iconColor = color || '#1242E6';
+
+      const content = (
+        <div className="contact-item">
+          <div
+            className="contact-item__icon"
+            style={{ backgroundColor: iconColor }}
+          >
+            <span className="material-icons" aria-hidden="true">{icon}</span>
+          </div>
+          <div className="contact-item__text">
+            <span className="contact-item__label">{label}</span>
+            <span className="contact-item__value">{value}</span>
+          </div>
+        </div>
+      );
+
+      if (link) {
+        return (
+          <a
+            href={link}
+            target={target || '_self'}
+            rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+            className="contact-item__link"
+          >
+            {content}
+          </a>
+        );
+      }
+
+      return content;
+    };
+
+    export default ContactItem;
+  compiled: |
+    import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+    const ContactItem = ({ link, target, label, value, icon, color })=>{
+        const iconColor = color || '#1242E6';
+        const content = /*#__PURE__*/ _jsxs("div", {
+            className: "contact-item",
+            children: [
+                /*#__PURE__*/ _jsx("div", {
+                    className: "contact-item__icon",
+                    style: {
+                        backgroundColor: iconColor
+                    },
+                    children: /*#__PURE__*/ _jsx("span", {
+                        className: "material-icons",
+                        "aria-hidden": "true",
+                        children: icon
+                    })
+                }),
+                /*#__PURE__*/ _jsxs("div", {
+                    className: "contact-item__text",
+                    children: [
+                        /*#__PURE__*/ _jsx("span", {
+                            className: "contact-item__label",
+                            children: label
+                        }),
+                        /*#__PURE__*/ _jsx("span", {
+                            className: "contact-item__value",
+                            children: value
+                        })
+                    ]
+                })
+            ]
+        });
+        if (link) {
+            return /*#__PURE__*/ _jsx("a", {
+                href: link,
+                target: target || '_self',
+                rel: target === '_blank' ? 'noopener noreferrer' : undefined,
+                className: "contact-item__link",
+                children: content
+            });
+        }
+        return content;
+    };
+    export default ContactItem;
+css:
+  original: |-
+    .contact-item__link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .contact-item__icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      font-size: 16px;
+    }
+
+    .contact-item__text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .contact-item__label {
+      font-size: 0.8rem;
+      color: #2D3A6B;
+      font-weight: 400;
+    }
+
+    .contact-item__value {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0A1A5C;
+      font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+    .contact-item__link:hover .contact-item__value {
+      color: #1242E6;
+      transition: color 0.15s ease-in-out;
+    }
+  compiled: |-
+    /*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */
+    .contact-item__link{color:inherit;text-decoration:none;display:block}.contact-item{align-items:center;gap:12px;display:flex}.contact-item__icon{color:#fff;border-radius:10px;flex-shrink:0;place-items:center;width:40px;height:40px;font-size:16px;display:grid}.contact-item__text{flex-direction:column;gap:2px;display:flex}.contact-item__label{color:#2d3a6b;font-size:.8rem;font-weight:400}.contact-item__value{color:#0a1a5c;font-family:Plus Jakarta Sans,sans-serif;font-size:1rem;font-weight:700}.contact-item__link:hover .contact-item__value{color:#1242e6;transition:color .15s ease-in-out}
+dataDependencies: {  }

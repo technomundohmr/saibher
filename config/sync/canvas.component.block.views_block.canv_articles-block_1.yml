@@ -1,0 +1,26 @@
+uuid: c44b8819-bc90-4ac9-9596-96e87e0154f7
+langcode: es
+status: true
+dependencies:
+  config:
+    - views.view.canv_articles
+  module:
+    - views
+active_version: ef71b6184d81ede4
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: 'views_block:canv_articles-block_1'
+        label: 'Artículos: Artículos'
+        label_display: '0'
+        provider: views
+        views_label: ''
+        items_per_page: null
+    fallback_metadata:
+      slot_definitions: null
+label: 'Artículos: Artículos'
+id: block.views_block.canv_articles-block_1
+provider: views
+source: block
+source_local_id: 'views_block:canv_articles-block_1'

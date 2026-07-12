@@ -5,6 +5,7 @@ dependencies:
   config:
     - canvas.component.block.views_block.blog_categories-block_1
     - canvas.component.block.views_block.blog_categories-block_2
+    - canvas.component.block.views_block.canv_articles-block_1
     - canvas.component.block.views_block.canv_articles-canv_articles_last
     - canvas.component.block.views_block.comments_recent-block_1
     - canvas.component.block.views_block.content_recent-block_1
@@ -32,6 +33,7 @@ weight: 0
 items:
   - block.views_block.blog_categories-block_1
   - block.views_block.blog_categories-block_2
+  - block.views_block.canv_articles-block_1
   - block.views_block.canv_articles-canv_articles_last
   - block.views_block.comments_recent-block_1
   - block.views_block.content_recent-block_1

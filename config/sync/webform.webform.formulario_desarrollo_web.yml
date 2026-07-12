@@ -1,16 +1,21 @@
-uuid: 873241ae-e9a7-477a-ac8b-b501da04460c
+uuid: bbb4aa88-1a88-4416-8f64-61329c57d649
 langcode: es
 status: open
-dependencies: {  }
+dependencies:
+  module:
+    - antibot
+third_party_settings:
+  antibot:
+    antibot: true
 weight: 0
 open: null
 close: null
 uid: 1
 template: false
 archive: false
-id: newsletter_suscription
-title: 'newsletter suscription'
-description: 'suscripci&oacute;n de usuarios a una nueva newsletter'
+id: formulario_desarrollo_web
+title: 'Formulario desarrollo web'
+description: ''
 categories: {  }
 elements: |-
   flexbox:
@@ -18,36 +23,40 @@ elements: |-
     nombre:
       '#type': textfield
       '#title': Nombre
-      '#title_display': none
-      '#placeholder': Nombre
-      '#required': true
-      '#required_error': 'cual es tu nombre'
+    correo:
+      '#type': email
+      '#title': 'Correo de contacto'
   flexbox_01:
     '#type': webform_flexbox
-    email:
-      '#type': email
-      '#title': 'Correo electrónico'
-      '#title_display': none
-      '#placeholder': 'Correo electrónico'
-      '#required': true
-      '#required_error': 'por favor escribe tu correo electrónico para suscribirte a nuestro newsletter'
-      '#unique': true
-      '#unique_error': 'El correo ingresado ya está registrado en nuestra base de datos'
+    telefono:
+      '#type': tel
+      '#title': 'Teléfono de contacto'
+      '#title_display': before
+      '#international': true
+      '#international_initial_country': CO
   flexbox_02:
     '#type': webform_flexbox
-    actions:
-      '#type': webform_actions
-      '#title': 'Submit button(s)'
-      '#submit__label': suscribirme
-      '#submit__attributes':
-        class:
-          - btn
-          - btn-primary-red
+    nombre_de_mi_proyecto_o_negocio:
+      '#type': textfield
+      '#title': 'Nombre de mi proyecto o negocio'
+  flexbox_03:
+    '#type': webform_flexbox
+    descripcion:
+      '#type': textarea
+      '#title': Descripción
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__attributes':
+      class:
+        - btn
+        - btn-primary-red
+        - w-full
 css: ''
 javascript: ''
 settings:
   ajax: false
-  ajax_scroll_top: form
+  ajax_scroll_top: page
   ajax_progress_type: ''
   ajax_effect: ''
   ajax_speed: null
@@ -151,7 +160,7 @@ settings:
   confirmation_type: url
   confirmation_url: /envo-exitoso
   confirmation_title: ''
-  confirmation_message: ''
+  confirmation_message: '<p>form submited</p>'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''

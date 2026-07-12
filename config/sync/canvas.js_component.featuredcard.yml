@@ -7,8 +7,6 @@ name: featuredCard
 required:
   - icon
   - title
-  - linkText
-  - linkUrl
 props:
   icon:
     type: string
@@ -25,12 +23,12 @@ props:
     title: description
   linkText:
     type: string
-    title: link_text
+    title: linkText
     examples:
-      - 'click aquí'
+      - 'Click aqui'
   linkUrl:
     type: string
-    title: link_url
+    title: linkUrl
     examples:
       - '#'
   target:
@@ -51,8 +49,8 @@ js:
       icon = 'monitor',
       title = 'Título del servicio',
       description = 'Magna varius varius commodo euismod facilisis felis nisl consectetur condimentum ipsum accumsan tristique quisque a ut ac nunc morbi vivamus ut ut cursus adipiscing felis.',
-      link_text = 'click aquí',
-      link_url = '#',
+      linkText,
+      linkUrl,
       target,
     }) => {
       return (
@@ -62,9 +60,9 @@ js:
           </div>
           <h3 className="featureCard__title">{title}</h3>
           {description && <p className="featureCard__description">{description}</p>}
-          {link_text && (
-            <a href={link_url} target={target} className="featureCard__link">
-              {link_text} →
+          {linkText && (
+            <a href={linkUrl} target={target} className="featureCard__link">
+              {linkText} →
             </a>
           )}
         </div>
@@ -74,7 +72,7 @@ js:
     export default Component;
   compiled: |
     import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-    const Component = ({ icon = 'monitor', title = 'Título del servicio', description = 'Magna varius varius commodo euismod facilisis felis nisl consectetur condimentum ipsum accumsan tristique quisque a ut ac nunc morbi vivamus ut ut cursus adipiscing felis.', link_text = 'click aquí', link_url = '#', target })=>{
+    const Component = ({ icon = 'monitor', title = 'Título del servicio', description = 'Magna varius varius commodo euismod facilisis felis nisl consectetur condimentum ipsum accumsan tristique quisque a ut ac nunc morbi vivamus ut ut cursus adipiscing felis.', linkText, linkUrl, target })=>{
         return /*#__PURE__*/ _jsxs("div", {
             className: "featureCard",
             children: [
@@ -93,12 +91,12 @@ js:
                     className: "featureCard__description",
                     children: description
                 }),
-                link_text && /*#__PURE__*/ _jsxs("a", {
-                    href: link_url,
+                linkText && /*#__PURE__*/ _jsxs("a", {
+                    href: linkUrl,
                     target: target,
                     className: "featureCard__link",
                     children: [
-                        link_text,
+                        linkText,
                         " →"
                     ]
                 })

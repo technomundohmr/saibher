@@ -1771,3 +1771,43 @@ p{
 .main-footer__newsletter-button:hover {
   background-color: #2563eb;
 }
+
+.pager {
+  padding: 1rem;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 1rem;
+}
+
+.pager ul{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.pager ul .pager__item{
+  padding: 8px 11px;
+  line-height: 1;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.pager ul .pager__item.pager__item--first, 
+.pager ul .pager__item.pager__item--previous, 
+.pager ul .pager__item.pager__item--next, 
+.pager ul .pager__item.pager__item--last {
+  border: 1px solid #e5e7eb;
+}
+
+.pager ul .pager__item.is-active {
+  background-color: var(--main_blue);
+  color: white;
+  border-color: var(--main_blue);
+}
+
+.webform-type-tel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}

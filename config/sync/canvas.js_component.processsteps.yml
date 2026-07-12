@@ -1,0 +1,227 @@
+uuid: 8550e8ab-cae3-436c-b385-de017155205a
+langcode: es
+status: true
+dependencies: {  }
+machineName: processsteps
+name: ProcessSteps
+required: {  }
+props:
+  stepOneIcon:
+    type: string
+    title: stepOneIcon
+  stepOneTitle:
+    type: string
+    title: stepOneTitle
+  stepOneDescription:
+    type: string
+    title: stepOneDescription
+  stepTwoIcon:
+    type: string
+    title: stepTwoIcon
+  stepTwoTitle:
+    type: string
+    title: stepTwoTitle
+  stepTwoDescription:
+    type: string
+    title: stepTwoDescription
+  stepThreeIcon:
+    type: string
+    title: stepThreeIcon
+  stepThreeTitle:
+    type: string
+    title: stepThreeTitle
+  stepThreeDescription:
+    type: string
+    title: stepThreeDescription
+  stepFourIcon:
+    type: string
+    title: stepFourIcon
+  stepFourTitle:
+    type: string
+    title: stepFourTitle
+  stepFourDescription:
+    type: string
+    title: stepFourDescription
+slots: {  }
+js:
+  original: |-
+    const ProcessSteps = ({
+      stepOneIcon, stepOneTitle, stepOneDescription,
+      stepTwoIcon, stepTwoTitle, stepTwoDescription,
+      stepThreeIcon, stepThreeTitle, stepThreeDescription,
+      stepFourIcon, stepFourTitle, stepFourDescription
+    }) => {
+      const steps = [
+        { number: 1, icon: stepOneIcon, title: stepOneTitle, description: stepOneDescription },
+        { number: 2, icon: stepTwoIcon, title: stepTwoTitle, description: stepTwoDescription },
+        { number: 3, icon: stepThreeIcon, title: stepThreeTitle, description: stepThreeDescription },
+        { number: 4, icon: stepFourIcon, title: stepFourTitle, description: stepFourDescription }
+      ];
+
+      return (
+        <div className="process-steps">
+          {steps.map((step) => (
+            <div className="process-steps__item" key={step.number}>
+              <div className="process-steps__icon-wrapper">
+                <div className="process-steps__icon">
+                  <span className="material-icons" aria-hidden="true">{step.icon}</span>
+                </div>
+                <span className="process-steps__number">{step.number}</span>
+              </div>
+              <h3 className="process-steps__title">{step.title}</h3>
+              <p className="process-steps__description">{step.description}</p>
+            </div>
+          ))}
+        </div>
+      );
+    };
+
+    export default ProcessSteps;
+  compiled: |
+    import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+    const ProcessSteps = ({ stepOneIcon, stepOneTitle, stepOneDescription, stepTwoIcon, stepTwoTitle, stepTwoDescription, stepThreeIcon, stepThreeTitle, stepThreeDescription, stepFourIcon, stepFourTitle, stepFourDescription })=>{
+        const steps = [
+            {
+                number: 1,
+                icon: stepOneIcon,
+                title: stepOneTitle,
+                description: stepOneDescription
+            },
+            {
+                number: 2,
+                icon: stepTwoIcon,
+                title: stepTwoTitle,
+                description: stepTwoDescription
+            },
+            {
+                number: 3,
+                icon: stepThreeIcon,
+                title: stepThreeTitle,
+                description: stepThreeDescription
+            },
+            {
+                number: 4,
+                icon: stepFourIcon,
+                title: stepFourTitle,
+                description: stepFourDescription
+            }
+        ];
+        return /*#__PURE__*/ _jsx("div", {
+            className: "process-steps",
+            children: steps.map((step)=>/*#__PURE__*/ _jsxs("div", {
+                    className: "process-steps__item",
+                    children: [
+                        /*#__PURE__*/ _jsxs("div", {
+                            className: "process-steps__icon-wrapper",
+                            children: [
+                                /*#__PURE__*/ _jsx("div", {
+                                    className: "process-steps__icon",
+                                    children: /*#__PURE__*/ _jsx("span", {
+                                        className: "material-icons",
+                                        "aria-hidden": "true",
+                                        children: step.icon
+                                    })
+                                }),
+                                /*#__PURE__*/ _jsx("span", {
+                                    className: "process-steps__number",
+                                    children: step.number
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ _jsx("h3", {
+                            className: "process-steps__title",
+                            children: step.title
+                        }),
+                        /*#__PURE__*/ _jsx("p", {
+                            className: "process-steps__description",
+                            children: step.description
+                        })
+                    ]
+                }, step.number))
+        });
+    };
+    export default ProcessSteps;
+css:
+  original: |-
+    .process-steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 32px;
+      position: relative;
+    }
+
+    .process-steps__item {
+      flex: 1 1 200px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .process-steps__icon-wrapper {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .process-steps__icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: #1242E6;
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+    }
+
+    .process-steps__icon .material-icons {
+      font-size: 26px;
+    }
+
+    .process-steps__number {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: #83E612;
+      color: #0A1A5C;
+      font-size: 0.7rem;
+      font-weight: 700;
+      display: grid;
+      place-items: center;
+      border: 2px solid #ffffff;
+    }
+
+    .process-steps__title {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #0A1A5C;
+      margin-bottom: 8px;
+    }
+
+    .process-steps__description {
+      font-size: 0.9rem;
+      color: #2D3A6B;
+      line-height: 1.5;
+      max-width: 240px;
+    }
+
+    @media (min-width: 768px) {
+      .process-steps::before {
+        content: "";
+        position: absolute;
+        top: 32px;
+        left: 60px;
+        right: 60px;
+        height: 1px;
+        background-color: #E4E9FF;
+        z-index: 0;
+      }
+    }
+  compiled: |-
+    /*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */
+    .process-steps{flex-wrap:wrap;justify-content:space-between;gap:32px;display:flex;position:relative}.process-steps__item{text-align:center;flex-direction:column;flex:200px;align-items:center;display:flex}.process-steps__icon-wrapper{margin-bottom:20px;position:relative}.process-steps__icon{color:#fff;background-color:#1242e6;border-radius:50%;place-items:center;width:64px;height:64px;display:grid}.process-steps__icon .material-icons{font-size:26px}.process-steps__number{color:#0a1a5c;background-color:#83e612;border:2px solid #fff;border-radius:50%;place-items:center;width:22px;height:22px;font-size:.7rem;font-weight:700;display:grid;position:absolute;top:-6px;right:-6px}.process-steps__title{color:#0a1a5c;margin-bottom:8px;font-family:Plus Jakarta Sans,sans-serif;font-size:1.1rem;font-weight:700}.process-steps__description{color:#2d3a6b;max-width:240px;font-size:.9rem;line-height:1.5}@media (min-width:768px){.process-steps:before{content:"";z-index:0;background-color:#e4e9ff;height:1px;position:absolute;top:32px;left:60px;right:60px}}
+dataDependencies: {  }
