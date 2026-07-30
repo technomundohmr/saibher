@@ -33,10 +33,12 @@ props:
     background:
       type: string
       title: 'Color de fondo'
-      description: 'white = #FFFFFF | gray = #F4F6FF'
+      description: 'white = #FFFFFF | gray = #F4F6FF | dark = #333333 | dark_secondary = #555555'
       enum:
         - white
         - gray
+        - dark
+        - dark_secondary
       default: white
 
 slots:

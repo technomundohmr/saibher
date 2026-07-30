@@ -31,7 +31,11 @@
    ════════════════════════════════════════════ */
 .sc--bg-white { background-color: #FFFFFF; }
 .sc--bg-gray  { background-color: #F4F6FF; }
-
+.sc--bg-dark  { background-color: #181818; color: white;}
+.sc--bg-dark_secondary .richText__titleStart, .sc--bg-dark .richText__titleStart , .sc--bg-dark .process-steps__description , .sc--bg-dark_secondary .process-steps__description  { color: #E5E2E1 !important; }
+.sc--bg-dark_secondary .richText__titleHighlight--blue, .sc--bg-dark .richText__titleHighlight--blue, .sc--bg-dark .process-steps__title, .sc--bg-dark_secondary .process-steps__title { color: #00DAF3 !important; }
+.sc--bg-dark_secondary { background-color: #1C1B1B; color: white !important; }
+.sc--bg-dark .richText__body, .sc--bg-dark_secondary .richText__body { color: white !important; }
 /* ════════════════════════════════════════════
    TABLET — 768px
    ════════════════════════════════════════════ */

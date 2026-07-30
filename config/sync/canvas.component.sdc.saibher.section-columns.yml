@@ -6,9 +6,50 @@ dependencies:
     - options
   theme:
     - saibher
-active_version: 117e3a718a7335c5
+active_version: 9621130ff4d8a91b
 versioned_properties:
   active:
+    settings:
+      prop_field_definitions:
+        columns:
+          required: false
+          field_type: list_integer
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_integer␟value
+        layout:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        background:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions:
+        column_1:
+          title: 'Columna 1'
+          description: 'Contenido de la primera columna. Siempre visible.'
+        column_2:
+          title: 'Columna 2'
+          description: 'Contenido de la segunda columna. Visible cuando columns >= 2.'
+        column_3:
+          title: 'Columna 3'
+          description: 'Contenido de la tercera columna. Visible solo cuando columns = 3.'
+  117e3a718a7335c5:
     settings:
       prop_field_definitions:
         columns:
