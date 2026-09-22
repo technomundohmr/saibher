@@ -1,0 +1,22 @@
+saibher_user_management.profile_menu:
+  title: 'Mi perfil'
+  description: 'Tu perfil, tus datos y tu enlace de afiliado'
+  route_name: saibher_user_management.profile
+  menu_name: account
+  weight: 0
+
+saibher_user_management.commissions_admin:
+  title: 'Comisiones de afiliados'
+  description: 'Registra y gestiona manualmente las comisiones de los afiliados'
+  route_name: entity.affiliate_commission.collection
+  menu_name: admin
+  parent: system.admin_content
+  weight: 20
+
+saibher_user_management.settings_admin:
+  title: 'Configuración de afiliados'
+  description: 'Tasa de comisión, moneda y duración de la cookie de referido'
+  route_name: saibher_user_management.affiliate_settings
+  menu_name: admin
+  parent: saibher_user_management.commissions_admin
+  weight: 30

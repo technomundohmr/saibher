@@ -1,0 +1,189 @@
+<?php
+
+/**
+ * @file
+ * Install and update functions for the Saibher User Management module.
+ */
+
+use Drupal\Core\Field\BaseFieldDefinition;
+
+/**
+ * Base fields installed on the user entity.
+ *
+ * Kept as a single source of truth shared between hook_install() and the
+ * update hooks so a fresh install and an existing upgrade register exactly
+ * the same field storage definitions.
+ */
+function saibher_user_management_user_base_fields(): array {
+  return [
+    'field_affiliate_code' => [
+      'type' => 'string',
+      'label' => t('Affiliate code'),
+      'description' => t('Unique code used to build this user affiliate referral link.'),
+      'settings' => ['max_length' => 8],
+      'configurable_form' => FALSE,
+      'configurable_view' => FALSE,
+    ],
+    'field_first_name' => [
+      'type' => 'string',
+      'label' => t('First name'),
+      'settings' => ['max_length' => 128],
+      'configurable_form' => TRUE,
+      'configurable_view' => TRUE,
+    ],
+    'field_last_name' => [
+      'type' => 'string',
+      'label' => t('Last name'),
+      'settings' => ['max_length' => 128],
+      'configurable_form' => TRUE,
+      'configurable_view' => TRUE,
+    ],
+    'field_phone_country_code' => [
+      'type' => 'string',
+      'label' => t('Phone country code'),
+      'settings' => ['max_length' => 5],
+      'configurable_form' => TRUE,
+      'configurable_view' => TRUE,
+    ],
+    'field_phone_number' => [
+      'type' => 'string',
+      'label' => t('Phone number'),
+      'settings' => ['max_length' => 20],
+      'configurable_form' => TRUE,
+      'configurable_view' => TRUE,
+    ],
+    'field_country' => [
+      'type' => 'string',
+      'label' => t('Country'),
+      'description' => t('Two-letter country code (ISO 3166-1 alpha-2).'),
+      'settings' => ['max_length' => 2],
+      'configurable_form' => TRUE,
+      'configurable_view' => TRUE,
+    ],
+    'field_website' => [
+      'type' => 'string',
+      'label' => t('Website'),
+      'settings' => ['max_length' => 255],
+      'configurable_form' => TRUE,
+      'configurable_view' => TRUE,
+    ],
+    'field_business_name' => [
+      'type' => 'string',
+      'label' => t('Business name'),
+      'settings' => ['max_length' => 255],
+      'configurable_form' => TRUE,
+      'configurable_view' => TRUE,
+    ],
+  ];
+}
+
+/**
+ * Installs the module.
+ */
+function saibher_user_management_install() {
+  $manager = \Drupal::entityDefinitionUpdateManager();
+
+  foreach (saibher_user_management_user_base_fields() as $field_name => $definition) {
+    $manager->installFieldStorageDefinition(
+      $field_name,
+      'user',
+      'saibher_user_management',
+      saibher_user_management_build_base_field_definition($definition)
+    );
+  }
+
+  // Default settings for the affiliate system.
+  \Drupal::configFactory()
+    ->getEditable('saibher_user_management.settings')
+    ->set('commission_rate', 10.0)
+    ->set('default_currency', 'COP')
+    ->set('default_status', 'pending')
+    ->set('cookie_lifetime', 315360000)
+    ->save();
+}
+
+/**
+ * Builds a BaseFieldDefinition from the shared field spec array.
+ *
+ * @param array $spec
+ *   The field spec (see saibher_user_management_user_base_fields()).
+ *
+ * @return \Drupal\Core\Field\BaseFieldDefinition
+ *   The base field definition.
+ */
+function saibher_user_management_build_base_field_definition(array $spec): BaseFieldDefinition {
+  $field = BaseFieldDefinition::create($spec['type'])
+    ->setLabel($spec['label'])
+    ->setSettings($spec['settings']);
+
+  if (!empty($spec['description'])) {
+    $field->setDescription($spec['description']);
+  }
+
+  $field->setDisplayConfigurable('form', $spec['configurable_form']);
+  $field->setDisplayConfigurable('view', $spec['configurable_view']);
+
+  return $field;
+}
+
+/**
+ * Installs the remaining profile base fields on the user entity.
+ */
+function saibher_user_management_update_9002() {
+  $manager = \Drupal::entityDefinitionUpdateManager();
+
+  $definitions = saibher_user_management_user_base_fields();
+  unset($definitions['field_affiliate_code']);
+
+  foreach ($definitions as $field_name => $definition) {
+    $manager->installFieldStorageDefinition(
+      $field_name,
+      'user',
+      'saibher_user_management',
+      saibher_user_management_build_base_field_definition($definition)
+    );
+  }
+}
+
+/**
+ * Installs the affiliate code base field on the user entity.
+ */
+function saibher_user_management_update_9003() {
+  $definitions = saibher_user_management_user_base_fields();
+  $definition = $definitions['field_affiliate_code'];
+
+  \Drupal::entityDefinitionUpdateManager()
+    ->installFieldStorageDefinition(
+      'field_affiliate_code',
+      'user',
+      'saibher_user_management',
+      saibher_user_management_build_base_field_definition($definition)
+    );
+}
+
+/**
+ * Installs the affiliate settings default configuration.
+ */
+function saibher_user_management_update_9004() {
+  \Drupal::configFactory()
+    ->getEditable('saibher_user_management.settings')
+    ->set('commission_rate', 10.0)
+    ->set('default_currency', 'COP')
+    ->set('default_status', 'pending')
+    ->set('cookie_lifetime', 315360000)
+    ->save();
+}
+
+/**
+ * Drops the now-removed commerce order reference from affiliate commissions.
+ *
+ * The commissions no longer reference a commerce order: the module works
+ * independently of the Commerce ecosystem, so the `order` base field was
+ * removed from the entity definition and this hook drops the leftover column.
+ */
+function saibher_user_management_update_9005() {
+  $schema = \Drupal::database()->schema();
+  if ($schema->fieldExists('saibher_affiliate_commission', 'order')) {
+    $schema->dropField('saibher_affiliate_commission', 'order');
+  }
+}

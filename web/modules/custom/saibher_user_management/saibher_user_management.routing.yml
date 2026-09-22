@@ -1,0 +1,107 @@
+saibher_user_management.referral_redirect:
+  path: '/r/{code}'
+  defaults:
+    _controller: '\Drupal\saibher_user_management\Controller\AffiliateRedirectController::handleRedirect'
+    _title: 'Redirigiendo…'
+  requirements:
+    _access: 'TRUE'
+    code: '[a-zA-Z0-9]+'
+  options:
+    no_cache: 'TRUE'
+
+saibher_user_management.register:
+  path: '/registro'
+  defaults:
+    _form: '\Drupal\saibher_user_management\Form\SaibherRegisterForm'
+    _title: 'Crea tu cuenta'
+  requirements:
+    _access_user_register: 'TRUE'
+
+saibher_user_management.profile:
+  path: '/mi-perfil'
+  defaults:
+    _controller: '\Drupal\saibher_user_management\Controller\UserProfileController::view'
+    _title: 'Mi perfil'
+  requirements:
+    _permission: 'saibher_user_management.view_own_profile'
+
+saibher_user_management.profile_edit:
+  path: '/mi-perfil/editar'
+  defaults:
+    _form: '\Drupal\saibher_user_management\Form\SaibherProfileEditForm'
+    _title: 'Editar tus datos'
+  requirements:
+    _permission: 'saibher_user_management.edit_own_profile'
+
+saibher_user_management.profile_photo:
+  path: '/mi-perfil/foto'
+  defaults:
+    _controller: '\Drupal\saibher_user_management\Controller\UserProfilePhotoController::upload'
+  requirements:
+    _permission: 'saibher_user_management.edit_own_profile'
+    _method: 'POST'
+  options:
+    no_cache: 'TRUE'
+
+saibher_user_management.affiliate_balances:
+  path: '/mi-perfil/afiliado/balances'
+  defaults:
+    _controller: '\Drupal\saibher_user_management\Controller\AffiliateBalancesController::balances'
+  requirements:
+    _permission: 'saibher_user_management.view_own_affiliate_panel'
+    _format: 'json'
+  options:
+    no_cache: 'TRUE'
+
+# ==============================================================
+# Admin: manual affiliate commission management
+# ==============================================================
+entity.affiliate_commission.collection:
+  path: '/admin/saibher/affiliate-commissions'
+  defaults:
+    _entity_list: affiliate_commission
+    _title: 'Comisiones de afiliados'
+  requirements:
+    _permission: 'saibher_user_management.manage_affiliate_commissions'
+  options:
+    _admin_route: TRUE
+
+entity.affiliate_commission.add_form:
+  path: '/admin/saibher/affiliate-commissions/add'
+  defaults:
+    _entity_form: affiliate_commission.add
+    _title: 'Registrar comisión manual'
+  requirements:
+    _permission: 'saibher_user_management.manage_affiliate_commissions'
+  options:
+    _admin_route: TRUE
+
+entity.affiliate_commission.edit_form:
+  path: '/admin/saibher/affiliate-commissions/{affiliate_commission}/edit'
+  defaults:
+    _entity_form: affiliate_commission.edit
+    _title: 'Editar comisión'
+  requirements:
+    _permission: 'saibher_user_management.manage_affiliate_commissions'
+  options:
+    _admin_route: TRUE
+
+entity.affiliate_commission.delete_form:
+  path: '/admin/saibher/affiliate-commissions/{affiliate_commission}/delete'
+  defaults:
+    _entity_form: affiliate_commission.delete
+    _title: 'Eliminar comisión'
+  requirements:
+    _permission: 'saibher_user_management.manage_affiliate_commissions'
+  options:
+    _admin_route: TRUE
+
+saibher_user_management.affiliate_settings:
+  path: '/admin/saibher/affiliate-settings'
+  defaults:
+    _form: '\Drupal\saibher_user_management\Form\AffiliateSettingsForm'
+    _title: 'Configuración de afiliados'
+  requirements:
+    _permission: 'saibher_user_management.administer_affiliate_settings'
+  options:
+    _admin_route: TRUE

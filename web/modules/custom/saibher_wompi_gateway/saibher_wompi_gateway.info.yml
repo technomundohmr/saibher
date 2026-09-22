@@ -1,8 +1,0 @@
-name: 'Wompi widget Gateway'
-type: module
-description: 'Wompi payment widget method'
-core_version_requirement: ^9 || ^10 || ^11
-package: 'Saibher' 
-dependencies:
-  - commerce:commerce
-  - commerce:commerce_payment

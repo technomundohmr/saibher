@@ -62,10 +62,10 @@ props:
     type: string
     enum:
       - _self
-      - _target
+      - _blank
     'meta:enum':
       _self: _self
-      _target: _target
+      _blank: _blank
     title: linkTarget
     examples:
       - _self
@@ -109,7 +109,7 @@ js:
             )}
 
             {excerpt && (
-              <p className="teaserCard__excerpt">{excerpt}</p>
+              <p className="teaserCard__excerpt" dangerouslySetInnerHTML={{ __html: excerpt }}></p>
             )}
 
             <div className="teaserCard__footer">
@@ -162,7 +162,9 @@ js:
                         }),
                         excerpt && /*#__PURE__*/ _jsx("p", {
                             className: "teaserCard__excerpt",
-                            children: excerpt
+                            dangerouslySetInnerHTML: {
+                                __html: excerpt
+                            }
                         }),
                         /*#__PURE__*/ _jsxs("div", {
                             className: "teaserCard__footer",

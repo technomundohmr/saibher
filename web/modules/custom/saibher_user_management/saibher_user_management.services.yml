@@ -1,0 +1,29 @@
+services:
+  # Generates unique affiliate codes for users.
+  saibher_user_management.code_generator:
+    class: Drupal\saibher_user_management\Service\AffiliateCodeGenerator
+    arguments: ['@entity_type.manager']
+
+  # Core business logic for the affiliate referral system.
+  saibher_user_management.affiliate_manager:
+    class: Drupal\saibher_user_management\Service\AffiliateManager
+    arguments:
+      - '@entity_type.manager'
+      - '@saibher_user_management.code_generator'
+      - '@request_stack'
+      - '@config.factory'
+
+  # Detects referral codes in incoming requests and persists them via cookie.
+  saibher_user_management.referral_subscriber:
+    class: Drupal\saibher_user_management\EventSubscriber\AffiliateReferralSubscriber
+    arguments:
+      - '@saibher_user_management.affiliate_manager'
+    tags:
+      - { name: event_subscriber }
+
+  # Aggregates the economic ledger shown in the affiliate panel.
+  saibher_user_management.ledger:
+    class: Drupal\saibher_user_management\Service\AffiliateLedger
+    arguments:
+      - '@entity_type.manager'
+      - '@config.factory'

@@ -1,0 +1,16 @@
+saibher_form:
+  version: 1.0
+  css:
+    theme:
+      css/saibher-user-management.css: {}
+
+saibher_profile:
+  version: 1.0
+  css:
+    theme:
+      css/saibher-user-management.css: {}
+  js:
+    js/saibher-profile.js: {}
+  dependencies:
+    - core/once
+    - core/drupal

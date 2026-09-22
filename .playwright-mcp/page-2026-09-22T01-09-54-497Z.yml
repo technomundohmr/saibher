@@ -1,0 +1,102 @@
+- generic [active] [ref=f12e1]:
+  - link "Pasar al contenido principal" [ref=f12e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=f12e3]:
+    - banner [ref=f12e4]:
+      - generic [ref=f12e6]:
+        - textbox "Qué estás buscano Hoy" [ref=f12e8]
+        - button "Buscar" [ref=f12e9] [cursor=pointer]
+      - navigation [ref=f12e10]:
+        - generic [ref=f12e11]:
+          - link [ref=f12e14] [cursor=pointer]:
+            - /url: /
+            - img "Home" [ref=f12e15]
+          - navigation [ref=f12e16]:
+            - list [ref=f12e17]:
+              - listitem [ref=f12e18]:
+                - link "Blog" [ref=f12e19] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=f12e20]:
+                - link "Portafolio" [ref=f12e21] [cursor=pointer]:
+                  - /url: /andres-rincon
+              - listitem [ref=f12e22]:
+                - link "Contácto" [ref=f12e23] [cursor=pointer]:
+                  - /url: /contactenos
+          - paragraph [ref=f12e26]:
+            - button "Necesito asesoría" [ref=f12e27] [cursor=pointer]
+    - generic [ref=f12e28]:
+      - complementary
+      - main [ref=f12e29]:
+        - generic [ref=f12e32]:
+          - generic [ref=f12e33]:
+            - generic [ref=f12e34]:
+              - generic [ref=f12e35]: "?"
+              - button "Subir o cambiar la foto de perfil" [ref=f12e36] [cursor=pointer]: Cambiar foto
+            - generic [ref=f12e37]:
+              - heading [level=2]
+              - paragraph [ref=f12e38]: Sube una foto para que te reconozcamos fácil.
+          - generic [ref=f12e39]:
+            - generic [ref=f12e40]:
+              - heading "Tus datos" [level=3] [ref=f12e41]
+              - link "Editar" [ref=f12e42] [cursor=pointer]:
+                - /url: /mi-perfil/editar
+            - generic [ref=f12e43]:
+              - generic [ref=f12e44]:
+                - generic [ref=f12e45]: Correo
+                - generic [ref=f12e46]: nuevo@test.local
+              - generic [ref=f12e47]: Teléfono
+              - generic [ref=f12e49]: País
+          - generic [ref=f12e51]:
+            - heading "Tu enlace de afiliado" [level=3] [ref=f12e52]
+            - paragraph [ref=f12e53]: Compártelo con quien quieras. Si alguien llega a Saibher por aquí, lo sabremos.
+            - generic [ref=f12e54]:
+              - textbox "Enlace de afiliado" [ref=f12e55]: https://saibher.ddev.site:8443/r/udpanvrs
+              - button "Copiar enlace" [ref=f12e56] [cursor=pointer]
+            - generic [ref=f12e57]:
+              - generic [ref=f12e58]:
+                - heading "Balance de afiliado" [level=4] [ref=f12e59]
+                - generic [ref=f12e60]:
+                  - generic [ref=f12e61]: Mes
+                  - combobox "Mes" [ref=f12e62]:
+                    - option "Todos" [selected]
+              - generic [ref=f12e63]:
+                - generic [ref=f12e64]:
+                  - strong [ref=f12e65]: "0"
+                  - generic [ref=f12e66]: Referidos
+                - generic [ref=f12e67]:
+                  - strong [ref=f12e68]: "0"
+                  - generic [ref=f12e69]: Compradores
+              - paragraph [ref=f12e71]:
+                - paragraph [ref=f12e72]: Aún no tienes referidos.
+          - generic [ref=f12e73]:
+            - generic [ref=f12e74]:
+              - heading "Contraseña" [level=3] [ref=f12e75]
+              - paragraph [ref=f12e76]: Cámbiala cuando quieras, sin complicaciones.
+            - link "Cambiar contraseña" [ref=f12e77] [cursor=pointer]:
+              - /url: /user/password
+      - complementary
+    - contentinfo [ref=f12e78]:
+      - generic [ref=f12e80]:
+        - heading "suscribete a nuestro newsletter" [level=2] [ref=f12e81]
+        - generic [ref=f12e83]:
+          - textbox "Nombre" [ref=f12e88]
+          - textbox "Correo electrónico" [ref=f12e93]
+          - button "suscribirme" [ref=f12e98] [cursor=pointer]
+      - generic [ref=f12e99]:
+        - heading "Síguenos en" [level=2] [ref=f12e100]
+        - generic [ref=f12e101]:
+          - link "YouTube" [ref=f12e102] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCh-v7gH7zPSK1qIjX5HzSSw
+          - link "LinkedIn" [ref=f12e104] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/andr%C3%A9s-felipe-rinc%C3%B3n-gracia-513982215/
+      - generic [ref=f12e106]:
+        - heading "Comparte el contenido con las personas que amas" [level=2] [ref=f12e107]
+        - generic [ref=f12e108]:
+          - link "Compartir" [ref=f12e109] [cursor=pointer]:
+            - /url: https://www.addtoany.com/share#url=https%3A%2F%2Fsaibher.ddev.site%3A8443%2Fmi-perfil&title=Mi%20perfil
+          - link "Facebook" [ref=f12e111] [cursor=pointer]:
+            - /url: /#facebook
+          - link "Twitter" [ref=f12e113] [cursor=pointer]:
+            - /url: /#twitter
+          - link "Email" [ref=f12e115] [cursor=pointer]:
+            - /url: /#email

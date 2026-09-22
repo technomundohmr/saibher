@@ -1,0 +1,221 @@
+- generic [active] [ref=e1]:
+  - link "Pasar al contenido principal" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - group "Barra de administración del sitio web":
+    - navigation "Elementos de la barra de herramientas" [ref=e3]:
+      - heading "Elementos de la barra de herramientas" [level=2] [ref=e4]
+      - generic [ref=e5]:
+        - link "Regresar al sitio" [ref=e6] [cursor=pointer]:
+          - /url: /
+        - generic:
+          - navigation
+      - generic [ref=e7]:
+        - button "Administrar" [pressed] [ref=e8] [cursor=pointer]
+        - navigation "Menú de administración" [ref=e10]:
+          - heading "Menú de administración" [level=3] [ref=e11]
+          - generic:
+            - list:
+              - listitem [ref=e12]:
+                - link "Front page" [ref=e13] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e14]:
+                - link "Content" [ref=e15] [cursor=pointer]:
+                  - /url: /admin/content
+              - listitem [ref=e16]:
+                - link "Comercio" [ref=e17] [cursor=pointer]:
+                  - /url: /admin/commerce
+              - listitem [ref=e18]:
+                - link "Estructura" [ref=e19] [cursor=pointer]:
+                  - /url: /admin/structure
+              - listitem [ref=e20]:
+                - link "Apariencia" [ref=e21] [cursor=pointer]:
+                  - /url: /admin/appearance
+              - listitem [ref=e22]:
+                - link "Ampliar" [ref=e23] [cursor=pointer]:
+                  - /url: /admin/modules
+              - listitem [ref=e24]:
+                - link "Configuración" [ref=e25] [cursor=pointer]:
+                  - /url: /admin/config
+              - listitem [ref=e26]:
+                - link "Password Manager" [ref=e27] [cursor=pointer]:
+                  - /url: /admin/password-manager
+              - listitem [ref=e28]:
+                - link "Usuarios" [ref=e29] [cursor=pointer]:
+                  - /url: /admin/people
+              - listitem [ref=e30]:
+                - link "Informes" [ref=e31] [cursor=pointer]:
+                  - /url: /admin/reports
+              - listitem [ref=e32]:
+                - link "Ayuda" [ref=e33] [cursor=pointer]:
+                  - /url: /admin/help
+          - button "Orientación vertical" [ref=e36] [cursor=pointer]
+      - button "Atajos" [ref=e38] [cursor=pointer]
+      - generic:
+        - generic:
+          - navigation
+      - generic [ref=e39]:
+        - button "Editar" [ref=e40] [cursor=pointer]
+        - generic:
+          - navigation
+      - generic [ref=e41]:
+        - link "Drupal Canvas" [ref=e42] [cursor=pointer]:
+          - /url: /canvas
+        - generic:
+          - navigation
+      - button "Ejemplos" [ref=e44] [cursor=pointer]
+      - button "saibher_developer" [ref=e46] [cursor=pointer]
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49] [cursor=pointer]: Buscar
+          - searchbox "Buscar" [ref=e50]
+        - generic:
+          - navigation
+      - generic [ref=e51]:
+        - link "Commerce inbox 3" [ref=e52] [cursor=pointer]:
+          - /url: /admin/commerce
+          - text: Commerce inbox
+          - generic [ref=e53]: "3"
+        - generic:
+          - navigation
+  - main [ref=e55]:
+    - generic [ref=e58]:
+      - navigation [ref=e61]:
+        - heading "Sobrescribir enlaces de ayuda a la navegación" [level=2] [ref=e62]
+        - list [ref=e63]:
+          - listitem [ref=e64]:
+            - link "Home" [ref=e65] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e66]:
+            - link "Administración" [ref=e67] [cursor=pointer]:
+              - /url: /admin
+          - listitem [ref=e68]:
+            - link "Comercio" [ref=e69] [cursor=pointer]:
+              - /url: /admin/commerce
+          - listitem [ref=e70]:
+            - link "Pedidos" [ref=e71] [cursor=pointer]:
+              - /url: /admin/commerce/orders
+          - listitem [ref=e72]: Order 1
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - heading "Order 1" [level=1] [ref=e75]
+          - link [ref=e76] [cursor=pointer]:
+            - /url: /admin/config/user-interface/shortcut/manage/default/add-link-inline?link=admin/commerce/orders/1&name=Order%201&destination=/admin/commerce/orders/1&token=_f8EOs8EFCH6Xo-0DgD8e6RtHEApw8GxY9BQPZxDstM
+            - generic [ref=e78]:
+              - text: Añadir a atajos
+              - emphasis [ref=e79]: Default
+        - generic [ref=e80]:
+          - heading "Solapas principales" [level=2] [ref=e81]
+          - navigation "Solapas principales" [ref=e82]:
+            - list [ref=e83]:
+              - listitem [ref=e84]:
+                - link "Ver" [ref=e85] [cursor=pointer]:
+                  - /url: /admin/commerce/orders/1
+              - listitem [ref=e86]:
+                - link "Editar" [ref=e87] [cursor=pointer]:
+                  - /url: /admin/commerce/orders/1/edit
+              - listitem [ref=e88]:
+                - link "Pagos" [ref=e89] [cursor=pointer]:
+                  - /url: /admin/commerce/orders/1/payments
+    - generic [ref=e91]:
+      - contentinfo [ref=e95]:
+        - alert [ref=e96]:
+          - heading "Mensaje de error" [level=2] [ref=e98]
+          - list [ref=e100]:
+            - listitem [ref=e101]:
+              - text: Hay una actualización de seguridad disponible para su versión de Drupal. Para garantizar la seguridad de su servidor, ¡debería actualizarla de inmediato! Vea la página de
+              - link "actualizaciones disponibles" [ref=e102] [cursor=pointer]:
+                - /url: /admin/reports/updates
+              - text: para más información.
+            - listitem [ref=e103]:
+              - text: Hay actualizaciones de seguridad disponibles para uno o más de sus módulos o temas gráficos. Para garantizar la seguridad de su servidor, ¡debería actualizarlos inmediatamente! Vea la página de
+              - link "actualizaciones disponibles" [ref=e104] [cursor=pointer]:
+                - /url: /admin/reports/updates
+              - text: para más información.
+      - generic [ref=e105]:
+        - list [ref=e107]:
+          - listitem [ref=e108]:
+            - link "+Reenviar recibo" [ref=e109] [cursor=pointer]:
+              - /url: /admin/commerce/orders/1/resend-receipt
+          - listitem [ref=e110]:
+            - link "+Reasignar pedido" [ref=e111] [cursor=pointer]:
+              - /url: /admin/commerce/orders/1/reassign
+        - generic [ref=e113]:
+          - generic [ref=e115]:
+            - generic [ref=e119]:
+              - generic [ref=e120]: Datos de facturación
+              - link "Añadir información de facturación" [ref=e123] [cursor=pointer]:
+                - /url: /admin/commerce/orders/1/form/billing-information
+            - generic [ref=e125]:
+              - generic [ref=e129]:
+                - table [ref=e130]:
+                  - rowgroup [ref=e131]:
+                    - row [ref=e132]:
+                      - columnheader "Title" [ref=e133]
+                      - columnheader "Unit price" [ref=e134]
+                      - columnheader "Quantity" [ref=e135]
+                      - columnheader "Total price" [ref=e136]
+                  - rowgroup [ref=e137]:
+                    - row [ref=e138]:
+                      - 'cell "Producto demo SKU: DEMO-001 edit | eliminar" [ref=e139]':
+                        - generic [ref=e140]:
+                          - generic [ref=e141]: Producto demo
+                          - generic [ref=e142]: "SKU: DEMO-001"
+                        - generic [ref=e143]:
+                          - generic [ref=e144]:
+                            - link "edit" [ref=e145] [cursor=pointer]:
+                              - /url: /admin/commerce/orders/1/items/2/edit
+                            - text: "|"
+                          - link "eliminar" [ref=e147] [cursor=pointer]:
+                            - /url: /admin/commerce/orders/1/items/2/delete
+                      - cell "150.000,00 COP" [ref=e148]
+                      - cell "1" [ref=e149]
+                      - cell "150.000,00 COP" [ref=e150]
+                - generic [ref=e154]:
+                  - generic [ref=e155]:
+                    - generic [ref=e156]: Subtotal
+                    - generic [ref=e157]: 150.000,00 COP
+                  - generic [ref=e158]:
+                    - generic [ref=e159]: Total
+                    - generic [ref=e160]: 150.000,00 COP
+              - link "Add order items" [ref=e162] [cursor=pointer]:
+                - /url: /admin/commerce/orders/1/form/add-items
+          - generic [ref=e163]:
+            - generic [ref=e166]:
+              - generic [ref=e167]:
+                - heading "Placed order" [level=4] [ref=e168]
+                - generic [ref=e169]: Unpaid
+              - generic [ref=e171]:
+                - generic [ref=e172]:
+                  - generic [ref=e173]: "Realizado:"
+                  - time [ref=e175]: 21/09/2026 - 20:39
+                - generic [ref=e176]:
+                  - generic [ref=e177]: "State:"
+                  - generic [ref=e178]: Completed
+                - generic [ref=e179]:
+                  - generic [ref=e180]: "Cliente:"
+                  - link "maria" [ref=e182] [cursor=pointer]:
+                    - /url: /user/768
+                - generic [ref=e183]:
+                  - generic [ref=e184]: "IP address:"
+                  - generic [ref=e185]: 127.0.0.1
+            - generic [ref=e186]: No transitions available.
+            - generic [ref=e192]:
+              - generic [ref=e193]:
+                - heading "Order details" [level=4] [ref=e194]
+                - link "Editar" [ref=e195] [cursor=pointer]:
+                  - /url: /admin/commerce/orders/1/form/order_details
+              - generic [ref=e198]:
+                - generic [ref=e199]: "Correo electrónico de contacto:"
+                - generic [ref=e200]: maria@test.local
+            - generic [ref=e201]:
+              - generic [ref=e202]:
+                - text: Created
+                - time [ref=e203]: 21/09/2026 - 20:38
+              - generic [ref=e204]:
+                - text: Updated
+                - time [ref=e205]: 21/09/2026 - 20:39
+              - generic [ref=e206]:
+                - text: Completado
+                - time [ref=e207]: 21/09/2026 - 20:39
+  - status [ref=e209]
+  - status [ref=e210]

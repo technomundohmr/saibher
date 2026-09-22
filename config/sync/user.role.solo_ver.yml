@@ -1,0 +1,12 @@
+uuid: b9fe866e-7c51-41be-a708-dd8c9e01e779
+langcode: es
+status: true
+dependencies:
+  module:
+    - saibher_user_management
+id: solo_ver
+label: 'Solo perfil'
+weight: 5
+is_admin: false
+permissions:
+  - saibher_user_management.view_own_profile

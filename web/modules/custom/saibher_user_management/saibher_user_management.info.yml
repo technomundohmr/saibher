@@ -1,0 +1,11 @@
+name: 'Saibher User Management'
+type: module
+description: 'Registro de usuarios, perfil y sistema de referidos (afiliación) con panel de comisiones para Saibher.'
+package: Saibher
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:user
+  - drupal:field
+  - drupal:file
+  - drupal:image
+configure: saibher_user_management.affiliate_settings

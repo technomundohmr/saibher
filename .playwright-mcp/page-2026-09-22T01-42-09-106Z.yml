@@ -1,0 +1,236 @@
+- generic [active] [ref=f1e1]:
+  - link "Pasar al contenido principal" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - group "Barra de administración del sitio web":
+    - navigation "Elementos de la barra de herramientas" [ref=f1e3]:
+      - heading "Elementos de la barra de herramientas" [level=2] [ref=f1e4]
+      - generic [ref=f1e5]:
+        - link "Regresar al sitio" [ref=f1e6] [cursor=pointer]:
+          - /url: /
+        - generic:
+          - navigation
+      - generic [ref=f1e7]:
+        - button "Administrar" [pressed] [ref=f1e8] [cursor=pointer]
+        - navigation "Menú de administración" [ref=f1e10]:
+          - heading "Menú de administración" [level=3] [ref=f1e11]
+          - generic:
+            - list:
+              - listitem [ref=f1e12]:
+                - link "Front page" [ref=f1e13] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=f1e14]:
+                - link "Content" [ref=f1e15] [cursor=pointer]:
+                  - /url: /admin/content
+              - listitem [ref=f1e16]:
+                - link "Comercio" [ref=f1e17] [cursor=pointer]:
+                  - /url: /admin/commerce
+              - listitem [ref=f1e18]:
+                - link "Estructura" [ref=f1e19] [cursor=pointer]:
+                  - /url: /admin/structure
+              - listitem [ref=f1e20]:
+                - link "Apariencia" [ref=f1e21] [cursor=pointer]:
+                  - /url: /admin/appearance
+              - listitem [ref=f1e22]:
+                - link "Ampliar" [ref=f1e23] [cursor=pointer]:
+                  - /url: /admin/modules
+              - listitem [ref=f1e24]:
+                - link "Configuración" [ref=f1e25] [cursor=pointer]:
+                  - /url: /admin/config
+              - listitem [ref=f1e26]:
+                - link "Password Manager" [ref=f1e27] [cursor=pointer]:
+                  - /url: /admin/password-manager
+              - listitem [ref=f1e28]:
+                - link "Usuarios" [ref=f1e29] [cursor=pointer]:
+                  - /url: /admin/people
+              - listitem [ref=f1e30]:
+                - link "Informes" [ref=f1e31] [cursor=pointer]:
+                  - /url: /admin/reports
+              - listitem [ref=f1e32]:
+                - link "Ayuda" [ref=f1e33] [cursor=pointer]:
+                  - /url: /admin/help
+          - button "Orientación vertical" [ref=f1e36] [cursor=pointer]
+      - button "Atajos" [ref=f1e38] [cursor=pointer]
+      - generic:
+        - generic:
+          - navigation
+      - generic [ref=f1e39]:
+        - button "Editar" [ref=f1e40] [cursor=pointer]
+        - generic:
+          - navigation
+      - generic [ref=f1e41]:
+        - link "Drupal Canvas" [ref=f1e42] [cursor=pointer]:
+          - /url: /canvas
+        - generic:
+          - navigation
+      - button "Ejemplos" [ref=f1e44] [cursor=pointer]
+      - button "saibher_developer" [ref=f1e46] [cursor=pointer]
+      - generic [ref=f1e47]:
+        - generic [ref=f1e48]:
+          - generic [ref=f1e49] [cursor=pointer]: Buscar
+          - searchbox "Buscar" [ref=f1e50]
+        - generic:
+          - navigation
+      - generic [ref=f1e51]:
+        - link "Commerce inbox 3" [ref=f1e52] [cursor=pointer]:
+          - /url: /admin/commerce
+          - text: Commerce inbox
+          - generic [ref=f1e53]: "3"
+        - generic:
+          - navigation
+  - main [ref=f1e55]:
+    - generic [ref=f1e58]:
+      - navigation [ref=f1e61]:
+        - heading "Sobrescribir enlaces de ayuda a la navegación" [level=2] [ref=f1e62]
+        - list [ref=f1e63]:
+          - listitem [ref=f1e64]:
+            - link "Home" [ref=f1e65] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f1e66]:
+            - link "Administración" [ref=f1e67] [cursor=pointer]:
+              - /url: /admin
+          - listitem [ref=f1e68]: Comisiones de Afiliados
+      - generic [ref=f1e70]:
+        - heading "Comisiones de afiliados" [level=1] [ref=f1e71]
+        - link [ref=f1e72] [cursor=pointer]:
+          - /url: /admin/config/user-interface/shortcut/manage/default/add-link-inline?link=admin/saibher/affiliate-commissions&name=Comisiones%20de%20afiliados&destination=/admin/saibher/affiliate-commissions&token=_f8EOs8EFCH6Xo-0DgD8e6RtHEApw8GxY9BQPZxDstM
+          - generic [ref=f1e74]:
+            - text: Añadir a atajos
+            - emphasis [ref=f1e75]: Default
+    - generic [ref=f1e77]:
+      - contentinfo [ref=f1e81]:
+        - alert [ref=f1e82]:
+          - heading "Mensaje de error" [level=2] [ref=f1e84]
+          - list [ref=f1e86]:
+            - listitem [ref=f1e87]:
+              - text: Hay una actualización de seguridad disponible para su versión de Drupal. Para garantizar la seguridad de su servidor, ¡debería actualizarla de inmediato! Vea la página de
+              - link "actualizaciones disponibles" [ref=f1e88] [cursor=pointer]:
+                - /url: /admin/reports/updates
+              - text: para más información.
+            - listitem [ref=f1e89]:
+              - text: Hay actualizaciones de seguridad disponibles para uno o más de sus módulos o temas gráficos. Para garantizar la seguridad de su servidor, ¡debería actualizarlos inmediatamente! Vea la página de
+              - link "actualizaciones disponibles" [ref=f1e90] [cursor=pointer]:
+                - /url: /admin/reports/updates
+              - text: para más información.
+      - generic [ref=f1e91]:
+        - list [ref=f1e93]:
+          - listitem [ref=f1e94]:
+            - link "+Registrar comisión" [ref=f1e95] [cursor=pointer]:
+              - /url: /admin/saibher/affiliate-commissions/add
+        - table [ref=f1e97]:
+          - rowgroup [ref=f1e98]:
+            - row [ref=f1e99]:
+              - columnheader "ID" [ref=f1e100]
+              - columnheader "Afiliado" [ref=f1e101]
+              - columnheader "Referido" [ref=f1e102]
+              - columnheader "Pedido" [ref=f1e103]
+              - columnheader "Monto" [ref=f1e104]
+              - columnheader "Estado" [ref=f1e105]
+              - columnheader "Fecha" [ref=f1e106]
+              - columnheader "Operations" [ref=f1e107]
+          - rowgroup [ref=f1e108]:
+            - row [ref=f1e109]:
+              - cell "1" [ref=f1e110]
+              - cell [ref=f1e111]:
+                - link "saibher_developer" [ref=f1e112] [cursor=pointer]:
+                  - /url: /user/1
+              - cell [ref=f1e113]:
+                - link "maria" [ref=f1e114] [cursor=pointer]:
+                  - /url: /user/768
+              - cell "—" [ref=f1e115]
+              - cell "100,000.00 COP" [ref=f1e116]
+              - cell "Aprobada" [ref=f1e117]
+              - cell "01/08/2026 - 19:55" [ref=f1e118]
+              - cell [ref=f1e119]:
+                - list [ref=f1e122]:
+                  - listitem [ref=f1e123]:
+                    - link "Edit affiliate_commission 1" [ref=f1e124] [cursor=pointer]:
+                      - /url: /admin/saibher/affiliate-commissions/1/edit?destination=/admin/saibher/affiliate-commissions
+                      - text: Editar
+                  - listitem:
+                    - button "Lista adicional de acciones" [ref=f1e125]
+            - row [ref=f1e127]:
+              - cell "2" [ref=f1e128]
+              - cell [ref=f1e129]:
+                - link "saibher_developer" [ref=f1e130] [cursor=pointer]:
+                  - /url: /user/1
+              - cell [ref=f1e131]:
+                - link "carlos" [ref=f1e132] [cursor=pointer]:
+                  - /url: /user/769
+              - cell "—" [ref=f1e133]
+              - cell "25,000.00 COP" [ref=f1e134]
+              - cell "Pendiente" [ref=f1e135]
+              - cell "01/09/2026 - 19:55" [ref=f1e136]
+              - cell [ref=f1e137]:
+                - list [ref=f1e140]:
+                  - listitem [ref=f1e141]:
+                    - link "Edit affiliate_commission 2" [ref=f1e142] [cursor=pointer]:
+                      - /url: /admin/saibher/affiliate-commissions/2/edit?destination=/admin/saibher/affiliate-commissions
+                      - text: Editar
+                  - listitem:
+                    - button "Lista adicional de acciones" [ref=f1e143]
+            - row [ref=f1e145]:
+              - cell "3" [ref=f1e146]
+              - cell [ref=f1e147]:
+                - link "saibher_developer" [ref=f1e148] [cursor=pointer]:
+                  - /url: /user/1
+              - cell [ref=f1e149]:
+                - link "carlos" [ref=f1e150] [cursor=pointer]:
+                  - /url: /user/769
+              - cell "—" [ref=f1e151]
+              - cell "15,000.00 COP" [ref=f1e152]
+              - cell "Rechazada" [ref=f1e153]
+              - cell "01/09/2026 - 19:55" [ref=f1e154]
+              - cell [ref=f1e155]:
+                - list [ref=f1e158]:
+                  - listitem [ref=f1e159]:
+                    - link "Edit affiliate_commission 3" [ref=f1e160] [cursor=pointer]:
+                      - /url: /admin/saibher/affiliate-commissions/3/edit?destination=/admin/saibher/affiliate-commissions
+                      - text: Editar
+                  - listitem:
+                    - button "Lista adicional de acciones" [ref=f1e161]
+            - row [ref=f1e163]:
+              - cell "4" [ref=f1e164]
+              - cell [ref=f1e165]:
+                - link "saibher_developer" [ref=f1e166] [cursor=pointer]:
+                  - /url: /user/1
+              - cell [ref=f1e167]:
+                - link "maria" [ref=f1e168] [cursor=pointer]:
+                  - /url: /user/768
+              - cell [ref=f1e169]:
+                - link "Order 1" [ref=f1e170] [cursor=pointer]:
+                  - /url: /admin/commerce/orders/1
+              - cell "15,000.00 COP" [ref=f1e171]
+              - cell "Pendiente" [ref=f1e172]
+              - cell "21/09/2026 - 20:39" [ref=f1e173]
+              - cell [ref=f1e174]:
+                - list [ref=f1e177]:
+                  - listitem [ref=f1e178]:
+                    - link "Edit affiliate_commission 4" [ref=f1e179] [cursor=pointer]:
+                      - /url: /admin/saibher/affiliate-commissions/4/edit?destination=/admin/saibher/affiliate-commissions
+                      - text: Editar
+                  - listitem:
+                    - button "Lista adicional de acciones" [ref=f1e180]
+            - row [ref=f1e182]:
+              - cell "5" [ref=f1e183]
+              - cell [ref=f1e184]:
+                - link "saibher_developer" [ref=f1e185] [cursor=pointer]:
+                  - /url: /user/1
+              - cell [ref=f1e186]:
+                - link "jairo" [ref=f1e187] [cursor=pointer]:
+                  - /url: /user/773
+              - cell [ref=f1e188]:
+                - link "Order 2" [ref=f1e189] [cursor=pointer]:
+                  - /url: /admin/commerce/orders/2
+              - cell "15,000.00 COP" [ref=f1e190]
+              - cell "Pendiente" [ref=f1e191]
+              - cell "21/09/2026 - 20:41" [ref=f1e192]
+              - cell [ref=f1e193]:
+                - list [ref=f1e196]:
+                  - listitem [ref=f1e197]:
+                    - link "Edit affiliate_commission 5" [ref=f1e198] [cursor=pointer]:
+                      - /url: /admin/saibher/affiliate-commissions/5/edit?destination=/admin/saibher/affiliate-commissions
+                      - text: Editar
+                  - listitem:
+                    - button "Lista adicional de acciones" [ref=f1e199]
+  - status [ref=f1e202]
+  - status [ref=f1e203]

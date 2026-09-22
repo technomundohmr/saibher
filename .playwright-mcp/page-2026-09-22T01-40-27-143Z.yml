@@ -1,0 +1,59 @@
+- generic [active] [ref=f16e1]:
+  - link "Pasar al contenido principal" [ref=f16e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=f16e3]:
+    - banner [ref=f16e4]:
+      - generic [ref=f16e6]:
+        - textbox "Qué estás buscano Hoy" [ref=f16e8]
+        - button "Buscar" [ref=f16e9] [cursor=pointer]
+      - navigation [ref=f16e10]:
+        - generic [ref=f16e11]:
+          - link [ref=f16e14] [cursor=pointer]:
+            - /url: /
+            - img "Home" [ref=f16e15]
+          - navigation [ref=f16e16]:
+            - list [ref=f16e17]:
+              - listitem [ref=f16e18]:
+                - link "Blog" [ref=f16e19] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=f16e20]:
+                - link "Portafolio" [ref=f16e21] [cursor=pointer]:
+                  - /url: /andres-rincon
+              - listitem [ref=f16e22]:
+                - link "Contácto" [ref=f16e23] [cursor=pointer]:
+                  - /url: /contactenos
+          - paragraph [ref=f16e26]:
+            - button "Necesito asesoría" [ref=f16e27] [cursor=pointer]
+    - generic [ref=f16e28]:
+      - complementary
+      - main [ref=f16e29]:
+        - generic [ref=f16e33]:
+          - button "Cerrar sesión" [ref=f16e34]
+          - link "Cancelar" [ref=f16e35] [cursor=pointer]:
+            - /url: /
+      - complementary
+    - contentinfo [ref=f16e36]:
+      - generic [ref=f16e38]:
+        - heading "suscribete a nuestro newsletter" [level=2] [ref=f16e39]
+        - generic [ref=f16e41]:
+          - textbox "Nombre" [ref=f16e46]
+          - textbox "Correo electrónico" [ref=f16e51]
+          - button "suscribirme" [ref=f16e56] [cursor=pointer]
+      - generic [ref=f16e57]:
+        - heading "Síguenos en" [level=2] [ref=f16e58]
+        - generic [ref=f16e59]:
+          - link "YouTube" [ref=f16e60] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCh-v7gH7zPSK1qIjX5HzSSw
+          - link "LinkedIn" [ref=f16e62] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/andr%C3%A9s-felipe-rinc%C3%B3n-gracia-513982215/
+      - generic [ref=f16e64]:
+        - heading "Comparte el contenido con las personas que amas" [level=2] [ref=f16e65]
+        - generic [ref=f16e66]:
+          - link "Compartir" [ref=f16e67] [cursor=pointer]:
+            - /url: https://www.addtoany.com/share#url=https%3A%2F%2Fsaibher.ddev.site%3A8443%2Fuser%2Flogout%2Fconfirm&title=saibher
+          - link "Facebook" [ref=f16e69] [cursor=pointer]:
+            - /url: /#facebook
+          - link "Twitter" [ref=f16e71] [cursor=pointer]:
+            - /url: /#twitter
+          - link "Email" [ref=f16e73] [cursor=pointer]:
+            - /url: /#email

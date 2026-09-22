@@ -1,0 +1,5 @@
+saibher_user_management.commission_add:
+  route_name: entity.affiliate_commission.add_form
+  title: 'Registrar comisión'
+  appears_on:
+    - entity.affiliate_commission.collection

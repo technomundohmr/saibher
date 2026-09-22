@@ -1,0 +1,201 @@
+- generic [active] [ref=f7e1]:
+  - link "Pasar al contenido principal" [ref=f7e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - group "Barra de administración del sitio web":
+    - navigation "Elementos de la barra de herramientas" [ref=f7e3]:
+      - heading "Elementos de la barra de herramientas" [level=2] [ref=f7e4]
+      - generic [ref=f7e5]:
+        - button "Administrar" [pressed] [ref=f7e6] [cursor=pointer]
+        - navigation "Menú de administración" [ref=f7e8]:
+          - heading "Menú de administración" [level=3] [ref=f7e9]
+          - generic:
+            - list:
+              - listitem [ref=f7e10]:
+                - link "Front page" [ref=f7e11] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=f7e12]:
+                - link "Content" [ref=f7e13] [cursor=pointer]:
+                  - /url: /admin/content
+              - listitem [ref=f7e14]:
+                - link "Comercio" [ref=f7e15] [cursor=pointer]:
+                  - /url: /admin/commerce
+              - listitem [ref=f7e16]:
+                - link "Estructura" [ref=f7e17] [cursor=pointer]:
+                  - /url: /admin/structure
+              - listitem [ref=f7e18]:
+                - link "Apariencia" [ref=f7e19] [cursor=pointer]:
+                  - /url: /admin/appearance
+              - listitem [ref=f7e20]:
+                - link "Ampliar" [ref=f7e21] [cursor=pointer]:
+                  - /url: /admin/modules
+              - listitem [ref=f7e22]:
+                - link "Configuración" [ref=f7e23] [cursor=pointer]:
+                  - /url: /admin/config
+              - listitem [ref=f7e24]:
+                - link "Password Manager" [ref=f7e25] [cursor=pointer]:
+                  - /url: /admin/password-manager
+              - listitem [ref=f7e26]:
+                - link "Usuarios" [ref=f7e27] [cursor=pointer]:
+                  - /url: /admin/people
+              - listitem [ref=f7e28]:
+                - link "Informes" [ref=f7e29] [cursor=pointer]:
+                  - /url: /admin/reports
+              - listitem [ref=f7e30]:
+                - link "Ayuda" [ref=f7e31] [cursor=pointer]:
+                  - /url: /admin/help
+          - button "Orientación vertical" [ref=f7e34] [cursor=pointer]
+      - button "Atajos" [ref=f7e36] [cursor=pointer]
+      - generic:
+        - generic:
+          - navigation
+      - generic [ref=f7e37]:
+        - button "Editar" [ref=f7e38] [cursor=pointer]
+        - generic:
+          - navigation
+      - generic [ref=f7e39]:
+        - link "Drupal Canvas" [ref=f7e40] [cursor=pointer]:
+          - /url: /canvas
+        - generic:
+          - navigation
+      - button "Ejemplos" [ref=f7e42] [cursor=pointer]
+      - button "saibher_developer" [ref=f7e44] [cursor=pointer]
+      - generic [ref=f7e45]:
+        - generic [ref=f7e46]:
+          - generic [ref=f7e47]: Buscar
+          - searchbox "Buscar" [ref=f7e48]
+        - generic:
+          - navigation
+      - generic [ref=f7e49]:
+        - link "Commerce inbox 3" [ref=f7e50] [cursor=pointer]:
+          - /url: /admin/commerce
+          - text: Commerce inbox
+          - generic [ref=f7e51]: "3"
+        - generic:
+          - navigation
+  - generic [ref=f7e52]:
+    - banner [ref=f7e53]:
+      - generic:
+        - generic:
+          - button "Abierta opciones de configuración" [ref=f7e54] [cursor=pointer]
+          - generic [ref=f7e56]:
+            - textbox "Qué estás buscano Hoy" [ref=f7e58]
+            - button "Buscar" [ref=f7e59] [cursor=pointer]
+      - navigation [ref=f7e60]:
+        - generic [ref=f7e61]:
+          - generic [ref=f7e62]:
+            - button "Abierta opciones de configuración" [ref=f7e63] [cursor=pointer]
+            - link [ref=f7e65] [cursor=pointer]:
+              - /url: /
+              - img "Home" [ref=f7e66]
+          - navigation [ref=f7e67]:
+            - list [ref=f7e68]:
+              - listitem [ref=f7e69]:
+                - link "Blog" [ref=f7e70] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=f7e71]:
+                - link "Portafolio" [ref=f7e72] [cursor=pointer]:
+                  - /url: /andres-rincon
+              - listitem [ref=f7e73]:
+                - link "Contácto" [ref=f7e74] [cursor=pointer]:
+                  - /url: /contactenos
+          - generic [ref=f7e75]:
+            - button "Abierta opciones de configuración" [ref=f7e76] [cursor=pointer]
+            - paragraph [ref=f7e78]:
+              - button "Necesito asesoría" [ref=f7e79] [cursor=pointer]
+    - generic [ref=f7e80]:
+      - complementary
+      - main [ref=f7e81]:
+        - generic [ref=f7e85]:
+          - button "Cerrar sesión" [ref=f7e86]
+          - link "Cancelar" [ref=f7e87] [cursor=pointer]:
+            - /url: /
+      - complementary
+    - contentinfo [ref=f7e88]:
+      - generic [ref=f7e90]:
+        - heading "suscribete a nuestro newsletter" [level=2] [ref=f7e91]
+        - button "Abierta suscribete a nuestro newsletter opciones de configuración" [ref=f7e92] [cursor=pointer]
+        - generic [ref=f7e94]:
+          - textbox "Nombre" [ref=f7e99]
+          - textbox "Correo electrónico" [ref=f7e104]
+          - button "suscribirme" [ref=f7e109] [cursor=pointer]
+          - button "Abierta opciones de configuración" [ref=f7e110] [cursor=pointer]
+      - generic [ref=f7e111]:
+        - button "Abierta categoría de artículo opciones de configuración" [ref=f7e112] [cursor=pointer]
+        - generic [ref=f7e113]:
+          - generic [ref=f7e114]:
+            - heading "categoría de artículo" [level=2] [ref=f7e115]
+            - list [ref=f7e117]:
+              - listitem [ref=f7e118]: crypto
+              - listitem [ref=f7e119]:
+                - link "Desarrollo web" [ref=f7e120] [cursor=pointer]:
+                  - /url: /desarrollo-web-0
+              - listitem [ref=f7e121]:
+                - link "Drupal" [ref=f7e122] [cursor=pointer]:
+                  - /url: /drupal
+              - listitem [ref=f7e123]:
+                - link "Inteligencia Artificial" [ref=f7e124] [cursor=pointer]:
+                  - /url: /inteligencia-artificial
+              - listitem [ref=f7e125]:
+                - link "Negocios" [ref=f7e126] [cursor=pointer]:
+                  - /url: /negocios
+              - listitem [ref=f7e127]:
+                - link "Noticias" [ref=f7e128] [cursor=pointer]:
+                  - /url: /noticias
+              - listitem [ref=f7e129]:
+                - link "PHP" [ref=f7e130] [cursor=pointer]:
+                  - /url: /php
+              - listitem [ref=f7e131]:
+                - link "React JS" [ref=f7e132] [cursor=pointer]:
+                  - /url: /react-js-0
+          - generic [ref=f7e133]:
+            - heading "Tecnologías o lenguajes de programacion" [level=2] [ref=f7e134]
+            - list [ref=f7e136]:
+              - listitem [ref=f7e137]:
+                - link "CSS 3" [ref=f7e138] [cursor=pointer]:
+                  - /url: /css-3
+              - listitem [ref=f7e139]:
+                - link "Drupal" [ref=f7e140] [cursor=pointer]:
+                  - /url: /drupal-1
+              - listitem [ref=f7e141]: JavaScript
+              - listitem [ref=f7e142]:
+                - link "PHP" [ref=f7e143] [cursor=pointer]:
+                  - /url: /php-1
+              - listitem [ref=f7e144]: Python
+              - listitem [ref=f7e145]: React
+              - listitem [ref=f7e146]:
+                - link "Tailwind CSS" [ref=f7e147] [cursor=pointer]:
+                  - /url: /tailwind-css
+          - generic [ref=f7e148]:
+            - heading "Navegación principal" [level=2] [ref=f7e149]
+            - list [ref=f7e151]:
+              - listitem [ref=f7e152]:
+                - link "Blog" [ref=f7e153] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=f7e154]:
+                - link "Portafolio" [ref=f7e155] [cursor=pointer]:
+                  - /url: /andres-rincon
+              - listitem [ref=f7e156]:
+                - link "Contácto" [ref=f7e157] [cursor=pointer]:
+                  - /url: /contactenos
+      - generic [ref=f7e158]:
+        - heading "Síguenos en" [level=2] [ref=f7e159]
+        - button "Abierta Síguenos en opciones de configuración" [ref=f7e160] [cursor=pointer]
+        - generic [ref=f7e161]:
+          - link "YouTube" [ref=f7e162] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCh-v7gH7zPSK1qIjX5HzSSw
+          - link "LinkedIn" [ref=f7e164] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/andr%C3%A9s-felipe-rinc%C3%B3n-gracia-513982215/
+      - generic [ref=f7e166]:
+        - heading "Comparte el contenido con las personas que amas" [level=2] [ref=f7e167]
+        - button "Abierta Comparte el contenido con las personas que amas opciones de configuración" [ref=f7e168] [cursor=pointer]
+        - generic [ref=f7e169]:
+          - link "Compartir" [ref=f7e170] [cursor=pointer]:
+            - /url: https://www.addtoany.com/share#url=https%3A%2F%2Fsaibher.ddev.site%3A8443%2Fuser%2Flogout%2Fconfirm&title=saibher
+          - link "Facebook" [ref=f7e172] [cursor=pointer]:
+            - /url: /#facebook
+          - link "Twitter" [ref=f7e174] [cursor=pointer]:
+            - /url: /#twitter
+          - link "Email" [ref=f7e176] [cursor=pointer]:
+            - /url: /#email
+  - status [ref=f7e179]
+  - status [ref=f7e180]

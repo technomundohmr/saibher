@@ -1,0 +1,14 @@
+uuid: 4c7b3a0e-5a89-44c1-ad35-dd5a3dd2fcfe
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.solo_ver
+  module:
+    - user
+id: user_remove_role_action.solo_ver
+label: 'Elimina el rol Solo perfil al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: solo_ver

@@ -1,0 +1,513 @@
+/**
+ * Styles for Saibher User Management forms and profile page.
+ *
+ * Reuses the CSS custom properties already defined by the Saibher theme
+ * (--brand, --brand-dark, --energy, --surface, --border, --radius, etc.)
+ * so this module stays visually consistent with the rest of the site
+ * without redefining brand colors.
+ */
+
+/* ==========================================================================
+   Shared form styles (register + profile edit)
+   ========================================================================== */
+
+.saibher-form {
+  max-width: 28rem;
+  margin-inline: auto;
+  background-color: var(--card, #fff);
+  border: 1px solid var(--border, #e4e9ff);
+  border-radius: calc(var(--radius, 0.625rem) + 8px);
+  padding: 2rem;
+  box-shadow: 0 2px 8px #1242e614;
+}
+
+.saibher-form h2 {
+  font-family: var(--font-display, "Plus Jakarta Sans", sans-serif);
+  font-weight: 700;
+  color: var(--text-strong, #0a1a5c);
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.saibher-form__subtitle {
+  color: var(--text-body, #2d3a6b);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.saibher-form__row {
+  display: flex;
+  gap: 1rem;
+}
+
+.saibher-form__row > * {
+  flex: 1;
+}
+
+.saibher-form label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-strong, #0a1a5c);
+  margin-bottom: 0.35rem;
+}
+
+.saibher-form input[type="text"],
+.saibher-form input[type="email"],
+.saibher-form input[type="password"],
+.saibher-form input[type="tel"],
+.saibher-form input[type="url"],
+.saibher-form select {
+  width: 100%;
+  border: 1px solid var(--border, #e4e9ff);
+  border-radius: calc(var(--radius, 0.625rem) - 2px);
+  padding: 0.65rem 0.85rem;
+  font-size: 0.95rem;
+  color: var(--text-strong, #0a1a5c);
+  background-color: var(--background, #fff);
+  margin-bottom: 1rem;
+}
+
+.saibher-form input:focus,
+.saibher-form select:focus {
+  outline: none;
+  border-color: var(--brand, #1242e6);
+  box-shadow: 0 0 0 3px var(--brand-light, #c5cffa);
+}
+
+.saibher-form__terms-checkbox {
+  background-color: var(--surface, #f4f6ff);
+  border-radius: calc(var(--radius, 0.625rem) - 2px);
+  padding: 0.85rem 1rem;
+  font-size: 0.85rem;
+  color: var(--text-body, #2d3a6b);
+}
+
+.saibher-form__terms-checkbox a {
+  color: var(--brand, #1242e6);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.saibher-form__submit {
+  width: 100%;
+  background-color: var(--brand, #1242e6);
+  color: #fff;
+  border: none;
+  border-radius: calc(var(--radius, 0.625rem) - 2px);
+  padding: 0.85rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.saibher-form__submit:hover {
+  background-color: var(--brand-dark, #052699);
+}
+
+/* ==========================================================================
+   Profile page
+   ========================================================================== */
+
+.saibher-profile {
+  max-width: 42rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.saibher-profile__card {
+  background-color: var(--card, #fff);
+  border: 1px solid var(--border, #e4e9ff);
+  border-radius: calc(var(--radius, 0.625rem) + 8px);
+  padding: 1.75rem;
+  box-shadow: 0 2px 8px #1242e614;
+}
+
+.saibher-profile__header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.saibher-profile__avatar {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--surface, #f4f6ff);
+  border: 2px solid var(--brand-light, #c5cffa);
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  overflow: visible;
+}
+
+.saibher-profile__avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.saibher-profile__avatar-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.saibher-profile__avatar-upload {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  border-radius: 999px;
+  background-color: var(--energy, #83e612);
+  border: 2px solid var(--card, #fff);
+  color: var(--text-strong, #0a1a5c);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.3rem 0.6rem;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.saibher-profile__avatar-upload:hover {
+  filter: brightness(0.96);
+}
+
+.saibher-profile__identity h2 {
+  font-family: var(--font-display, "Plus Jakarta Sans", sans-serif);
+  font-weight: 700;
+  color: var(--text-strong, #0a1a5c);
+  font-size: 1.25rem;
+  margin-bottom: 0.15rem;
+}
+
+.saibher-profile__business {
+  color: var(--text-body, #2d3a6b);
+  font-size: 0.9rem;
+}
+
+.saibher-profile__hint {
+  color: var(--text-body, #2d3a6b);
+  font-size: 0.8rem;
+  margin-top: 0.35rem;
+}
+
+.saibher-profile__section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.saibher-profile__section-header h3 {
+  font-family: var(--font-display, "Plus Jakarta Sans", sans-serif);
+  font-weight: 700;
+  color: var(--text-strong, #0a1a5c);
+  font-size: 1.05rem;
+}
+
+.saibher-profile__edit-link {
+  color: var(--brand, #1242e6);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.saibher-profile__edit-link:hover {
+  text-decoration: underline;
+}
+
+.saibher-profile__data-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.saibher-profile__data-item {
+  border: 1px solid var(--border, #e4e9ff);
+  border-radius: calc(var(--radius, 0.625rem) - 2px);
+  padding: 0.75rem 1rem;
+}
+
+.saibher-profile__data-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-body, #2d3a6b);
+  margin-bottom: 0.15rem;
+}
+
+.saibher-profile__data-value {
+  display: block;
+  font-weight: 700;
+  color: var(--text-strong, #0a1a5c);
+  font-size: 0.9rem;
+}
+
+.saibher-profile__affiliate {
+  background-color: var(--surface, #f4f6ff);
+  border-color: var(--border, #e4e9ff);
+}
+
+.saibher-profile__affiliate h3 {
+  font-family: var(--font-display, "Plus Jakarta Sans", sans-serif);
+  color: var(--text-strong, #0a1a5c);
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+}
+
+.saibher-profile__affiliate p {
+  color: var(--text-body, #2d3a6b);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.saibher-profile__affiliate-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.saibher-profile__affiliate-input {
+  flex: 1;
+  border: 1px solid var(--border, #e4e9ff);
+  border-radius: calc(var(--radius, 0.625rem) - 2px);
+  padding: 0.65rem 0.85rem;
+  background-color: #fff;
+  color: var(--text-strong, #0a1a5c);
+  font-size: 0.85rem;
+}
+
+.saibher-profile__copy-button {
+  background-color: var(--energy, #83e612);
+  color: var(--text-strong, #0a1a5c);
+  border: none;
+  border-radius: calc(var(--radius, 0.625rem) - 2px);
+  padding: 0.65rem 1.25rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.saibher-profile__balances {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border, #e4e9ff);
+  padding-top: 1.25rem;
+}
+
+.saibher-profile__balances-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.saibher-profile__balances-head h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-strong, #0a1a5c);
+  margin: 0;
+}
+
+.saibher-profile__balances-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-body, #2d3a6b);
+}
+
+.saibher-profile__balances-controls select {
+  border: 1px solid var(--border, #e4e9ff);
+  border-radius: calc(var(--radius, 0.625rem) - 2px);
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  background-color: #fff;
+  color: var(--text-strong, #0a1a5c);
+}
+
+.saibher-profile__balances-totals {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.saibher-profile__balances-total {
+  flex: 1 1 10rem;
+  background-color: var(--card, #fff);
+  border: 1px solid var(--border, #e4e9ff);
+  border-radius: calc(var(--radius, 0.625rem) - 2px);
+  padding: 0.6rem 0.9rem;
+}
+
+.saibher-profile__balances-total strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--text-strong, #0a1a5c);
+}
+
+.saibher-profile__balances-total span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-body, #2d3a6b);
+  margin-top: 0.15rem;
+}
+
+.saibher-profile__balances-body {
+  overflow-x: auto;
+}
+
+.saibher-profile__balances-state {
+  background-color: var(--card, #fff);
+  border: 1px solid var(--border, #e4e9ff);
+  border-radius: calc(var(--radius, 0.625rem) - 2px);
+  padding: 1.25rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-body, #2d3a6b);
+}
+
+.saibher-profile__balances-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--card, #fff);
+  font-size: 0.85rem;
+}
+
+.saibher-profile__balances-table th,
+.saibher-profile__balances-table td {
+  border: 1px solid var(--border, #e4e9ff);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  color: var(--text-strong, #0a1a5c);
+}
+
+.saibher-profile__balances-table th {
+  background-color: var(--surface, #f4f6ff);
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.saibher-profile__balances-sortable {
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.saibher-profile__balances-sortable:hover {
+  background-color: var(--brand-light, #c5cffa);
+}
+
+.saibher-profile__balances-active,
+.saibher-profile__balances-active:hover {
+  background-color: var(--brand-light, #c5cffa);
+}
+
+.saibher-profile__balances-arrow {
+  font-size: 0.7rem;
+}
+
+.saibher-profile__balances-numeric {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.saibher-profile__balances-total-row {
+  font-weight: 700;
+}
+
+.saibher-profile__balances-pager {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-body, #2d3a6b);
+}
+
+.saibher-profile__balances-pager button {
+  border: 1px solid var(--border, #e4e9ff);
+  background-color: #fff;
+  border-radius: calc(var(--radius, 0.625rem) - 2px);
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  color: var(--text-strong, #0a1a5c);
+  cursor: pointer;
+}
+
+.saibher-profile__balances-pager button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.saibher-profile__balances-empty {
+  background-color: var(--card, #fff);
+  border: 1px dashed var(--border, #e4e9ff);
+  border-radius: calc(var(--radius, 0.625rem) - 2px);
+  padding: 1.25rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-body, #2d3a6b);
+}
+
+.saibher-profile__password {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.saibher-profile__password h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-strong, #0a1a5c);
+}
+
+.saibher-profile__password p {
+  color: var(--text-body, #2d3a6b);
+  font-size: 0.85rem;
+}
+
+.saibher-profile__secondary-button {
+  border: 2px solid var(--brand, #1242e6);
+  color: var(--brand, #1242e6);
+  border-radius: calc(var(--radius, 0.625rem) - 2px);
+  padding: 0.6rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.saibher-profile__secondary-button:hover {
+  background-color: var(--brand, #1242e6);
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .saibher-form__row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .saibher-profile__data-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .saibher-profile__password {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

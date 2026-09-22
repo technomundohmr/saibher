@@ -1,0 +1,258 @@
+- generic [active] [ref=f18e1]:
+  - link "Pasar al contenido principal" [ref=f18e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=f18e3]:
+    - banner [ref=f18e4]:
+      - generic [ref=f18e6]:
+        - textbox "Qué estás buscano Hoy" [ref=f18e8]
+        - button "Buscar" [ref=f18e9] [cursor=pointer]
+      - navigation [ref=f18e10]:
+        - generic [ref=f18e11]:
+          - link [ref=f18e14] [cursor=pointer]:
+            - /url: /
+            - img "Home" [ref=f18e15]
+          - navigation [ref=f18e16]:
+            - list [ref=f18e17]:
+              - listitem [ref=f18e18]:
+                - link "Blog" [ref=f18e19] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=f18e20]:
+                - link "Portafolio" [ref=f18e21] [cursor=pointer]:
+                  - /url: /andres-rincon
+              - listitem [ref=f18e22]:
+                - link "Contácto" [ref=f18e23] [cursor=pointer]:
+                  - /url: /contactenos
+          - paragraph [ref=f18e26]:
+            - button "Necesito asesoría" [ref=f18e27] [cursor=pointer]
+    - generic [ref=f18e28]:
+      - complementary
+      - main [ref=f18e29]:
+        - generic [ref=f18e31]:
+          - region "Persona trabajando en su negocio con tecnología" [ref=f18e32]:
+            - generic [ref=f18e34]:
+              - paragraph [ref=f18e35]: TECNOLOGÍA PARA NEGOCIOS REALES
+              - heading "Digitaliza tu negocio. Sin complicaciones." [level=1] [ref=f18e39]:
+                - generic [ref=f18e40]: Digitaliza tu negocio.
+                - generic [ref=f18e41]: Sin complicaciones.
+              - paragraph [ref=f18e42]: En Saibher creamos páginas web, software de gestión y puntos de venta para que tu comercio crezca en el mundo digital — de forma simple y cercana.
+              - generic [ref=f18e43]:
+                - link "Conoce nuestros servicios" [ref=f18e44] [cursor=pointer]:
+                  - /url: "#servicios"
+                - link "Ver portafolio" [ref=f18e45] [cursor=pointer]:
+                  - /url: /andres-rincon
+          - generic [ref=f18e55]:
+            - paragraph [ref=f18e56]: Servicios
+            - heading "Lo que hacemos" [level=2] [ref=f18e57]
+            - paragraph [ref=f18e58]: Tres servicios diseñados para llevar tu negocio al mundo digital, sin tecnicismos.
+          - generic [ref=f18e60]:
+            - generic [ref=f18e63] [cursor=pointer]:
+              - generic [ref=f18e64]: monitor
+              - heading "Desarrollo Web Especializado" [level=3] [ref=f18e66]
+              - paragraph [ref=f18e67]: Sitios web rápidos, modernos y diseñados a la medida para que tu negocio destaque y convierta visitantes en clientes.
+              - link "Saber más →" [ref=f18e68]:
+                - /url: /desarrollo-web-a-medida
+            - generic [ref=f18e71] [cursor=pointer]:
+              - generic [ref=f18e72]: dashboard
+              - heading "Software de Gestión Personalizado" [level=3] [ref=f18e74]
+              - paragraph [ref=f18e75]: Plataformas internas que organizan inventario, ventas, clientes y reportes — pensadas para tu flujo de trabajo.
+              - link "click aquí →" [ref=f18e76]:
+                - /url: /gestion-de-negocio-con-pagina-web
+            - generic [ref=f18e79] [cursor=pointer]:
+              - generic [ref=f18e80]: store
+              - heading "Sistema de Punto de Venta" [level=3] [ref=f18e82]
+              - paragraph [ref=f18e83]: "POS intuitivo para tu tienda física: ventas, facturación, control de caja e integración con tu inventario en tiempo real."
+              - link "click aquí →" [ref=f18e84]:
+                - /url: /sistema-de-punto-de-ventas
+          - generic [ref=f18e86]:
+            - img "Andres rincon" [ref=f18e90]
+            - generic [ref=f18e93]:
+              - generic [ref=f18e94]: El equipo detrás de Saibher
+              - heading "Hola, soy Andrés Rincón" [level=2] [ref=f18e95]:
+                - generic [ref=f18e96]: Hola,
+                - text: soy Andrés Rincón
+              - paragraph [ref=f18e97]:
+                - paragraph [ref=f18e98]: Desarrollador Full Stack especializado en Drupal, con experiencia real creando sitios web, software de gestión y experiencias digitales que transforman negocios.
+                - paragraph [ref=f18e99]:
+                  - strong [ref=f18e100]: "Mi misión con Saibher es simple:"
+                  - text: que cualquier comercio o empresa mediana pueda digitalizarse sin complicaciones, con tecnología que funciona y un aliado que habla claro.
+              - generic [ref=f18e101]:
+                - generic [ref=f18e102]: Drupal Expert
+                - generic [ref=f18e103]: Arquitecto de soluciones
+              - link "Ver portafolio completo →" [ref=f18e104] [cursor=pointer]:
+                - /url: /andres-rincon
+          - generic [ref=f18e106]:
+            - generic [ref=f18e109]:
+              - paragraph [ref=f18e110]: Artículos
+              - heading "Del blog" [level=2] [ref=f18e111]
+              - paragraph [ref=f18e112]: Ideas, guías y noticias para digitalizar tu negocio.
+            - link "Ver todos los artículos" [ref=f18e115] [cursor=pointer]:
+              - /url: /blog
+          - generic [ref=f18e122]:
+            - generic [ref=f18e124]:
+              - link:
+                - /url: /blog/drupal/como-descargar-y-usar-el-modulo-admin-toolbar-en-drupal-10
+              - article [ref=f18e125]:
+                - link [ref=f18e126] [cursor=pointer]:
+                  - /url: /blog/drupal/como-descargar-y-usar-el-modulo-admin-toolbar-en-drupal-10
+                  - img "admin toolbar saibher" [ref=f18e128]
+                - generic [ref=f18e129]:
+                  - link "Drupal Cómo Descargar y Usar el Módulo Admin Toolbar en Drupal 10 Drupal es uno de los sistemas de gestión de contenidos más poderosos y flexibles disponibles hoy en día. Sin embargo, la administración de un sitio web en Drupal puede ser un desafío, especialmente pa" [ref=f18e130] [cursor=pointer]:
+                    - /url: /blog/drupal/como-descargar-y-usar-el-modulo-admin-toolbar-en-drupal-10
+                    - generic [ref=f18e131]: Drupal
+                    - heading "Cómo Descargar y Usar el Módulo Admin Toolbar en Drupal 10" [level=3] [ref=f18e132]
+                    - paragraph [ref=f18e133]: Drupal es uno de los sistemas de gestión de contenidos más poderosos y flexibles disponibles hoy en día. Sin embargo, la administración de un sitio web en Drupal puede ser un desafío, especialmente pa
+                  - generic [ref=f18e134]:
+                    - link "10/06/2024" [ref=f18e135] [cursor=pointer]:
+                      - /url: /blog/drupal/como-descargar-y-usar-el-modulo-admin-toolbar-en-drupal-10
+                    - link "Leer artículo →" [ref=f18e136] [cursor=pointer]:
+                      - /url: /blog/drupal/como-descargar-y-usar-el-modulo-admin-toolbar-en-drupal-10
+            - generic [ref=f18e138]:
+              - link:
+                - /url: /blog/desarrollo-web-drupal-php/maximiza-la-eficiencia-descubre-las-queueworker-colas-de-drupal-10
+              - article [ref=f18e139]:
+                - link [ref=f18e140] [cursor=pointer]:
+                  - /url: /blog/desarrollo-web-drupal-php/maximiza-la-eficiencia-descubre-las-queueworker-colas-de-drupal-10
+                  - 'img "Maximiza la Eficiencia: QueueWorker Descubre las Colas de Drupal 10 para Procesos Masivos" [ref=f18e142]'
+                - generic [ref=f18e143]:
+                  - 'link "Desarrollo web Maximiza la Eficiencia: Descubre las QueueWorker Colas de Drupal 10 para Procesos Masivos Maximiza la Eficiencia: Descubre las QueueWorker Colas de Drupal 10 para Procesos MasivosEn el mundo digital actual, la eficiencia y la escalabilidad son fundamentales para el éxito de cualquier plata" [ref=f18e144] [cursor=pointer]':
+                    - /url: /blog/desarrollo-web-drupal-php/maximiza-la-eficiencia-descubre-las-queueworker-colas-de-drupal-10
+                    - generic [ref=f18e145]: Desarrollo web
+                    - 'heading "Maximiza la Eficiencia: Descubre las QueueWorker Colas de Drupal 10 para Procesos Masivos" [level=3] [ref=f18e146]'
+                    - paragraph [ref=f18e147]: "Maximiza la Eficiencia: Descubre las QueueWorker Colas de Drupal 10 para Procesos MasivosEn el mundo digital actual, la eficiencia y la escalabilidad son fundamentales para el éxito de cualquier plata"
+                  - generic [ref=f18e148]:
+                    - link "15/05/2024" [ref=f18e149] [cursor=pointer]:
+                      - /url: /blog/desarrollo-web-drupal-php/maximiza-la-eficiencia-descubre-las-queueworker-colas-de-drupal-10
+                    - link "Leer artículo →" [ref=f18e150] [cursor=pointer]:
+                      - /url: /blog/desarrollo-web-drupal-php/maximiza-la-eficiencia-descubre-las-queueworker-colas-de-drupal-10
+            - generic [ref=f18e152]:
+              - link:
+                - /url: /blog/desarrollo-web-drupal-noticias-php/actualizacion-eficaz-de-drupal-95-102
+              - article [ref=f18e153]:
+                - link [ref=f18e154] [cursor=pointer]:
+                  - /url: /blog/desarrollo-web-drupal-noticias-php/actualizacion-eficaz-de-drupal-95-102
+                  - img "Drupal 10 saibher" [ref=f18e156]
+                - generic [ref=f18e157]:
+                  - 'link "Desarrollo web Actualización Eficaz: De Drupal 9.5 a 10.2 Nos complace anunciar que Saibher ha completado con éxito la actualización a la última versión de Drupal, la 10.2. Este avance representa un hito significativo en nuestro compromiso continuo con la excelencia tecnológica y la innovación. Por ello queremos mostrarte cómo hacer una actualización segura y sencilla de Drupal 9.5 a Drupal 10.2" [ref=f18e158] [cursor=pointer]':
+                    - /url: /blog/desarrollo-web-drupal-noticias-php/actualizacion-eficaz-de-drupal-95-102
+                    - generic [ref=f18e159]: Desarrollo web
+                    - 'heading "Actualización Eficaz: De Drupal 9.5 a 10.2" [level=3] [ref=f18e160]'
+                    - paragraph [ref=f18e161]: Nos complace anunciar que Saibher ha completado con éxito la actualización a la última versión de Drupal, la 10.2. Este avance representa un hito significativo en nuestro compromiso continuo con la excelencia tecnológica y la innovación. Por ello queremos mostrarte cómo hacer una actualización segura y sencilla de Drupal 9.5 a Drupal 10.2
+                  - generic [ref=f18e162]:
+                    - link "13/05/2024" [ref=f18e163] [cursor=pointer]:
+                      - /url: /blog/desarrollo-web-drupal-noticias-php/actualizacion-eficaz-de-drupal-95-102
+                    - link "Leer artículo →" [ref=f18e164] [cursor=pointer]:
+                      - /url: /blog/desarrollo-web-drupal-noticias-php/actualizacion-eficaz-de-drupal-95-102
+          - generic [ref=f18e169]:
+            - paragraph [ref=f18e170]: Lo que hacemos
+            - heading "Planes y precios" [level=2] [ref=f18e171]
+            - paragraph [ref=f18e172]: Transparencia total. Sin sorpresas.
+          - generic [ref=f18e174]:
+            - generic [ref=f18e177] [cursor=pointer]:
+              - generic [ref=f18e178]:
+                - heading "Sitio web" [level=3] [ref=f18e179]
+                - paragraph [ref=f18e180]: Tu sitio web, tu identidad. Creamos páginas a medida que convierten visitantes en clientes rápidas, modernas y diseñadas para crecer contigo.
+              - paragraph [ref=f18e182]: Desde $499.000
+              - list [ref=f18e183]:
+                - listitem [ref=f18e184]:
+                  - generic [ref=f18e185]: ✓
+                  - text: Diseño a medida
+                - listitem [ref=f18e186]:
+                  - generic [ref=f18e187]: ✓
+                  - text: Responsive y rápido
+                - listitem [ref=f18e188]:
+                  - generic [ref=f18e189]: ✓
+                  - text: SEO base incluido
+                - listitem [ref=f18e190]:
+                  - generic [ref=f18e191]: ✓
+                  - text: 1 mes de soporte
+              - link "Cotizar" [ref=f18e192]:
+                - /url: /desarrollo-web-a-medida
+            - generic [ref=f18e195] [cursor=pointer]:
+              - generic [ref=f18e196]: Más solicitado
+              - generic [ref=f18e197]:
+                - heading "Pack Completo" [level=3] [ref=f18e198]
+                - paragraph [ref=f18e199]: "Todo lo que tu negocio necesita en un solo lugar: sitio web, software de gestión y punto de venta integrados para digitalizar tu operación de forma simple y sin complicaciones."
+              - paragraph [ref=f18e201]: Desde $899.000
+              - list [ref=f18e202]:
+                - listitem [ref=f18e203]:
+                  - generic [ref=f18e204]: ✓
+                  - text: 2 Primeros meses gratis
+                - listitem [ref=f18e205]:
+                  - generic [ref=f18e206]: ✓
+                  - text: Responsive y rápido
+                - listitem [ref=f18e207]:
+                  - generic [ref=f18e208]: ✓
+                  - text: SEO base incluido
+                - listitem [ref=f18e209]:
+                  - generic [ref=f18e210]: ✓
+                  - text: 1 mes de soporte
+              - link "Cotizar" [ref=f18e211]:
+                - /url: /gestion-de-negocio-con-pagina-web
+            - generic [ref=f18e214] [cursor=pointer]:
+              - generic [ref=f18e215]:
+                - heading "Sistema de punto de ventas" [level=3] [ref=f18e216]
+                - paragraph [ref=f18e217]: Sistema de punto de venta simple y confiable, funciona sin internet. Controla tus ventas, caja e inventario, sin complicaciones técnicas.
+              - paragraph [ref=f18e219]: Desde $399.000
+              - list [ref=f18e220]:
+                - listitem [ref=f18e221]:
+                  - generic [ref=f18e222]: ✓
+                  - text: Pago único
+                - listitem [ref=f18e223]:
+                  - generic [ref=f18e224]: ✓
+                  - text: Control de inventarios
+                - listitem [ref=f18e225]:
+                  - generic [ref=f18e226]: ✓
+                  - text: Reportes de ventas
+                - listitem [ref=f18e227]:
+                  - generic [ref=f18e228]: ✓
+                  - text: Asistencia y capacitación continua
+              - link "Adquirir" [ref=f18e229]:
+                - /url: /sistema-de-punto-de-ventas
+          - generic [ref=f18e234]:
+            - paragraph [ref=f18e235]: FAQ
+            - heading "Preguntas frecuentes" [level=2] [ref=f18e236]
+          - generic [ref=f18e242]:
+            - article [ref=f18e244]:
+              - group [ref=f18e245]:
+                - generic "¿Qué es un sistema de punto de ventas (POS) y por qué debería considerarlo para mi negocio?" [ref=f18e246]
+            - article [ref=f18e248]:
+              - group [ref=f18e249]:
+                - generic "¿Qué es el desarrollo web a medida y por qué debería considerarlo para mi sitio web?" [ref=f18e250]
+            - article [ref=f18e252]:
+              - group [ref=f18e253]:
+                - generic "¿Cómo puedo asegurarme de que mi sitio Drupal sea seguro y esté protegido contra posibles amenazas?" [ref=f18e254]
+            - article [ref=f18e256]:
+              - group [ref=f18e257]:
+                - generic "¿Cómo puedo personalizar y ampliar las funcionalidades de mi sitio Drupal?" [ref=f18e258]
+            - article [ref=f18e260]:
+              - group [ref=f18e261]:
+                - generic "¿Qué es Drupal y por qué debería considerarlo para mi sitio web?" [ref=f18e262]
+            - article [ref=f18e264]:
+              - group [ref=f18e265]:
+                - generic "¿Cada cuánto debo pagar la licencia de mi sistema de punto de ventas (POS)?" [ref=f18e266]
+      - complementary
+    - contentinfo [ref=f18e267]:
+      - generic [ref=f18e269]:
+        - heading "suscribete a nuestro newsletter" [level=2] [ref=f18e270]
+        - generic [ref=f18e272]:
+          - textbox "Nombre" [ref=f18e277]
+          - textbox "Correo electrónico" [ref=f18e282]
+          - button "suscribirme" [ref=f18e287] [cursor=pointer]
+      - generic [ref=f18e288]:
+        - heading "Síguenos en" [level=2] [ref=f18e289]
+        - generic [ref=f18e290]:
+          - link "YouTube" [ref=f18e291] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCh-v7gH7zPSK1qIjX5HzSSw
+          - link "LinkedIn" [ref=f18e293] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/andr%C3%A9s-felipe-rinc%C3%B3n-gracia-513982215/
+      - generic [ref=f18e295]:
+        - heading "Comparte el contenido con las personas que amas" [level=2] [ref=f18e296]
+        - generic [ref=f18e297]:
+          - link "Compartir" [ref=f18e298] [cursor=pointer]:
+            - /url: https://www.addtoany.com/share#url=https%3A%2F%2Fsaibher.ddev.site%3A8443%2F&title=saibher
+          - link "Facebook" [ref=f18e300] [cursor=pointer]:
+            - /url: /#facebook
+          - link "Twitter" [ref=f18e302] [cursor=pointer]:
+            - /url: /#twitter
+          - link "Email" [ref=f18e304] [cursor=pointer]:
+            - /url: /#email

@@ -1,0 +1,247 @@
+- generic [active] [ref=f3e1]:
+  - link "Pasar al contenido principal" [ref=f3e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - group "Barra de administración del sitio web":
+    - navigation "Elementos de la barra de herramientas" [ref=f3e3]:
+      - heading "Elementos de la barra de herramientas" [level=2] [ref=f3e4]
+      - generic [ref=f3e5]:
+        - button "Administrar" [pressed] [ref=f3e6] [cursor=pointer]
+        - navigation "Menú de administración" [ref=f3e8]:
+          - heading "Menú de administración" [level=3] [ref=f3e9]
+          - generic:
+            - list:
+              - listitem [ref=f3e10]:
+                - link "Front page" [ref=f3e11] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=f3e12]:
+                - link "Content" [ref=f3e13] [cursor=pointer]:
+                  - /url: /admin/content
+              - listitem [ref=f3e14]:
+                - link "Comercio" [ref=f3e15] [cursor=pointer]:
+                  - /url: /admin/commerce
+              - listitem [ref=f3e16]:
+                - link "Estructura" [ref=f3e17] [cursor=pointer]:
+                  - /url: /admin/structure
+              - listitem [ref=f3e18]:
+                - link "Apariencia" [ref=f3e19] [cursor=pointer]:
+                  - /url: /admin/appearance
+              - listitem [ref=f3e20]:
+                - link "Ampliar" [ref=f3e21] [cursor=pointer]:
+                  - /url: /admin/modules
+              - listitem [ref=f3e22]:
+                - link "Configuración" [ref=f3e23] [cursor=pointer]:
+                  - /url: /admin/config
+              - listitem [ref=f3e24]:
+                - link "Password Manager" [ref=f3e25] [cursor=pointer]:
+                  - /url: /admin/password-manager
+              - listitem [ref=f3e26]:
+                - link "Usuarios" [ref=f3e27] [cursor=pointer]:
+                  - /url: /admin/people
+              - listitem [ref=f3e28]:
+                - link "Informes" [ref=f3e29] [cursor=pointer]:
+                  - /url: /admin/reports
+              - listitem [ref=f3e30]:
+                - link "Ayuda" [ref=f3e31] [cursor=pointer]:
+                  - /url: /admin/help
+          - button "Orientación vertical" [ref=f3e34] [cursor=pointer]
+      - button "Atajos" [ref=f3e36] [cursor=pointer]
+      - generic:
+        - generic:
+          - navigation
+      - generic [ref=f3e37]:
+        - button "Editar" [ref=f3e38] [cursor=pointer]
+        - generic:
+          - navigation
+      - generic [ref=f3e39]:
+        - link "Drupal Canvas" [ref=f3e40] [cursor=pointer]:
+          - /url: /canvas
+        - generic:
+          - navigation
+      - button "Ejemplos" [ref=f3e42] [cursor=pointer]
+      - button "saibher_developer" [ref=f3e44] [cursor=pointer]
+      - generic [ref=f3e45]:
+        - generic [ref=f3e46]:
+          - generic [ref=f3e47]: Buscar
+          - searchbox "Buscar" [ref=f3e48]
+        - generic:
+          - navigation
+      - generic [ref=f3e49]:
+        - link "Commerce inbox 3" [ref=f3e50] [cursor=pointer]:
+          - /url: /admin/commerce
+          - text: Commerce inbox
+          - generic [ref=f3e51]: "3"
+        - generic:
+          - navigation
+  - generic [ref=f3e52]:
+    - banner [ref=f3e53]:
+      - generic:
+        - generic:
+          - button "Abierta opciones de configuración" [ref=f3e54] [cursor=pointer]
+          - generic [ref=f3e56]:
+            - textbox "Qué estás buscano Hoy" [ref=f3e58]
+            - button "Buscar" [ref=f3e59] [cursor=pointer]
+      - navigation [ref=f3e60]:
+        - generic [ref=f3e61]:
+          - generic [ref=f3e62]:
+            - button "Abierta opciones de configuración" [ref=f3e63] [cursor=pointer]
+            - link [ref=f3e65] [cursor=pointer]:
+              - /url: /
+              - img "Home" [ref=f3e66]
+          - navigation [ref=f3e67]:
+            - list [ref=f3e68]:
+              - listitem [ref=f3e69]:
+                - link "Blog" [ref=f3e70] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=f3e71]:
+                - link "Portafolio" [ref=f3e72] [cursor=pointer]:
+                  - /url: /andres-rincon
+              - listitem [ref=f3e73]:
+                - link "Contácto" [ref=f3e74] [cursor=pointer]:
+                  - /url: /contactenos
+          - generic [ref=f3e75]:
+            - button "Abierta opciones de configuración" [ref=f3e76] [cursor=pointer]
+            - paragraph [ref=f3e78]:
+              - button "Necesito asesoría" [ref=f3e79] [cursor=pointer]
+    - generic [ref=f3e80]:
+      - complementary
+      - main [ref=f3e81]:
+        - generic [ref=f3e84]:
+          - generic [ref=f3e85]:
+            - button "Subir o cambiar la foto de perfil" [ref=f3e89] [cursor=pointer]: Cambiar foto
+            - generic [ref=f3e90]:
+              - heading [level=2]
+              - paragraph [ref=f3e91]: Sube una foto para que te reconozcamos fácil.
+          - generic [ref=f3e92]:
+            - generic [ref=f3e93]:
+              - heading "Tus datos" [level=3] [ref=f3e94]
+              - link "Editar" [ref=f3e95] [cursor=pointer]:
+                - /url: /mi-perfil/editar
+            - generic [ref=f3e96]:
+              - generic [ref=f3e97]:
+                - generic [ref=f3e98]: Correo
+                - generic [ref=f3e99]: developer@saibher.com
+              - generic [ref=f3e100]: Teléfono
+              - generic [ref=f3e102]: País
+          - generic [ref=f3e104]:
+            - heading "Tu enlace de afiliado" [level=3] [ref=f3e105]
+            - paragraph [ref=f3e106]: Compártelo con quien quieras. Si alguien llega a Saibher por aquí, lo sabremos.
+            - generic [ref=f3e107]:
+              - textbox "Enlace de afiliado" [ref=f3e108]: https://saibher.ddev.site:8443/r/admint1
+              - button "Copiar enlace" [ref=f3e109] [cursor=pointer]
+            - generic [ref=f3e110]:
+              - generic [ref=f3e111]:
+                - heading "Balance de afiliado" [level=4] [ref=f3e112]
+                - generic [ref=f3e113]:
+                  - generic [ref=f3e114]: Mes
+                  - combobox "Mes" [ref=f3e115]:
+                    - option "Todos"
+                    - option "septiembre de 2026"
+                    - option "agosto de 2026" [selected]
+              - generic [ref=f3e116]:
+                - generic [ref=f3e323]:
+                  - strong [ref=f3e324]: "3"
+                  - generic [ref=f3e325]: Referidos
+                - generic [ref=f3e326]:
+                  - strong [ref=f3e327]: "2"
+                  - generic [ref=f3e328]: Compradores
+                - generic [ref=f3e329]:
+                  - strong [ref=f3e330]: 125.000 COP · 25.000 COP pendientes · 100.000 COP aprobados
+                  - generic [ref=f3e331]: Ganado (COP)
+              - paragraph [ref=f3e127]
+          - generic [ref=f3e172]:
+            - generic [ref=f3e173]:
+              - heading "Contraseña" [level=3] [ref=f3e174]
+              - paragraph [ref=f3e175]: Cámbiala cuando quieras, sin complicaciones.
+            - link "Cambiar contraseña" [ref=f3e176] [cursor=pointer]:
+              - /url: /user/password
+      - complementary
+    - contentinfo [ref=f3e177]:
+      - generic [ref=f3e179]:
+        - heading "suscribete a nuestro newsletter" [level=2] [ref=f3e180]
+        - button "Abierta suscribete a nuestro newsletter opciones de configuración" [ref=f3e181] [cursor=pointer]
+        - generic [ref=f3e183]:
+          - textbox "Nombre" [ref=f3e188]
+          - textbox "Correo electrónico" [ref=f3e193]
+          - button "suscribirme" [ref=f3e198] [cursor=pointer]
+          - button "Abierta opciones de configuración" [ref=f3e199] [cursor=pointer]
+      - generic [ref=f3e200]:
+        - button "Abierta categoría de artículo opciones de configuración" [ref=f3e201] [cursor=pointer]
+        - generic [ref=f3e202]:
+          - generic [ref=f3e203]:
+            - heading "categoría de artículo" [level=2] [ref=f3e204]
+            - list [ref=f3e206]:
+              - listitem [ref=f3e207]: crypto
+              - listitem [ref=f3e208]:
+                - link "Desarrollo web" [ref=f3e209] [cursor=pointer]:
+                  - /url: /desarrollo-web-0
+              - listitem [ref=f3e210]:
+                - link "Drupal" [ref=f3e211] [cursor=pointer]:
+                  - /url: /drupal
+              - listitem [ref=f3e212]:
+                - link "Inteligencia Artificial" [ref=f3e213] [cursor=pointer]:
+                  - /url: /inteligencia-artificial
+              - listitem [ref=f3e214]:
+                - link "Negocios" [ref=f3e215] [cursor=pointer]:
+                  - /url: /negocios
+              - listitem [ref=f3e216]:
+                - link "Noticias" [ref=f3e217] [cursor=pointer]:
+                  - /url: /noticias
+              - listitem [ref=f3e218]:
+                - link "PHP" [ref=f3e219] [cursor=pointer]:
+                  - /url: /php
+              - listitem [ref=f3e220]:
+                - link "React JS" [ref=f3e221] [cursor=pointer]:
+                  - /url: /react-js-0
+          - generic [ref=f3e222]:
+            - heading "Tecnologías o lenguajes de programacion" [level=2] [ref=f3e223]
+            - list [ref=f3e225]:
+              - listitem [ref=f3e226]:
+                - link "CSS 3" [ref=f3e227] [cursor=pointer]:
+                  - /url: /css-3
+              - listitem [ref=f3e228]:
+                - link "Drupal" [ref=f3e229] [cursor=pointer]:
+                  - /url: /drupal-1
+              - listitem [ref=f3e230]: JavaScript
+              - listitem [ref=f3e231]:
+                - link "PHP" [ref=f3e232] [cursor=pointer]:
+                  - /url: /php-1
+              - listitem [ref=f3e233]: Python
+              - listitem [ref=f3e234]: React
+              - listitem [ref=f3e235]:
+                - link "Tailwind CSS" [ref=f3e236] [cursor=pointer]:
+                  - /url: /tailwind-css
+          - generic [ref=f3e237]:
+            - heading "Navegación principal" [level=2] [ref=f3e238]
+            - list [ref=f3e240]:
+              - listitem [ref=f3e241]:
+                - link "Blog" [ref=f3e242] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=f3e243]:
+                - link "Portafolio" [ref=f3e244] [cursor=pointer]:
+                  - /url: /andres-rincon
+              - listitem [ref=f3e245]:
+                - link "Contácto" [ref=f3e246] [cursor=pointer]:
+                  - /url: /contactenos
+      - generic [ref=f3e247]:
+        - heading "Síguenos en" [level=2] [ref=f3e248]
+        - button "Abierta Síguenos en opciones de configuración" [ref=f3e249] [cursor=pointer]
+        - generic [ref=f3e250]:
+          - link "YouTube" [ref=f3e251] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCh-v7gH7zPSK1qIjX5HzSSw
+          - link "LinkedIn" [ref=f3e253] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/andr%C3%A9s-felipe-rinc%C3%B3n-gracia-513982215/
+      - generic [ref=f3e255]:
+        - heading "Comparte el contenido con las personas que amas" [level=2] [ref=f3e256]
+        - button "Abierta Comparte el contenido con las personas que amas opciones de configuración" [ref=f3e257] [cursor=pointer]
+        - generic [ref=f3e258]:
+          - link "Compartir" [ref=f3e259] [cursor=pointer]:
+            - /url: https://www.addtoany.com/share#url=https%3A%2F%2Fsaibher.ddev.site%3A8443%2Fmi-perfil&title=Mi%20perfil
+          - link "Facebook" [ref=f3e261] [cursor=pointer]:
+            - /url: /#facebook
+          - link "Twitter" [ref=f3e263] [cursor=pointer]:
+            - /url: /#twitter
+          - link "Email" [ref=f3e265] [cursor=pointer]:
+            - /url: /#email
+  - generic [ref=f3e267]: Bandeja "Menú de administración" abierto
+  - status [ref=f3e268]
+  - status [ref=f3e269]

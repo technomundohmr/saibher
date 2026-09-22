@@ -1,0 +1,14 @@
+uuid: 2a4dad88-48b3-435d-83fe-30fa1ce82619
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.afiliado
+  module:
+    - user
+id: user_remove_role_action.afiliado
+label: 'Elimina el rol Afiliado al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: afiliado

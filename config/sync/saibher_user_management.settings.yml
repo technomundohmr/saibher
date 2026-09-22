@@ -1,0 +1,4 @@
+commission_rate: 10.0
+default_currency: COP
+default_status: pending
+cookie_lifetime: 315360000

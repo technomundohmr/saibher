@@ -1,0 +1,31 @@
+'saibher_user_management.view_own_profile':
+  title: 'View own profile page'
+  description: 'Allows a user to view their own Saibher profile page (/mi-perfil).'
+
+'saibher_user_management.view_any_profile':
+  title: 'View any user profile page'
+  description: 'Allows a user to view any user profile page.'
+
+'saibher_user_management.edit_own_profile':
+  title: 'Edit own profile data'
+  description: 'Allows a user to edit their own profile data and upload a profile photo.'
+
+'saibher_user_management.edit_any_profile':
+  title: 'Edit any user profile data'
+  description: 'Allows a user to edit any user profile data.'
+
+'saibher_user_management.view_own_affiliate_panel':
+  title: 'View own affiliate panel'
+  description: 'Allows a user to see their own affiliate dashboard and commissions ledger.'
+
+'saibher_user_management.view_any_affiliate_panel':
+  title: 'View any affiliate panel'
+  description: 'Allows a user to see any affiliate dashboard and commissions ledger.'
+
+'saibher_user_management.manage_affiliate_commissions':
+  title: 'Manage affiliate commissions'
+  description: 'Allows manual registration, editing and deletion of affiliate commissions. Intended for the administrator role.'
+
+'saibher_user_management.administer_affiliate_settings':
+  title: 'Administer affiliate settings'
+  description: 'Allows configuration of the affiliate system (commission rate, currency, cookie lifetime).'

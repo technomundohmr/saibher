@@ -1,0 +1,13 @@
+uuid: 2403f206-7ded-46c5-be4a-5823bcb26db7
+langcode: es
+status: true
+dependencies:
+  module:
+    - saibher_user_management
+id: afiliado
+label: Afiliado
+weight: 4
+is_admin: false
+permissions:
+  - saibher_user_management.view_own_affiliate_panel
+  - saibher_user_management.view_own_profile

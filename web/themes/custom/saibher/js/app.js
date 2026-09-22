@@ -21,15 +21,16 @@ const gallery = document.querySelector('.gallery');
 const modal = document.querySelector('.modal');
 const modalContent = document.querySelector('.img-modal-content');
 const closeBtn = document.querySelector('.close');
-
-gallery.addEventListener('click', event => {
-  if (event.target.tagName === 'IMG') {
-    const imgSrc = event.target.getAttribute('src');
-    modalContent.innerHTML = `<img src="${imgSrc}">`;
-    modal.style.display = 'block';
-  }
-});
-
-closeBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
+if (gallery && modal && modalContent && closeBtn) {
+    gallery.addEventListener('click', event => {
+      if (event.target.tagName === 'IMG') {
+        const imgSrc = event.target.getAttribute('src');
+        modalContent.innerHTML = `<img src="${imgSrc}">`;
+        modal.style.display = 'block';
+      }
+    });
+    
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+}

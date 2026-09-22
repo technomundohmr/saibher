@@ -1,0 +1,14 @@
+uuid: 15bea3f5-6ae6-4846-b444-44d8d4d50ab1
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.solo_ver
+  module:
+    - user
+id: user_add_role_action.solo_ver
+label: 'Añade el rol Solo perfil al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: solo_ver

@@ -1,0 +1,16 @@
+diff --git a/src/SchedulerManager.php b/src/SchedulerManager.php
+--- a/src/SchedulerManager.php
++++ b/src/SchedulerManager.php
+@@ -1800,6 +1800,12 @@
+
+     $definitions = $this->getPluginDefinitions();
+     foreach ($definitions as $definition) {
++      // Skip plugins whose entity type is no longer available. This prevents
++      // failures when a module providing the entity type (e.g. commerce) has
++      // been uninstalled while scheduler stays enabled.
++      if (!$this->entityTypeManager->hasDefinition($definition['entityType'])) {
++        continue;
++      }
+       $plugin = $this->pluginManager->createInstance($definition['id']);
+       $dependency = $plugin->dependency();
+       // Ignore plugins if there is a dependency module and it is not enabled.

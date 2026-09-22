@@ -1,0 +1,401 @@
+- generic [active] [ref=e1]:
+  - link "Pasar al contenido principal" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - group "Barra de administración del sitio web":
+    - navigation "Elementos de la barra de herramientas" [ref=e3]:
+      - heading "Elementos de la barra de herramientas" [level=2] [ref=e4]
+      - generic [ref=e5]:
+        - button "Administrar" [pressed] [ref=e6] [cursor=pointer]
+        - navigation "Menú de administración" [ref=e8]:
+          - heading "Menú de administración" [level=3] [ref=e9]
+          - generic:
+            - list:
+              - listitem [ref=e10]:
+                - link "Front page" [ref=e11] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e12]:
+                - link "Content" [ref=e13] [cursor=pointer]:
+                  - /url: /admin/content
+              - listitem [ref=e14]:
+                - link "Comercio" [ref=e15] [cursor=pointer]:
+                  - /url: /admin/commerce
+              - listitem [ref=e16]:
+                - link "Estructura" [ref=e17] [cursor=pointer]:
+                  - /url: /admin/structure
+              - listitem [ref=e18]:
+                - link "Apariencia" [ref=e19] [cursor=pointer]:
+                  - /url: /admin/appearance
+              - listitem [ref=e20]:
+                - link "Ampliar" [ref=e21] [cursor=pointer]:
+                  - /url: /admin/modules
+              - listitem [ref=e22]:
+                - link "Configuración" [ref=e23] [cursor=pointer]:
+                  - /url: /admin/config
+              - listitem [ref=e24]:
+                - link "Password Manager" [ref=e25] [cursor=pointer]:
+                  - /url: /admin/password-manager
+              - listitem [ref=e26]:
+                - link "Usuarios" [ref=e27] [cursor=pointer]:
+                  - /url: /admin/people
+              - listitem [ref=e28]:
+                - link "Informes" [ref=e29] [cursor=pointer]:
+                  - /url: /admin/reports
+              - listitem [ref=e30]:
+                - link "Ayuda" [ref=e31] [cursor=pointer]:
+                  - /url: /admin/help
+          - button "Orientación vertical" [ref=e34] [cursor=pointer]
+      - button "Atajos" [ref=e36] [cursor=pointer]
+      - generic:
+        - generic:
+          - navigation
+      - generic [ref=e37]:
+        - button "Editar" [ref=e38] [cursor=pointer]
+        - generic:
+          - navigation
+      - generic [ref=e39]:
+        - link "Drupal Canvas" [ref=e40] [cursor=pointer]:
+          - /url: /canvas
+        - generic:
+          - navigation
+      - button "Ejemplos" [ref=e42] [cursor=pointer]
+      - button "saibher_developer" [ref=e44] [cursor=pointer]
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - generic [ref=e47]: Buscar
+          - searchbox "Buscar" [ref=e48]
+        - generic:
+          - navigation
+      - generic [ref=e49]:
+        - link "Commerce inbox 3" [ref=e50] [cursor=pointer]:
+          - /url: /admin/commerce
+          - text: Commerce inbox
+          - generic [ref=e51]: "3"
+        - generic:
+          - navigation
+  - generic [ref=e52]:
+    - banner [ref=e53]:
+      - generic:
+        - generic:
+          - button "Abierta opciones de configuración" [ref=e54] [cursor=pointer]
+          - generic [ref=e56]:
+            - textbox "Qué estás buscano Hoy" [ref=e58]
+            - button "Buscar" [ref=e59] [cursor=pointer]
+      - navigation [ref=e60]:
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - button "Abierta opciones de configuración" [ref=e63] [cursor=pointer]
+            - link [ref=e65] [cursor=pointer]:
+              - /url: /
+              - img "Home" [ref=e66]
+          - navigation [ref=e67]:
+            - list [ref=e68]:
+              - listitem [ref=e69]:
+                - link "Blog" [ref=e70] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e71]:
+                - link "Portafolio" [ref=e72] [cursor=pointer]:
+                  - /url: /andres-rincon
+              - listitem [ref=e73]:
+                - link "Contácto" [ref=e74] [cursor=pointer]:
+                  - /url: /contactenos
+          - generic [ref=e75]:
+            - button "Abierta opciones de configuración" [ref=e76] [cursor=pointer]
+            - paragraph [ref=e78]:
+              - button "Necesito asesoría" [ref=e79] [cursor=pointer]
+    - generic [ref=e80]:
+      - complementary
+      - main [ref=e81]:
+        - generic [ref=e83]:
+          - region "Persona trabajando en su negocio con tecnología" [ref=e84]:
+            - generic [ref=e86]:
+              - paragraph [ref=e87]: TECNOLOGÍA PARA NEGOCIOS REALES
+              - heading "Digitaliza tu negocio. Sin complicaciones." [level=1] [ref=e91]:
+                - generic [ref=e92]: Digitaliza tu negocio.
+                - generic [ref=e93]: Sin complicaciones.
+              - paragraph [ref=e94]: En Saibher creamos páginas web, software de gestión y puntos de venta para que tu comercio crezca en el mundo digital — de forma simple y cercana.
+              - generic [ref=e95]:
+                - link "Conoce nuestros servicios" [ref=e96] [cursor=pointer]:
+                  - /url: "#servicios"
+                - link "Ver portafolio" [ref=e97] [cursor=pointer]:
+                  - /url: /andres-rincon
+          - generic [ref=e107]:
+            - paragraph [ref=e108]: Servicios
+            - heading "Lo que hacemos" [level=2] [ref=e109]
+            - paragraph [ref=e110]: Tres servicios diseñados para llevar tu negocio al mundo digital, sin tecnicismos.
+          - generic [ref=e112]:
+            - generic [ref=e115] [cursor=pointer]:
+              - generic [ref=e116]: monitor
+              - heading "Desarrollo Web Especializado" [level=3] [ref=e118]
+              - paragraph [ref=e119]: Sitios web rápidos, modernos y diseñados a la medida para que tu negocio destaque y convierta visitantes en clientes.
+              - link "Saber más →" [ref=e120]:
+                - /url: /desarrollo-web-a-medida
+            - generic [ref=e123] [cursor=pointer]:
+              - generic [ref=e124]: dashboard
+              - heading "Software de Gestión Personalizado" [level=3] [ref=e126]
+              - paragraph [ref=e127]: Plataformas internas que organizan inventario, ventas, clientes y reportes — pensadas para tu flujo de trabajo.
+              - link "click aquí →" [ref=e128]:
+                - /url: /gestion-de-negocio-con-pagina-web
+            - generic [ref=e131] [cursor=pointer]:
+              - generic [ref=e132]: store
+              - heading "Sistema de Punto de Venta" [level=3] [ref=e134]
+              - paragraph [ref=e135]: "POS intuitivo para tu tienda física: ventas, facturación, control de caja e integración con tu inventario en tiempo real."
+              - link "click aquí →" [ref=e136]:
+                - /url: /sistema-de-punto-de-ventas
+          - generic [ref=e138]:
+            - img "Andres rincon" [ref=e142]
+            - generic [ref=e145]:
+              - generic [ref=e146]: El equipo detrás de Saibher
+              - heading "Hola, soy Andrés Rincón" [level=2] [ref=e147]:
+                - generic [ref=e148]: Hola,
+                - text: soy Andrés Rincón
+              - paragraph [ref=e149]:
+                - paragraph [ref=e150]: Desarrollador Full Stack especializado en Drupal, con experiencia real creando sitios web, software de gestión y experiencias digitales que transforman negocios.
+                - paragraph [ref=e151]:
+                  - strong [ref=e152]: "Mi misión con Saibher es simple:"
+                  - text: que cualquier comercio o empresa mediana pueda digitalizarse sin complicaciones, con tecnología que funciona y un aliado que habla claro.
+              - generic [ref=e153]:
+                - generic [ref=e154]: Drupal Expert
+                - generic [ref=e155]: Arquitecto de soluciones
+              - link "Ver portafolio completo →" [ref=e156] [cursor=pointer]:
+                - /url: /andres-rincon
+          - generic [ref=e158]:
+            - generic [ref=e161]:
+              - paragraph [ref=e162]: Artículos
+              - heading "Del blog" [level=2] [ref=e163]
+              - paragraph [ref=e164]: Ideas, guías y noticias para digitalizar tu negocio.
+            - link "Ver todos los artículos" [ref=e167] [cursor=pointer]:
+              - /url: /blog
+          - generic [ref=e173]:
+            - button "Abierta opciones de configuración" [ref=e174] [cursor=pointer]
+            - generic [ref=e175]:
+              - generic [ref=e177]:
+                - link:
+                  - /url: /blog/drupal/como-descargar-y-usar-el-modulo-admin-toolbar-en-drupal-10
+                - article [ref=e178]:
+                  - link [ref=e179] [cursor=pointer]:
+                    - /url: /blog/drupal/como-descargar-y-usar-el-modulo-admin-toolbar-en-drupal-10
+                    - img "admin toolbar saibher" [ref=e181]
+                  - generic [ref=e182]:
+                    - link "Drupal Cómo Descargar y Usar el Módulo Admin Toolbar en Drupal 10 Drupal es uno de los sistemas de gestión de contenidos más poderosos y flexibles disponibles hoy en día. Sin embargo, la administración de un sitio web en Drupal puede ser un desafío, especialmente pa" [ref=e183] [cursor=pointer]:
+                      - /url: /blog/drupal/como-descargar-y-usar-el-modulo-admin-toolbar-en-drupal-10
+                      - generic [ref=e184]: Drupal
+                      - heading "Cómo Descargar y Usar el Módulo Admin Toolbar en Drupal 10" [level=3] [ref=e185]
+                      - paragraph [ref=e186]: Drupal es uno de los sistemas de gestión de contenidos más poderosos y flexibles disponibles hoy en día. Sin embargo, la administración de un sitio web en Drupal puede ser un desafío, especialmente pa
+                    - generic [ref=e187]:
+                      - link "10/06/2024" [ref=e188] [cursor=pointer]:
+                        - /url: /blog/drupal/como-descargar-y-usar-el-modulo-admin-toolbar-en-drupal-10
+                      - link "Leer artículo →" [ref=e189] [cursor=pointer]:
+                        - /url: /blog/drupal/como-descargar-y-usar-el-modulo-admin-toolbar-en-drupal-10
+              - generic [ref=e191]:
+                - link:
+                  - /url: /blog/desarrollo-web-drupal-php/maximiza-la-eficiencia-descubre-las-queueworker-colas-de-drupal-10
+                - article [ref=e192]:
+                  - link [ref=e193] [cursor=pointer]:
+                    - /url: /blog/desarrollo-web-drupal-php/maximiza-la-eficiencia-descubre-las-queueworker-colas-de-drupal-10
+                    - 'img "Maximiza la Eficiencia: QueueWorker Descubre las Colas de Drupal 10 para Procesos Masivos" [ref=e195]'
+                  - generic [ref=e196]:
+                    - 'link "Desarrollo web Maximiza la Eficiencia: Descubre las QueueWorker Colas de Drupal 10 para Procesos Masivos Maximiza la Eficiencia: Descubre las QueueWorker Colas de Drupal 10 para Procesos MasivosEn el mundo digital actual, la eficiencia y la escalabilidad son fundamentales para el éxito de cualquier plata" [ref=e197] [cursor=pointer]':
+                      - /url: /blog/desarrollo-web-drupal-php/maximiza-la-eficiencia-descubre-las-queueworker-colas-de-drupal-10
+                      - generic [ref=e198]: Desarrollo web
+                      - 'heading "Maximiza la Eficiencia: Descubre las QueueWorker Colas de Drupal 10 para Procesos Masivos" [level=3] [ref=e199]'
+                      - paragraph [ref=e200]: "Maximiza la Eficiencia: Descubre las QueueWorker Colas de Drupal 10 para Procesos MasivosEn el mundo digital actual, la eficiencia y la escalabilidad son fundamentales para el éxito de cualquier plata"
+                    - generic [ref=e201]:
+                      - link "15/05/2024" [ref=e202] [cursor=pointer]:
+                        - /url: /blog/desarrollo-web-drupal-php/maximiza-la-eficiencia-descubre-las-queueworker-colas-de-drupal-10
+                      - link "Leer artículo →" [ref=e203] [cursor=pointer]:
+                        - /url: /blog/desarrollo-web-drupal-php/maximiza-la-eficiencia-descubre-las-queueworker-colas-de-drupal-10
+              - generic [ref=e205]:
+                - link:
+                  - /url: /blog/desarrollo-web-drupal-noticias-php/actualizacion-eficaz-de-drupal-95-102
+                - article [ref=e206]:
+                  - link [ref=e207] [cursor=pointer]:
+                    - /url: /blog/desarrollo-web-drupal-noticias-php/actualizacion-eficaz-de-drupal-95-102
+                    - img "Drupal 10 saibher" [ref=e209]
+                  - generic [ref=e210]:
+                    - 'link "Desarrollo web Actualización Eficaz: De Drupal 9.5 a 10.2 Nos complace anunciar que Saibher ha completado con éxito la actualización a la última versión de Drupal, la 10.2. Este avance representa un hito significativo en nuestro compromiso continuo con la excelencia tecnológica y la innovación. Por ello queremos mostrarte cómo hacer una actualización segura y sencilla de Drupal 9.5 a Drupal 10.2" [ref=e211] [cursor=pointer]':
+                      - /url: /blog/desarrollo-web-drupal-noticias-php/actualizacion-eficaz-de-drupal-95-102
+                      - generic [ref=e212]: Desarrollo web
+                      - 'heading "Actualización Eficaz: De Drupal 9.5 a 10.2" [level=3] [ref=e213]'
+                      - paragraph [ref=e214]: Nos complace anunciar que Saibher ha completado con éxito la actualización a la última versión de Drupal, la 10.2. Este avance representa un hito significativo en nuestro compromiso continuo con la excelencia tecnológica y la innovación. Por ello queremos mostrarte cómo hacer una actualización segura y sencilla de Drupal 9.5 a Drupal 10.2
+                    - generic [ref=e215]:
+                      - link "13/05/2024" [ref=e216] [cursor=pointer]:
+                        - /url: /blog/desarrollo-web-drupal-noticias-php/actualizacion-eficaz-de-drupal-95-102
+                      - link "Leer artículo →" [ref=e217] [cursor=pointer]:
+                        - /url: /blog/desarrollo-web-drupal-noticias-php/actualizacion-eficaz-de-drupal-95-102
+          - generic [ref=e222]:
+            - paragraph [ref=e223]: Lo que hacemos
+            - heading "Planes y precios" [level=2] [ref=e224]
+            - paragraph [ref=e225]: Transparencia total. Sin sorpresas.
+          - generic [ref=e227]:
+            - generic [ref=e230] [cursor=pointer]:
+              - generic [ref=e231]:
+                - heading "Sitio web" [level=3] [ref=e232]
+                - paragraph [ref=e233]: Tu sitio web, tu identidad. Creamos páginas a medida que convierten visitantes en clientes rápidas, modernas y diseñadas para crecer contigo.
+              - paragraph [ref=e235]: Desde $499.000
+              - list [ref=e236]:
+                - listitem [ref=e237]:
+                  - generic [ref=e238]: ✓
+                  - text: Diseño a medida
+                - listitem [ref=e239]:
+                  - generic [ref=e240]: ✓
+                  - text: Responsive y rápido
+                - listitem [ref=e241]:
+                  - generic [ref=e242]: ✓
+                  - text: SEO base incluido
+                - listitem [ref=e243]:
+                  - generic [ref=e244]: ✓
+                  - text: 1 mes de soporte
+              - link "Cotizar" [ref=e245]:
+                - /url: /desarrollo-web-a-medida
+            - generic [ref=e248] [cursor=pointer]:
+              - generic [ref=e249]: Más solicitado
+              - generic [ref=e250]:
+                - heading "Pack Completo" [level=3] [ref=e251]
+                - paragraph [ref=e252]: "Todo lo que tu negocio necesita en un solo lugar: sitio web, software de gestión y punto de venta integrados para digitalizar tu operación de forma simple y sin complicaciones."
+              - paragraph [ref=e254]: Desde $899.000
+              - list [ref=e255]:
+                - listitem [ref=e256]:
+                  - generic [ref=e257]: ✓
+                  - text: 2 Primeros meses gratis
+                - listitem [ref=e258]:
+                  - generic [ref=e259]: ✓
+                  - text: Responsive y rápido
+                - listitem [ref=e260]:
+                  - generic [ref=e261]: ✓
+                  - text: SEO base incluido
+                - listitem [ref=e262]:
+                  - generic [ref=e263]: ✓
+                  - text: 1 mes de soporte
+              - link "Cotizar" [ref=e264]:
+                - /url: /gestion-de-negocio-con-pagina-web
+            - generic [ref=e267] [cursor=pointer]:
+              - generic [ref=e268]:
+                - heading "Sistema de punto de ventas" [level=3] [ref=e269]
+                - paragraph [ref=e270]: Sistema de punto de venta simple y confiable, funciona sin internet. Controla tus ventas, caja e inventario, sin complicaciones técnicas.
+              - paragraph [ref=e272]: Desde $399.000
+              - list [ref=e273]:
+                - listitem [ref=e274]:
+                  - generic [ref=e275]: ✓
+                  - text: Pago único
+                - listitem [ref=e276]:
+                  - generic [ref=e277]: ✓
+                  - text: Control de inventarios
+                - listitem [ref=e278]:
+                  - generic [ref=e279]: ✓
+                  - text: Reportes de ventas
+                - listitem [ref=e280]:
+                  - generic [ref=e281]: ✓
+                  - text: Asistencia y capacitación continua
+              - link "Adquirir" [ref=e282]:
+                - /url: /sistema-de-punto-de-ventas
+          - generic [ref=e287]:
+            - paragraph [ref=e288]: FAQ
+            - heading "Preguntas frecuentes" [level=2] [ref=e289]
+          - generic [ref=e295]:
+            - button "Abierta opciones de configuración" [ref=e296] [cursor=pointer]
+            - article [ref=e298]:
+              - group [ref=e299]:
+                - generic "¿Qué es un sistema de punto de ventas (POS) y por qué debería considerarlo para mi negocio?" [ref=e300]
+            - article [ref=e302]:
+              - group [ref=e303]:
+                - generic "¿Qué es el desarrollo web a medida y por qué debería considerarlo para mi sitio web?" [ref=e304]
+            - article [ref=e306]:
+              - group [ref=e307]:
+                - generic "¿Cómo puedo asegurarme de que mi sitio Drupal sea seguro y esté protegido contra posibles amenazas?" [ref=e308]
+            - article [ref=e310]:
+              - group [ref=e311]:
+                - generic "¿Cómo puedo personalizar y ampliar las funcionalidades de mi sitio Drupal?" [ref=e312]
+            - article [ref=e314]:
+              - group [ref=e315]:
+                - generic "¿Qué es Drupal y por qué debería considerarlo para mi sitio web?" [ref=e316]
+            - article [ref=e318]:
+              - group [ref=e319]:
+                - generic "¿Cada cuánto debo pagar la licencia de mi sistema de punto de ventas (POS)?" [ref=e320]
+      - complementary
+    - contentinfo [ref=e321]:
+      - generic [ref=e323]:
+        - heading "suscribete a nuestro newsletter" [level=2] [ref=e324]
+        - generic [ref=e326]:
+          - textbox "Nombre" [ref=e331]
+          - textbox "Correo electrónico" [ref=e336]
+          - button "suscribirme" [ref=e341] [cursor=pointer]
+      - generic [ref=e342]:
+        - button "Abierta categoría de artículo opciones de configuración" [ref=e343] [cursor=pointer]
+        - generic [ref=e344]:
+          - generic [ref=e345]:
+            - heading "categoría de artículo" [level=2] [ref=e346]
+            - list [ref=e348]:
+              - listitem [ref=e349]: crypto
+              - listitem [ref=e350]:
+                - link "Desarrollo web" [ref=e351] [cursor=pointer]:
+                  - /url: /desarrollo-web-0
+              - listitem [ref=e352]:
+                - link "Drupal" [ref=e353] [cursor=pointer]:
+                  - /url: /drupal
+              - listitem [ref=e354]:
+                - link "Inteligencia Artificial" [ref=e355] [cursor=pointer]:
+                  - /url: /inteligencia-artificial
+              - listitem [ref=e356]:
+                - link "Negocios" [ref=e357] [cursor=pointer]:
+                  - /url: /negocios
+              - listitem [ref=e358]:
+                - link "Noticias" [ref=e359] [cursor=pointer]:
+                  - /url: /noticias
+              - listitem [ref=e360]:
+                - link "PHP" [ref=e361] [cursor=pointer]:
+                  - /url: /php
+              - listitem [ref=e362]:
+                - link "React JS" [ref=e363] [cursor=pointer]:
+                  - /url: /react-js-0
+          - generic [ref=e364]:
+            - heading "Tecnologías o lenguajes de programacion" [level=2] [ref=e365]
+            - list [ref=e367]:
+              - listitem [ref=e368]:
+                - link "CSS 3" [ref=e369] [cursor=pointer]:
+                  - /url: /css-3
+              - listitem [ref=e370]:
+                - link "Drupal" [ref=e371] [cursor=pointer]:
+                  - /url: /drupal-1
+              - listitem [ref=e372]: JavaScript
+              - listitem [ref=e373]:
+                - link "PHP" [ref=e374] [cursor=pointer]:
+                  - /url: /php-1
+              - listitem [ref=e375]: Python
+              - listitem [ref=e376]: React
+              - listitem [ref=e377]:
+                - link "Tailwind CSS" [ref=e378] [cursor=pointer]:
+                  - /url: /tailwind-css
+          - generic [ref=e379]:
+            - heading "Navegación principal" [level=2] [ref=e380]
+            - list [ref=e382]:
+              - listitem [ref=e383]:
+                - link "Blog" [ref=e384] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e385]:
+                - link "Portafolio" [ref=e386] [cursor=pointer]:
+                  - /url: /andres-rincon
+              - listitem [ref=e387]:
+                - link "Contácto" [ref=e388] [cursor=pointer]:
+                  - /url: /contactenos
+      - generic [ref=e389]:
+        - heading "Síguenos en" [level=2] [ref=e390]
+        - button "Abierta Síguenos en opciones de configuración" [ref=e391] [cursor=pointer]
+        - generic [ref=e392]:
+          - link "YouTube" [ref=e393] [cursor=pointer]:
+            - /url: https://www.youtube.com/channel/UCh-v7gH7zPSK1qIjX5HzSSw
+          - link "LinkedIn" [ref=e395] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/andr%C3%A9s-felipe-rinc%C3%B3n-gracia-513982215/
+      - generic [ref=e397]:
+        - heading "Comparte el contenido con las personas que amas" [level=2] [ref=e398]
+        - button "Abierta Comparte el contenido con las personas que amas opciones de configuración" [ref=e399] [cursor=pointer]
+        - generic [ref=e400]:
+          - link "Compartir" [ref=e401] [cursor=pointer]:
+            - /url: https://www.addtoany.com/share#url=https%3A%2F%2Fsaibher.ddev.site%3A8443%2F&title=saibher
+          - link "Facebook" [ref=e403] [cursor=pointer]:
+            - /url: /#facebook
+          - link "Twitter" [ref=e405] [cursor=pointer]:
+            - /url: /#twitter
+          - link "Email" [ref=e407] [cursor=pointer]:
+            - /url: /#email
+  - status [ref=e410]
+  - status [ref=e411]

@@ -1,0 +1,11 @@
+saibher_user_management.profile.view:
+  route_name: saibher_user_management.profile
+  title: 'Mi perfil'
+  base_route: saibher_user_management.profile
+  weight: 0
+
+saibher_user_management.profile.edit:
+  route_name: saibher_user_management.profile_edit
+  title: 'Editar'
+  base_route: saibher_user_management.profile
+  weight: 10

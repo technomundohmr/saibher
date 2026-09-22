@@ -1,0 +1,603 @@
+- generic [active] [ref=e1]:
+  - link "Pasar al contenido principal" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - group "Barra de administración del sitio web":
+    - navigation "Elementos de la barra de herramientas" [ref=e3]:
+      - heading "Elementos de la barra de herramientas" [level=2] [ref=e4]
+      - generic [ref=e5]:
+        - button "Administrar" [pressed] [ref=e6] [cursor=pointer]
+        - navigation "Menú de administración" [ref=e8]:
+          - heading "Menú de administración" [level=3] [ref=e9]
+          - generic:
+            - list:
+              - listitem [ref=e10]:
+                - link "Front page" [ref=e11] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e12]:
+                - link "Content" [ref=e13] [cursor=pointer]:
+                  - /url: /admin/content
+              - listitem [ref=e14]:
+                - link "Comercio" [ref=e15] [cursor=pointer]:
+                  - /url: /admin/commerce
+              - listitem [ref=e16]:
+                - link "Estructura" [ref=e17] [cursor=pointer]:
+                  - /url: /admin/structure
+              - listitem [ref=e18]:
+                - link "Apariencia" [ref=e19] [cursor=pointer]:
+                  - /url: /admin/appearance
+              - listitem [ref=e20]:
+                - link "Ampliar" [ref=e21] [cursor=pointer]:
+                  - /url: /admin/modules
+              - listitem [ref=e22]:
+                - link "Configuración" [ref=e23] [cursor=pointer]:
+                  - /url: /admin/config
+              - listitem [ref=e24]:
+                - link "Password Manager" [ref=e25] [cursor=pointer]:
+                  - /url: /admin/password-manager
+              - listitem [ref=e26]:
+                - link "Usuarios" [ref=e27] [cursor=pointer]:
+                  - /url: /admin/people
+              - listitem [ref=e28]:
+                - link "Informes" [ref=e29] [cursor=pointer]:
+                  - /url: /admin/reports
+              - listitem [ref=e30]:
+                - link "Ayuda" [ref=e31] [cursor=pointer]:
+                  - /url: /admin/help
+          - button "Orientación vertical" [ref=e34] [cursor=pointer]
+      - button "Atajos" [ref=e36] [cursor=pointer]
+      - generic:
+        - generic:
+          - navigation
+      - generic [ref=e37]:
+        - button "Editar" [ref=e38] [cursor=pointer]
+        - generic:
+          - navigation
+      - generic [ref=e39]:
+        - link "Drupal Canvas" [ref=e40] [cursor=pointer]:
+          - /url: /canvas
+        - generic:
+          - navigation
+      - button "Ejemplos" [ref=e42] [cursor=pointer]
+      - button "saibher_developer" [ref=e44] [cursor=pointer]
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - generic [ref=e47] [cursor=pointer]: Buscar
+          - searchbox "Buscar" [ref=e48]
+        - generic:
+          - navigation
+      - generic [ref=e49]:
+        - link "Commerce inbox 3" [ref=e50] [cursor=pointer]:
+          - /url: /admin/commerce
+          - text: Commerce inbox
+          - generic [ref=e51]: "3"
+        - generic:
+          - navigation
+  - main [ref=e53]:
+    - generic [ref=e56]:
+      - navigation [ref=e59]:
+        - heading "Sobrescribir enlaces de ayuda a la navegación" [level=2] [ref=e60]
+        - list [ref=e61]:
+          - listitem [ref=e62]:
+            - link "Home" [ref=e63] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e64]:
+            - link "Saibher_developer" [ref=e65] [cursor=pointer]:
+              - /url: /user/1
+          - listitem [ref=e66]: Saibher_developer
+      - generic [ref=e67]:
+        - generic [ref=e68]:
+          - heading "saibher_developer" [level=1] [ref=e69]
+          - link [ref=e70] [cursor=pointer]:
+            - /url: /admin/config/user-interface/shortcut/manage/default/add-link-inline?link=user/1/edit&name=saibher_developer&destination=/user/1/edit%3Fpass-reset-token%3Dbxs5R9aSoB5iZjGSqvlFJGqitrFQsVyfmjYgAnkCCDKmmKVAsR14IDzTy8suVI580dPAV2xd1w%26check_logged_in%3D1&token=yOJ1dHUexF31cR3oUISJLTz1jrQ2hcts5dTcKsw8vsU
+            - generic [ref=e72]:
+              - text: Añadir a atajos
+              - emphasis [ref=e73]: Default
+        - generic [ref=e74]:
+          - heading "Solapas principales" [level=2] [ref=e75]
+          - navigation "Solapas principales" [ref=e76]:
+            - list [ref=e77]:
+              - listitem [ref=e78]:
+                - link "Editar" [ref=e79] [cursor=pointer]:
+                  - /url: /user/1/edit
+                - button "Conmutación de la visualización de las pestañas" [ref=e80]
+    - generic [ref=e85]:
+      - generic [ref=e88]:
+        - contentinfo [ref=e89]:
+          - heading "Mensaje de estado" [level=2] [ref=e91]
+          - generic [ref=e92]: You have used a one-time login link. You can set your new password now.
+        - contentinfo [ref=e93]:
+          - alert [ref=e94]:
+            - heading "Mensaje de error" [level=2] [ref=e96]
+            - list [ref=e98]:
+              - listitem [ref=e99]:
+                - text: Hay una actualización de seguridad disponible para su versión de Drupal. Para garantizar la seguridad de su servidor, ¡debería actualizarla de inmediato! Vea la página de
+                - link "actualizaciones disponibles" [ref=e100] [cursor=pointer]:
+                  - /url: /admin/reports/updates
+                - text: para más información.
+              - listitem [ref=e101]:
+                - text: Hay actualizaciones de seguridad disponibles para uno o más de sus módulos o temas gráficos. Para garantizar la seguridad de su servidor, ¡debería actualizarlos inmediatamente! Vea la página de
+                - link "actualizaciones disponibles" [ref=e102] [cursor=pointer]:
+                  - /url: /admin/reports/updates
+                - text: para más información.
+      - generic [ref=e105]:
+        - generic [ref=e106]:
+          - generic [ref=e107]:
+            - generic [ref=e108] [cursor=pointer]: Dirección de correo electrónico *
+            - textbox "Dirección de correo electrónico *" [ref=e109]: developer@saibher.com
+            - generic [ref=e110]: La dirección de correo electrónico no se hace pública. Solo se utilizará si necesita ser contactado acerca de su cuenta o para recibir notificaciones activadas (opted-in).
+          - generic [ref=e111]:
+            - generic [ref=e112] [cursor=pointer]: Username *
+            - textbox "Username *" [ref=e113]: saibher_developer
+            - generic [ref=e114]: Varios caracteres están permitidos, incluyendo los espacios, puntos (.), guiones (-), comillas ('), guiones bajos (_) y el signo @.
+          - generic [ref=e115]:
+            - generic [ref=e116]:
+              - generic [ref=e117] [cursor=pointer]: Contraseña *
+              - textbox "Contraseña *" [ref=e118]
+              - generic [ref=e119]: "Fortaleza de la contraseña:"
+            - text: "*"
+            - generic [ref=e122]: Para cambiar la contraseña actual del usuario, escriba la nueva contraseña en ambos campos.
+          - group "Roles" [ref=e123]:
+            - generic [ref=e127]:
+              - generic [ref=e128]:
+                - checkbox "Usuario autenticado" [checked] [disabled] [ref=e129]
+                - text: Usuario autenticado
+              - generic [ref=e130]:
+                - checkbox "Editor de contenido" [ref=e131]
+                - text: Editor de contenido
+              - generic [ref=e132]:
+                - checkbox "Administrador" [checked] [ref=e133]
+                - text: Administrador
+        - group [ref=e136]:
+          - button "Imagen" [expanded] [ref=e137] [cursor=pointer]
+          - generic [ref=e139]:
+            - generic [ref=e140] [cursor=pointer]: Imagen
+            - generic [ref=e142]:
+              - generic [ref=e143]:
+                - link "1-5932-1790038700.png" [ref=e144] [cursor=pointer]:
+                  - /url: /sites/default/files/pictures/avatars/2026-09/1-5932-1790038700.png
+                - text: (303 bytes)
+              - button "Eliminar" [ref=e145] [cursor=pointer]
+            - generic [ref=e150]: Su cara o foto virtual.
+        - generic [ref=e152]:
+          - generic [ref=e153] [cursor=pointer]: Idioma del sitio
+          - combobox "Idioma del sitio" [ref=e154]:
+            - option "Spanish" [selected]
+          - generic [ref=e155]: El idioma preferido de los correos de esta cuenta. Se asume que este idioma es el predeterminado para este perfil de usuario.
+        - group [ref=e156]:
+          - button "Opciones de contacto" [expanded] [ref=e157] [cursor=pointer]
+          - generic [ref=e159]:
+            - checkbox "Formulario de contacto personal" [checked] [ref=e160]
+            - text: Formulario de contacto personal
+            - generic [ref=e161]: Permitir que otros usuarios contacten con usted a través de un formulario de contacto personal que mantiene oculta su dirección de correo electrónico. Tenga en cuenta que algunos usuarios con privilegios, como los administradores del sitio, podrán contactar con usted incluso si desactiva esta característica.
+        - group [ref=e162]:
+          - button "Opciones de regionalización" [expanded] [ref=e163] [cursor=pointer]
+          - generic [ref=e165]:
+            - generic [ref=e166] [cursor=pointer]: Zona horaria
+            - combobox "Zona horaria" [ref=e167]:
+              - option "Abidjan"
+              - option "Accra"
+              - option "Addis Ababa"
+              - option "Algiers"
+              - option "Asmara"
+              - option "Bamako"
+              - option "Bangui"
+              - option "Banjul"
+              - option "Bissau"
+              - option "Blantyre"
+              - option "Brazzaville"
+              - option "Bujumbura"
+              - option "Cairo"
+              - option "Casablanca"
+              - option "Ceuta"
+              - option "Conakry"
+              - option "Dakar"
+              - option "Dar es Salaam"
+              - option "Djibouti"
+              - option "Douala"
+              - option "El Aaiun"
+              - option "Freetown"
+              - option "Gaborone"
+              - option "Harare"
+              - option "Johannesburg"
+              - option "Juba"
+              - option "Kampala"
+              - option "Khartoum"
+              - option "Kigali"
+              - option "Kinshasa"
+              - option "Lagos"
+              - option "Libreville"
+              - option "Lome"
+              - option "Luanda"
+              - option "Lubumbashi"
+              - option "Lusaka"
+              - option "Malabo"
+              - option "Maputo"
+              - option "Maseru"
+              - option "Mbabane"
+              - option "Mogadishu"
+              - option "Monrovia"
+              - option "Nairobi"
+              - option "Ndjamena"
+              - option "Niamey"
+              - option "Nouakchott"
+              - option "Ouagadougou"
+              - option "Porto-Novo"
+              - option "Sao Tome"
+              - option "Tripoli"
+              - option "Tunis"
+              - option "Windhoek"
+              - option "Adak"
+              - option "Anchorage"
+              - option "Anguilla"
+              - option "Antigua"
+              - option "Araguaina"
+              - option "Aruba"
+              - option "Asuncion"
+              - option "Atikokan"
+              - option "Bahia"
+              - option "Bahia Banderas"
+              - option "Barbados"
+              - option "Belem"
+              - option "Belize"
+              - option "Beulah (North Dakota)"
+              - option "Blanc-Sablon"
+              - option "Boa Vista"
+              - option "Bogota" [selected]
+              - option "Boise"
+              - option "Buenos Aires (Argentina)"
+              - option "Cambridge Bay"
+              - option "Campo Grande"
+              - option "Cancun"
+              - option "Caracas"
+              - option "Catamarca (Argentina)"
+              - option "Cayenne"
+              - option "Cayman"
+              - option "Center (North Dakota)"
+              - option "Chicago"
+              - option "Chihuahua"
+              - option "Ciudad Juarez"
+              - option "Cordoba (Argentina)"
+              - option "Costa Rica"
+              - option "Coyhaique"
+              - option "Creston"
+              - option "Cuiaba"
+              - option "Curacao"
+              - option "Danmarkshavn"
+              - option "Dawson"
+              - option "Dawson Creek"
+              - option "Denver"
+              - option "Detroit"
+              - option "Dominica"
+              - option "Edmonton"
+              - option "Eirunepe"
+              - option "El Salvador"
+              - option "Fort Nelson"
+              - option "Fortaleza"
+              - option "Glace Bay"
+              - option "Goose Bay"
+              - option "Grand Turk"
+              - option "Grenada"
+              - option "Guadeloupe"
+              - option "Guatemala"
+              - option "Guayaquil"
+              - option "Guyana"
+              - option "Halifax"
+              - option "Havana"
+              - option "Hermosillo"
+              - option "Indianapolis (Indiana)"
+              - option "Inuvik"
+              - option "Iqaluit"
+              - option "Jamaica"
+              - option "Jujuy (Argentina)"
+              - option "Juneau"
+              - option "Knox (Indiana)"
+              - option "Kralendijk"
+              - option "La Paz"
+              - option "La Rioja (Argentina)"
+              - option "Lima"
+              - option "Los Angeles"
+              - option "Louisville (Kentucky)"
+              - option "Lower Princes"
+              - option "Maceio"
+              - option "Managua"
+              - option "Manaus"
+              - option "Marengo (Indiana)"
+              - option "Marigot"
+              - option "Martinique"
+              - option "Matamoros"
+              - option "Mazatlan"
+              - option "Mendoza (Argentina)"
+              - option "Menominee"
+              - option "Merida"
+              - option "Metlakatla"
+              - option "Mexico City"
+              - option "Miquelon"
+              - option "Moncton"
+              - option "Monterrey"
+              - option "Montevideo"
+              - option "Monticello (Kentucky)"
+              - option "Montserrat"
+              - option "Nassau"
+              - option "New Salem (North Dakota)"
+              - option "New York"
+              - option "Nome"
+              - option "Noronha"
+              - option "Nuuk"
+              - option "Ojinaga"
+              - option "Panama"
+              - option "Paramaribo"
+              - option "Petersburg (Indiana)"
+              - option "Phoenix"
+              - option "Port of Spain"
+              - option "Port-au-Prince"
+              - option "Porto Velho"
+              - option "Puerto Rico"
+              - option "Punta Arenas"
+              - option "Rankin Inlet"
+              - option "Recife"
+              - option "Regina"
+              - option "Resolute"
+              - option "Rio Branco"
+              - option "Rio Gallegos (Argentina)"
+              - option "Salta (Argentina)"
+              - option "San Juan (Argentina)"
+              - option "San Luis (Argentina)"
+              - option "Santarem"
+              - option "Santiago"
+              - option "Santo Domingo"
+              - option "Sao Paulo"
+              - option "Scoresbysund"
+              - option "Sitka"
+              - option "St Barthelemy"
+              - option "St Johns"
+              - option "St Kitts"
+              - option "St Lucia"
+              - option "St Thomas"
+              - option "St Vincent"
+              - option "Swift Current"
+              - option "Tegucigalpa"
+              - option "Tell City (Indiana)"
+              - option "Thule"
+              - option "Tijuana"
+              - option "Toronto"
+              - option "Tortola"
+              - option "Tucuman (Argentina)"
+              - option "Ushuaia (Argentina)"
+              - option "Vancouver"
+              - option "Vevay (Indiana)"
+              - option "Vincennes (Indiana)"
+              - option "Whitehorse"
+              - option "Winamac (Indiana)"
+              - option "Winnipeg"
+              - option "Yakutat"
+              - option "Casey"
+              - option "Davis"
+              - option "DumontDUrville"
+              - option "Macquarie"
+              - option "Mawson"
+              - option "McMurdo"
+              - option "Palmer"
+              - option "Rothera"
+              - option "Syowa"
+              - option "Troll"
+              - option "Vostok"
+              - option "Longyearbyen"
+              - option "Aden"
+              - option "Almaty"
+              - option "Amman"
+              - option "Anadyr"
+              - option "Aqtau"
+              - option "Aqtobe"
+              - option "Ashgabat"
+              - option "Atyrau"
+              - option "Baghdad"
+              - option "Bahrain"
+              - option "Baku"
+              - option "Bangkok"
+              - option "Barnaul"
+              - option "Beirut"
+              - option "Bishkek"
+              - option "Brunei"
+              - option "Chita"
+              - option "Colombo"
+              - option "Damascus"
+              - option "Dhaka"
+              - option "Dili"
+              - option "Dubai"
+              - option "Dushanbe"
+              - option "Famagusta"
+              - option "Gaza"
+              - option "Hebron"
+              - option "Ho Chi Minh"
+              - option "Hong Kong"
+              - option "Hovd"
+              - option "Irkutsk"
+              - option "Jakarta"
+              - option "Jayapura"
+              - option "Jerusalem"
+              - option "Kabul"
+              - option "Kamchatka"
+              - option "Karachi"
+              - option "Kathmandu"
+              - option "Khandyga"
+              - option "Kolkata"
+              - option "Krasnoyarsk"
+              - option "Kuala Lumpur"
+              - option "Kuching"
+              - option "Kuwait"
+              - option "Macau"
+              - option "Magadan"
+              - option "Makassar"
+              - option "Manila"
+              - option "Muscat"
+              - option "Nicosia"
+              - option "Novokuznetsk"
+              - option "Novosibirsk"
+              - option "Omsk"
+              - option "Oral"
+              - option "Phnom Penh"
+              - option "Pontianak"
+              - option "Pyongyang"
+              - option "Qatar"
+              - option "Qostanay"
+              - option "Qyzylorda"
+              - option "Riyadh"
+              - option "Sakhalin"
+              - option "Samarkand"
+              - option "Seoul"
+              - option "Shanghai"
+              - option "Singapore"
+              - option "Srednekolymsk"
+              - option "Taipei"
+              - option "Tashkent"
+              - option "Tbilisi"
+              - option "Tehran"
+              - option "Thimphu"
+              - option "Tokyo"
+              - option "Tomsk"
+              - option "Ulaanbaatar"
+              - option "Urumqi"
+              - option "Ust-Nera"
+              - option "Vientiane"
+              - option "Vladivostok"
+              - option "Yakutsk"
+              - option "Yangon"
+              - option "Yekaterinburg"
+              - option "Yerevan"
+              - option "Azores"
+              - option "Bermuda"
+              - option "Canary"
+              - option "Cape Verde"
+              - option "Faroe"
+              - option "Madeira"
+              - option "Reykjavik"
+              - option "South Georgia"
+              - option "St Helena"
+              - option "Stanley"
+              - option "Adelaide"
+              - option "Brisbane"
+              - option "Broken Hill"
+              - option "Darwin"
+              - option "Eucla"
+              - option "Hobart"
+              - option "Lindeman"
+              - option "Lord Howe"
+              - option "Melbourne"
+              - option "Perth"
+              - option "Sydney"
+              - option "Amsterdam"
+              - option "Andorra"
+              - option "Astrakhan"
+              - option "Athens"
+              - option "Belgrade"
+              - option "Berlin"
+              - option "Bratislava"
+              - option "Brussels"
+              - option "Bucharest"
+              - option "Budapest"
+              - option "Busingen"
+              - option "Chisinau"
+              - option "Copenhagen"
+              - option "Dublin"
+              - option "Gibraltar"
+              - option "Guernsey"
+              - option "Helsinki"
+              - option "Isle of Man"
+              - option "Istanbul"
+              - option "Jersey"
+              - option "Kaliningrad"
+              - option "Kirov"
+              - option "Kyiv"
+              - option "Lisbon"
+              - option "Ljubljana"
+              - option "London"
+              - option "Luxembourg"
+              - option "Madrid"
+              - option "Malta"
+              - option "Mariehamn"
+              - option "Minsk"
+              - option "Monaco"
+              - option "Moscow"
+              - option "Oslo"
+              - option "Paris"
+              - option "Podgorica"
+              - option "Prague"
+              - option "Riga"
+              - option "Rome"
+              - option "Samara"
+              - option "San Marino"
+              - option "Sarajevo"
+              - option "Saratov"
+              - option "Simferopol"
+              - option "Skopje"
+              - option "Sofia"
+              - option "Stockholm"
+              - option "Tallinn"
+              - option "Tirane"
+              - option "Ulyanovsk"
+              - option "Vaduz"
+              - option "Vatican"
+              - option "Vienna"
+              - option "Vilnius"
+              - option "Volgograd"
+              - option "Warsaw"
+              - option "Zagreb"
+              - option "Zurich"
+              - option "Antananarivo"
+              - option "Chagos"
+              - option "Christmas"
+              - option "Cocos"
+              - option "Comoro"
+              - option "Kerguelen"
+              - option "Mahe"
+              - option "Maldives"
+              - option "Mauritius"
+              - option "Mayotte"
+              - option "Reunion"
+              - option "Apia"
+              - option "Auckland"
+              - option "Bougainville"
+              - option "Chatham"
+              - option "Chuuk"
+              - option "Easter"
+              - option "Efate"
+              - option "Fakaofo"
+              - option "Fiji"
+              - option "Funafuti"
+              - option "Galapagos"
+              - option "Gambier"
+              - option "Guadalcanal"
+              - option "Guam"
+              - option "Honolulu"
+              - option "Kanton"
+              - option "Kiritimati"
+              - option "Kosrae"
+              - option "Kwajalein"
+              - option "Majuro"
+              - option "Marquesas"
+              - option "Midway"
+              - option "Nauru"
+              - option "Niue"
+              - option "Norfolk"
+              - option "Noumea"
+              - option "Pago Pago"
+              - option "Palau"
+              - option "Pitcairn"
+              - option "Pohnpei"
+              - option "Port Moresby"
+              - option "Rarotonga"
+              - option "Saipan"
+              - option "Tahiti"
+              - option "Tarawa"
+              - option "Tongatapu"
+              - option "Wake"
+              - option "Wallis"
+              - option "UTC"
+            - generic [ref=e168]: Seleccione la zona horaria local deseada. Las fechas y horas dentro del sitio se mostrarán usando esta zona horaria.
+        - generic [ref=e170]:
+          - generic [ref=e171] [cursor=pointer]: Alias de URL
+          - textbox "Alias de URL" [ref=e172]
+          - generic [ref=e173]: Especificar una ruta alternativa por la que se pueda acceder a estos datos. Por ejemplo, escribe "/ sobre" al escribir una página acerca de.
+        - button "Guardar" [ref=e175] [cursor=pointer]
+  - status [ref=e177]
+  - status [ref=e178]

@@ -1,0 +1,123 @@
+<?php
+
+/**
+ * @file
+ * Hooks for the Saibher User Management module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\user\UserInterface;
+
+/**
+ * Implements hook_entity_base_field_info().
+ *
+ * Adds a base field to the user entity to store the unique affiliate code.
+ */
+function saibher_user_management_entity_base_field_info(EntityTypeInterface $entity_type) {
+  if ($entity_type->id() !== 'user') {
+    return [];
+  }
+
+  $fields = [];
+
+  $fields['field_affiliate_code'] = BaseFieldDefinition::create('string')
+    ->setLabel(t('Affiliate code'))
+    ->setDescription(t('Unique code used to build this user affiliate referral link.'))
+    ->setSetting('max_length', 8)
+    ->setDisplayConfigurable('form', FALSE)
+    ->setDisplayConfigurable('view', FALSE)
+    ->setRevisionable(FALSE)
+    ->setTranslatable(FALSE);
+
+  $fields['field_first_name'] = BaseFieldDefinition::create('string')
+    ->setLabel(t('First name'))
+    ->setSetting('max_length', 128)
+    ->setDisplayConfigurable('form', TRUE)
+    ->setDisplayConfigurable('view', TRUE);
+
+  $fields['field_last_name'] = BaseFieldDefinition::create('string')
+    ->setLabel(t('Last name'))
+    ->setSetting('max_length', 128)
+    ->setDisplayConfigurable('form', TRUE)
+    ->setDisplayConfigurable('view', TRUE);
+
+  $fields['field_phone_country_code'] = BaseFieldDefinition::create('string')
+    ->setLabel(t('Phone country code'))
+    ->setSetting('max_length', 5)
+    ->setDisplayConfigurable('form', TRUE)
+    ->setDisplayConfigurable('view', TRUE);
+
+  $fields['field_phone_number'] = BaseFieldDefinition::create('string')
+    ->setLabel(t('Phone number'))
+    ->setSetting('max_length', 20)
+    ->setDisplayConfigurable('form', TRUE)
+    ->setDisplayConfigurable('view', TRUE);
+
+  $fields['field_country'] = BaseFieldDefinition::create('string')
+    ->setLabel(t('Country'))
+    ->setSetting('max_length', 2)
+    ->setDescription(t('Two-letter country code (ISO 3166-1 alpha-2).'))
+    ->setDisplayConfigurable('form', TRUE)
+    ->setDisplayConfigurable('view', TRUE);
+
+  $fields['field_website'] = BaseFieldDefinition::create('string')
+    ->setLabel(t('Website'))
+    ->setSetting('max_length', 255)
+    ->setDisplayConfigurable('form', TRUE)
+    ->setDisplayConfigurable('view', TRUE);
+
+  $fields['field_business_name'] = BaseFieldDefinition::create('string')
+    ->setLabel(t('Business name'))
+    ->setSetting('max_length', 255)
+    ->setDisplayConfigurable('form', TRUE)
+    ->setDisplayConfigurable('view', TRUE);
+
+  return $fields;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave() for user entities.
+ *
+ * Ensures every user has a unique affiliate code before being saved.
+ */
+function saibher_user_management_user_presave(UserInterface $account) {
+  if ($account->hasField('field_affiliate_code') && $account->get('field_affiliate_code')->isEmpty()) {
+    /** @var \Drupal\saibher_user_management\Service\AffiliateCodeGeneratorInterface $generator */
+    $generator = \Drupal::service('saibher_user_management.code_generator');
+    $account->set('field_affiliate_code', $generator->generateUniqueCode());
+  }
+}
+
+/**
+ * Implements hook_user_insert().
+ *
+ * Once a new user account is created, links it to its referrer if a
+ * referral cookie is present in the current request.
+ */
+function saibher_user_management_user_insert(EntityInterface $account) {
+  /** @var \Drupal\saibher_user_management\Service\AffiliateManagerInterface $affiliate_manager */
+  $affiliate_manager = \Drupal::service('saibher_user_management.affiliate_manager');
+  $affiliate_manager->linkReferralFromCookie((int) $account->id());
+}
+
+/**
+ * Implements hook_theme().
+ */
+function saibher_user_management_theme($existing, $type, $theme, $path) {
+  return [
+    'saibher_user_profile' => [
+      'variables' => [
+        'account' => NULL,
+        'affiliate_link' => NULL,
+        'country_name' => NULL,
+        'picture' => NULL,
+        'edit_url' => NULL,
+        'balances_endpoint' => NULL,
+        'show_balances' => FALSE,
+      ],
+      'template' => 'saibher-user-profile',
+    ],
+  ];
+}

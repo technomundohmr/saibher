@@ -1,0 +1,14 @@
+uuid: 61fcdbf4-3e77-41d6-9bc2-9ef7957ddaa6
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.afiliado
+  module:
+    - user
+id: user_add_role_action.afiliado
+label: 'Añade el rol Afiliado al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: afiliado

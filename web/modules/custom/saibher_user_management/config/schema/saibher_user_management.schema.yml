@@ -1,0 +1,16 @@
+saibher_user_management.settings:
+  type: config_object
+  label: 'Saibher User Management settings'
+  mapping:
+    commission_rate:
+      type: float
+      label: 'Commission rate (percentage of the order total)'
+    default_currency:
+      type: string
+      label: 'Default currency code'
+    default_status:
+      type: string
+      label: 'Default commission status'
+    cookie_lifetime:
+      type: integer
+      label: 'Referral cookie lifetime in seconds'

@@ -1,0 +1,148 @@
+{#
+/**
+ * @file
+ * Saibher user profile page.
+ *
+ * Available variables:
+ * - account: the current user entity.
+ * - affiliate_link: the full affiliate URL for this user.
+ * - country_name: human-readable country name, or NULL.
+ * - picture: render array with the profile picture, or NULL.
+ * - edit_url: URL object to the profile edit form.
+ * - balances_endpoint: absolute URL of the affiliate balances JSON endpoint.
+ * - show_balances: whether the affiliate balances panel is shown for this user.
+ */
+#}
+<div class="saibher-profile">
+
+  {# ====================================================================
+     Encabezado: avatar (foto / iniciales), nombre, negocio y carga de foto
+     ==================================================================== #}
+  <div class="saibher-profile__card saibher-profile__header">
+    <div class="saibher-profile__avatar" data-saibher-avatar>
+      {% if picture %}
+        <div class="saibher-profile__avatar-img">{{ picture }}</div>
+      {% else %}
+        {% set initial_first = account.field_first_name.value ? account.field_first_name.value|slice(0, 1)|upper : '' %}
+        {% set initial_last = account.field_last_name.value ? account.field_last_name.value|slice(0, 1)|upper : '' %}
+        {% set initials = initial_first ~ initial_last %}
+        <span class="saibher-profile__avatar-icon">{{ initials ? initials : '?' }}</span>
+      {% endif %}
+      <button type="button" class="saibher-profile__avatar-upload" data-saibher-photo-trigger aria-label="{{ 'Subir o cambiar la foto de perfil'|t }}">
+        {% trans %}Cambiar foto{% endtrans %}
+      </button>
+      <input type="file" data-saibher-photo-input accept="image/png,image/gif,image/jpeg,image/webp" hidden>
+    </div>
+    <div class="saibher-profile__identity">
+      <h2>{{ account.field_first_name.value }} {{ account.field_last_name.value }}</h2>
+      {% if account.field_business_name.value %}
+        <p class="saibher-profile__business">{{ account.field_business_name.value }}</p>
+      {% endif %}
+      <p class="saibher-profile__hint">{{ 'Sube una foto para que te reconozcamos fácil.'|t }}</p>
+    </div>
+  </div>
+
+  {# ====================================================================
+     Tus datos: correo, teléfono, país, sitio web + botón Editar
+     ==================================================================== #}
+  <div class="saibher-profile__card">
+    <div class="saibher-profile__section-header">
+      <h3>{{ 'Tus datos'|t }}</h3>
+      <a href="{{ edit_url }}" class="saibher-profile__edit-link">
+        {{ 'Editar'|t }}
+      </a>
+    </div>
+    <div class="saibher-profile__data-grid">
+      <div class="saibher-profile__data-item">
+        <span class="saibher-profile__data-label">{{ 'Correo'|t }}</span>
+        <span class="saibher-profile__data-value">{{ account.mail.value }}</span>
+      </div>
+      <div class="saibher-profile__data-item">
+        <span class="saibher-profile__data-label">{{ 'Teléfono'|t }}</span>
+        <span class="saibher-profile__data-value">
+          {{ account.field_phone_country_code.value }} {{ account.field_phone_number.value }}
+        </span>
+      </div>
+      <div class="saibher-profile__data-item">
+        <span class="saibher-profile__data-label">{{ 'País'|t }}</span>
+        <span class="saibher-profile__data-value">{{ country_name ?: account.field_country.value }}</span>
+      </div>
+      {% if account.field_website.value %}
+        <div class="saibher-profile__data-item">
+          <span class="saibher-profile__data-label">{{ 'Sitio web'|t }}</span>
+          <span class="saibher-profile__data-value">{{ account.field_website.value }}</span>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {# ====================================================================
+     Tu enlace de afiliado + contenedor del balance (tabla de comisiones)
+     ==================================================================== #}
+  <div class="saibher-profile__card saibher-profile__affiliate">
+    <h3>{{ 'Tu enlace de afiliado'|t }}</h3>
+    <p>{{ 'Compártelo con quien quieras. Si alguien llega a Saibher por aquí, lo sabremos.'|t }}</p>
+    <div class="saibher-profile__affiliate-row">
+      <input type="text" readonly value="{{ affiliate_link }}" class="saibher-profile__affiliate-input" aria-label="{{ 'Enlace de afiliado'|t }}">
+      <button type="button" class="saibher-profile__copy-button" data-copy-target="{{ affiliate_link }}">
+        {{ 'Copiar enlace'|t }}
+      </button>
+    </div>
+
+    {# ------------------------------------------------------------------
+       Tabla de balances económicos del afiliado.
+       Controlada por el comportamiento JS saibherProfileBalances
+       (js/saibher-profile.js), que consume el endpoint JSON:
+
+       - data-saibher-endpoint: URL JSON. Parámetros soportados:
+         month=YYYY-MM | page | limit | sort (joined|earned|orders|name)
+         | dir (asc|desc).
+       - El payload JSON devuelve: months[], totals{referred_count,
+         buyers_count, by_currency[]}, rows[], pagination{} y
+         meta{currency,user}.
+       - Solo se renderiza si el usuario tiene el permiso
+         "saibher_user_management.view_own_affiliate_panel".
+       ------------------------------------------------------------------ #}
+    {% if show_balances %}
+    <div
+      class="saibher-profile__balances"
+      id="saibher-affiliate-balances"
+      data-saibher-balances
+      data-saibher-endpoint="{{ balances_endpoint }}"
+      data-saibher-user="{{ account.id }}"
+    >
+      <div class="saibher-profile__balances-head">
+        <h4>{{ 'Balance de afiliado'|t }}</h4>
+        <div class="saibher-profile__balances-controls">
+          <label for="saibher-balances-month">{{ 'Mes'|t }}</label>
+          <select id="saibher-balances-month" data-saibher-month>
+            <option value="">{{ 'Todos'|t }}</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="saibher-profile__balances-totals" data-saibher-totals></div>
+
+      <div class="saibher-profile__balances-body">
+        <p class="saibher-profile__balances-state" data-saibher-state>
+          {{ 'Cargando…'|t }}
+        </p>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  {# ====================================================================
+     Contraseña
+     ==================================================================== #}
+  <div class="saibher-profile__card saibher-profile__password">
+    <div>
+      <h3>{{ 'Contraseña'|t }}</h3>
+      <p>{{ 'Cámbiala cuando quieras, sin complicaciones.'|t }}</p>
+    </div>
+    <a href="{{ path('user.pass') }}" class="saibher-profile__secondary-button">
+      {{ 'Cambiar contraseña'|t }}
+    </a>
+  </div>
+
+</div>

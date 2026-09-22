@@ -49,8 +49,6 @@
         "drupal/examples": "^4.0",
         "drupal/antibot": "^2.0",
         "drupal/seckit": "^2.0",
-        "drupal/inline_entity_form": "^3.0@RC",
-        "drupal/commerce": "^3.0@beta",
         "drupal/simplenews": "^4.1",
         "symfony/var-dumper": "^7.1",
         "sebastian/diff": "^5.1",
@@ -64,7 +62,8 @@
         "drupal/gemini_provider": "^1.0",
         "drupal/google_analytics": "^4.0",
         "drupal/config_ignore": "^3.4",
-        "drupal/twig_tweak": "^3.4"
+        "drupal/twig_tweak": "^3.4",
+        "drupal/gin_login": "^2.1"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -72,6 +71,11 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "extra": {
+        "patches": {
+            "drupal/scheduler": {
+                "Skip scheduler plugins whose entity type no longer exists": "patches/scheduler-entity-gone-guard.patch"
+            }
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "./web"
