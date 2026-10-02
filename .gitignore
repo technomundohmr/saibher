@@ -102,3 +102,8 @@
 # secret. Never commit them, even as part of a config export.
 /config/sync/saibher_web_services.key.*.yml
 **/saibher_web_services.key.*.yml
+
+# Build/deployment zip artifacts: they duplicate the source that is already
+# tracked and web.zip exceeds GitHub's 100 MB per-file limit.
+/web.zip
+/web/modules/custom/*.zip
