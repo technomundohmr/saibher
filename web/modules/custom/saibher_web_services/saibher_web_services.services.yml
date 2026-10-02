@@ -1,0 +1,40 @@
+services:
+  logger.channel.saibher_web_services:
+    parent: logger.channel_base
+    arguments: ['saibher_web_services']
+
+  saibher_web_services.api_key_service:
+    class: Drupal\saibher_web_services\Service\ApiKeyService
+    arguments:
+      - '@entity_type.manager'
+      - '@datetime.time'
+      - '@logger.channel.saibher_web_services'
+
+  saibher_web_services.article_api_service:
+    class: Drupal\saibher_web_services\Service\ArticleApiService
+    arguments:
+      - '@entity_type.manager'
+      - '@current_user'
+      - '@config.factory'
+      - '@logger.channel.saibher_web_services'
+      - '@file.repository'
+      - '@file_system'
+      - '@file.validator'
+      - '@file_url_generator'
+      - '@http_client'
+      - '@datetime.time'
+      - '@path_alias.manager'
+      - '@language_manager'
+
+  saibher_web_services.authentication:
+    class: Drupal\saibher_web_services\Authentication\Provider\ApiKeyAuth
+    arguments:
+      - '@saibher_web_services.api_key_service'
+      - '@logger.channel.saibher_web_services'
+    tags:
+      - { name: authentication_provider, provider_id: saibher_api_key }
+
+  saibher_web_services.exception_subscriber:
+    class: Drupal\saibher_web_services\EventSubscriber\ApiExceptionSubscriber
+    tags:
+      - { name: event_subscriber, priority: 300 }

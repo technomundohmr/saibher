@@ -1,0 +1,8 @@
+_core:
+  default_config_hash: SNx4vz19xA1_aioZf8L3rWDG2BWk3hY3SWI2VBuTJ98
+allowed_formats:
+  - basic_html
+  - restricted_html
+article_status_default: true
+only_published_in_lists: true
+image_max_bytes: 10485760

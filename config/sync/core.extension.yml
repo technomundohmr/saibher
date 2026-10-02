@@ -82,6 +82,7 @@ module:
   saibher_prompt_generator: 0
   saibher_tracking: 0
   saibher_user_management: 0
+  saibher_web_services: 0
   scheduler: 0
   schema_metatag: 0
   search: 0

@@ -1,0 +1,54 @@
+saibher_web_services.settings:
+  type: config_object
+  label: 'Saibher Web Services settings'
+  mapping:
+    allowed_formats:
+      type: sequence
+      label: 'Allowed text formats'
+      sequence:
+        type: string
+        label: 'Text format'
+    article_status_default:
+      type: boolean
+      label: 'Publish new articles by default'
+    only_published_in_lists:
+      type: boolean
+      label: 'Return only published articles in lists'
+    image_max_bytes:
+      type: integer
+      label: 'Maximum size (bytes) for images received via URL'
+
+saibher_web_services.key.*:
+  type: config_entity
+  label: 'Saibher API key'
+  mapping:
+    id:
+      type: string
+      label: 'Key ID'
+    uuid:
+      type: string
+      label: 'UUID'
+    label:
+      type: label
+      label: 'Label'
+    userId:
+      type: integer
+      label: 'Linked user ID'
+    salt:
+      type: string
+      label: 'Salt'
+    hash:
+      type: string
+      label: 'Key hash'
+    status:
+      type: boolean
+      label: 'Active'
+    expires:
+      type: integer
+      label: 'Expiration timestamp'
+    created:
+      type: integer
+      label: 'Created timestamp'
+    lastUsed:
+      type: integer
+      label: 'Last used timestamp'

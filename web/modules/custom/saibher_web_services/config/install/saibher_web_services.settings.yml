@@ -1,0 +1,9 @@
+# Configuración por defecto de Saibher Web Services.
+# Se aplica en la primera instalación del módulo; después se gestiona desde
+# el formulario de configuración en el menú de administración.
+allowed_formats:
+  - basic_html
+  - restricted_html
+article_status_default: true
+only_published_in_lists: true
+image_max_bytes: 10485760

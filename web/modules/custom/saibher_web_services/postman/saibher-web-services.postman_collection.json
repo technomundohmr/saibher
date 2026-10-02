@@ -1,0 +1,138 @@
+{
+  "info": {
+    "_postman_id": "saibher-web-services-v1",
+    "name": "Saibher Web Services — Artículos API",
+    "description": "Gateway API de lectura/escritura del tipo de contenido Artículos de saibher.com. Autenticación: header `Authorization: Saibher {credential}` donde credential = `<keyId>.<secret>`.\n\n1. Crea una API key en el sitio (Drush o panel de administración).\n2. En Postman, edita las variables de entorno/colección:\n   - `baseUrl` → p. ej. `https://saibher.ddev.site:8443`\n   - `credential` → el valor completo `keyId.secret`\n   - `articleId` → un nid o UUID de un artículo existente\nTodo request ya trae el header Authorization preconfigurado.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "https://saibher.ddev.site:8443" },
+    { "key": "credential", "value": "REEMPLAZA-POR-tu.keyId.secret" },
+    { "key": "articleId", "value": "212" }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      { "key": "key", "value": "Authorization", "type": "string" },
+      { "key": "value", "value": "Saibher {{credential}}", "type": "string" },
+      { "key": "in", "value": "header", "type": "string" }
+    ]
+  },
+  "item": [
+    {
+      "name": "Artículos",
+      "item": [
+        {
+          "name": "Listar artículos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/articles?limit=5&offset=0&sort=created&dir=desc",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "articles"],
+              "query": [
+                { "key": "limit", "value": "5", "description": "1–50 (por defecto 10)." },
+                { "key": "offset", "value": "0", "description": "Desplazamiento para paginación." },
+                { "key": "title", "value": "", "description": "Filtro por subtítulo (LIKE), opcional.", "disabled": true },
+                { "key": "status", "value": "", "description": "Filtro por estado publicado (0/1), opcional.", "disabled": true },
+                { "key": "sort", "value": "created", "description": "nid | title | created | changed | status" },
+                { "key": "dir", "value": "desc", "description": "asc | desc" }
+              ]
+            },
+            "description": "Devuelve la lista de artículos (sin body completo; incluye `summary`) y metadatos de paginación en `meta`."
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener un artículo",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/articles/{{articleId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "articles", "{{articleId}}"]
+            },
+            "description": "Obtiene un artículo por nid o por UUID. Incluye `body` (value/summary/format)."
+          },
+          "response": []
+        },
+        {
+          "name": "Crear artículo (POST)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Título del artículo desde la API\",\n  \"body\": {\n    \"value\": \"<p>Contenido HTML del artículo.</p>\",\n    \"summary\": \"Resumen opcional corto.\",\n    \"format\": \"basic_html\"\n  },\n  \"status\": true,\n  \"category\": [\n    { \"id\": 5 },\n    { \"name\": \"Drupal\" }\n  ],\n  \"tags\": [\n    { \"id\": 10 },\n    { \"name\": \"Nuevo tag (se crea automáticamente)\" }\n  ],\n  \"image\": {\n    \"url\": \"https://ejemplo.com/imagen.jpg\",\n    \"alt\": \"Texto alternativo de la imagen\"\n  }\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/articles",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "articles"]
+            },
+            "description": "Crea un artículo. Respuesta 201 con Location del recurso. Campos usables: `title`, `body` (string u objeto), `status`, `category` (`field_category`, solo términos existentes del vocabulario article_category), `tags` (`field_tags`, auto-crea términos), `image` (url+alt, remota). El autor y las fechas son siempre los de la cuenta vinculada a la API key."
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar artículo (PATCH)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Título actualizado vía API\",\n  \"tags\": [\n    { \"id\": 10 },\n    { \"name\": \"Otro tag nuevo\" }\n  ]\n}",
+              "options": { "raw": { "language": "json" } }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/articles/{{articleId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "articles", "{{articleId}}"]
+            },
+            "description": "Actualización parcial (los campos ausentes no se tocan). Cada PATCH crea una revisión nueva del nodo con los campos cambiados."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Casos de error",
+      "item": [
+        {
+          "name": "Sin credenciales (401)",
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/articles",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "articles"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Artículo inexistente (404)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/articles/999999",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "articles", "999999"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

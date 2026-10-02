@@ -1,0 +1,18 @@
+uuid: 7d4e2021-a1a7-4b51-85f7-186604505a98
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.article
+  module:
+    - node
+    - saibher_web_services
+id: saibher_api_consumer
+label: 'Consumidor API Saibher (lectura + escritura)'
+weight: 6
+is_admin: false
+permissions:
+  - 'access saibher web services'
+  - 'access saibher web services write'
+  - 'create article content'
+  - 'edit any article content'

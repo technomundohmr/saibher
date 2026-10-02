@@ -97,3 +97,8 @@
 /.env
 
 /config/sync/key*
+
+# Saibher Web Services: API key entities contain salt+hash derived from a
+# secret. Never commit them, even as part of a config export.
+/config/sync/saibher_web_services.key.*.yml
+**/saibher_web_services.key.*.yml

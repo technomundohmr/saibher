@@ -1,0 +1,10 @@
+access saibher web services:
+  title: 'Access Saibher Web Services (GET)'
+  description: 'Permite consultar artículos a través de la API de Saibher Web Services. Este permiso debe otorgarse a la cuenta de usuario a la que se vinculan las API keys de lectura.'
+access saibher web services write:
+  title: 'Write Saibher articles via API (POST/PATCH)'
+  description: 'Permite crear (POST) y actualizar (PATCH) artículos a través de la API de Saibher Web Services.'
+administer saibher web services:
+  title: 'Administer Saibher Web Services'
+  description: 'Administrar la configuración del módulo y gestionar las API keys.'
+  restrict access: true

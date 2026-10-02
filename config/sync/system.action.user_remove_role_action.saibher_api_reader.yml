@@ -1,0 +1,14 @@
+uuid: 81a71adb-f8f8-4ced-823c-c40f5f5e0c5e
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.saibher_api_reader
+  module:
+    - user
+id: user_remove_role_action.saibher_api_reader
+label: 'Elimina el rol Lector API Saibher (solo lectura) al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: saibher_api_reader

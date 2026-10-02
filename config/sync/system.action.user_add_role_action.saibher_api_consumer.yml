@@ -1,0 +1,14 @@
+uuid: 58f98a13-1625-4c93-b93a-848bb2622d73
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.saibher_api_consumer
+  module:
+    - user
+id: user_add_role_action.saibher_api_consumer
+label: 'Añade el rol Consumidor API Saibher (lectura + escritura) al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: saibher_api_consumer

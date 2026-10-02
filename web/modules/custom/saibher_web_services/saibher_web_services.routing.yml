@@ -1,0 +1,57 @@
+saibher_web_services.articles.collection:
+  path: '/api/v1/articles'
+  methods: [GET]
+  defaults:
+    _controller: '\Drupal\saibher_web_services\Controller\ArticleApiController::list'
+  requirements:
+    _permission: 'access saibher web services'
+  options:
+    _auth: ['saibher_api_key']
+
+saibher_web_services.articles.item:
+  path: '/api/v1/articles/{article_key}'
+  methods: [GET]
+  defaults:
+    _controller: '\Drupal\saibher_web_services\Controller\ArticleApiController::get'
+  requirements:
+    _permission: 'access saibher web services'
+    article_key: '^[0-9]+|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$'
+  options:
+    _auth: ['saibher_api_key']
+
+saibher_web_services.articles.create:
+  path: '/api/v1/articles'
+  methods: [POST]
+  defaults:
+    _controller: '\Drupal\saibher_web_services\Controller\ArticleApiController::createArticle'
+  requirements:
+    _permission: 'access saibher web services write'
+  options:
+    _auth: ['saibher_api_key']
+
+saibher_web_services.articles.update:
+  path: '/api/v1/articles/{article_key}'
+  methods: [PATCH]
+  defaults:
+    _controller: '\Drupal\saibher_web_services\Controller\ArticleApiController::update'
+  requirements:
+    _permission: 'access saibher web services write'
+    article_key: '^[0-9]+|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$'
+  options:
+    _auth: ['saibher_api_key']
+
+saibher_web_services.settings:
+  path: '/admin/config/services/saibher-web-services'
+  defaults:
+    _form: '\Drupal\saibher_web_services\Form\SettingsForm'
+    _title: 'Saibher Web Services'
+  requirements:
+    _permission: 'administer saibher web services'
+
+saibher_web_services.key.reveal:
+  path: '/admin/config/services/saibher-web-services/keys/{saibher_api_key}/reveal'
+  defaults:
+    _controller: '\Drupal\saibher_web_services\Controller\ApiKeyRevealController::reveal'
+    _title: 'Reveal API key'
+  requirements:
+    _permission: 'administer saibher web services'

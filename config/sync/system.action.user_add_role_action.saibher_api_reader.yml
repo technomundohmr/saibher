@@ -1,0 +1,14 @@
+uuid: 17aca4c7-6b8e-4bd4-974b-bc5f8a83f236
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.saibher_api_reader
+  module:
+    - user
+id: user_add_role_action.saibher_api_reader
+label: 'Añade el rol Lector API Saibher (solo lectura) al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: saibher_api_reader

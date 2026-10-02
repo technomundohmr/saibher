@@ -1,0 +1,17 @@
+.saibher-ws-reveal code {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background: #272a2c;
+  color: #d5e6e5;
+  border-radius: 4px;
+  word-break: break-all;
+  max-width: 100%;
+}
+
+.saibher-ws-reveal table {
+  margin: 1rem 0;
+}
+
+.saibher-ws-add-key {
+  margin: 0.75rem 0;
+}

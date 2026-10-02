@@ -1,0 +1,8 @@
+services:
+  saibher_web_services.commands:
+    class: Drupal\saibher_web_services\Commands\SaibherApiKeyCommands
+    arguments:
+      - '@saibher_web_services.api_key_service'
+      - '@entity_type.manager'
+    tags:
+      - { name: drush.command }

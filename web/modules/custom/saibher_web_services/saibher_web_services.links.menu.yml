@@ -1,0 +1,13 @@
+saibher_web_services.settings:
+  title: 'Saibher Web Services'
+  description: 'Configure the articles API and manage access keys for external integrations.'
+  route_name: saibher_web_services.settings
+  parent: system.admin_config_services
+  weight: -10
+
+saibher_web_services.keys:
+  title: 'API keys'
+  description: 'Manage Saibher Web Services API keys.'
+  route_name: entity.saibher_api_key.collection
+  parent: saibher_web_services.settings
+  weight: 5

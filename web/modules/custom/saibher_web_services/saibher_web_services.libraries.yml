@@ -1,0 +1,8 @@
+admin:
+  version: VERSION
+  css:
+    theme:
+      css/admin.css: {}
+  dependencies:
+    - core/drupal
+    - core/classy

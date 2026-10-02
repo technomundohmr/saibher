@@ -1,0 +1,12 @@
+uuid: c8d30de8-e58f-44e9-bf01-947f71bca844
+langcode: es
+status: true
+dependencies:
+  module:
+    - saibher_web_services
+id: saibher_api_reader
+label: 'Lector API Saibher (solo lectura)'
+weight: 7
+is_admin: false
+permissions:
+  - 'access saibher web services'

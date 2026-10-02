@@ -1,0 +1,11 @@
+name: 'Saibher Web Services'
+type: module
+description: 'Gateway API de lectura y escritura para el tipo de contenido Artículos, con autenticación por API key para integraciones externas.'
+package: Saibher
+core_version_requirement: ^10.2 || ^11
+configure: saibher_web_services.settings
+dependencies:
+  - drupal:node
+  - drupal:taxonomy
+  - drupal:file
+  - drupal:user
