@@ -202,6 +202,37 @@ input, select, textarea{
     flex-basis: 0;
 }
 
+/*
+ * Grilla de artículos (Views "grid_responsive", ej. home y /blog).
+ *
+ * El CSS de core usa
+ * `repeat(auto-fill, minmax(max(<cell-min-width>, <ancho-por-columna>), 1fr))`
+ * con cell_min_width en línea de 100px. Como ese mínimo es menor que el ancho
+ * de una columna en móvil, la grilla nunca baja a una sola columna y las
+ * tarjetas se reparten en 2 o 3 columnas muy angostas (~150px) que desbordan.
+ *
+ * Se sobrescribe `grid-template-columns` con `minmax(0, 1fr)` en vez de `1fr`
+ * porque el `min-width: auto` del ítem como ítem de grid hace que `1fr` crezca
+ * hasta el ancho min-content del contenido en vez de quedarse en 1 columna.
+ * Escalonado: 1 columna en móvil, 2 en tablet, las de la vista (3) en desktop.
+ */
+.views-view-responsive-grid--horizontal{
+    grid-template-columns: minmax(0, 1fr);
+}
+@media (min-width: 640px){
+    .views-view-responsive-grid--horizontal{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (min-width: 1024px){
+    .views-view-responsive-grid--horizontal{
+        grid-template-columns: repeat(var(--views-responsive-grid--column-count, 3), minmax(0, 1fr));
+    }
+}
+.views-view-responsive-grid__item{
+    min-width: 0;
+}
+
 .webform-submission-add-form.webform-submission-newsletter-suscription-form{
     align-items: center;
     display: flex;

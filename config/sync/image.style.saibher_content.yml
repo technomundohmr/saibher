@@ -1,0 +1,17 @@
+uuid: f3ce5db8-0fc2-41de-90bf-e0a698a68785
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: saibherContent0000000000000000000000000000
+name: saibher_content
+label: 'Contenido (max 1280px)'
+effects:
+  8c71e926-9dae-45f6-a0b6-2b63d248280d:
+    uuid: 8c71e926-9dae-45f6-a0b6-2b63d248280d
+    id: image_scale
+    weight: 0
+    data:
+      width: 1280
+      height: 1280
+      upscale: false

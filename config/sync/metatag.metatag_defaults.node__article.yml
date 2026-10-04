@@ -1,0 +1,21 @@
+langcode: es
+status: true
+dependencies: {  }
+id: node__article
+label: 'Node  article'
+tags:
+  schema_article_type: Article
+  schema_article_headline: '[node:title]'
+  schema_article_id: '[current-page:url]'
+  schema_article_date_published: '[node:created:iso]'
+  schema_article_date_modified: '[node:changed:iso]'
+  schema_article_author: Saibher
+  schema_article_publisher: Saibher
+  schema_article_image: '[node:field_image:url]'
+  schema_article_description: '[node:summary]'
+  schema_article_main_entity_of_page: '[current-page:url]'
+  schema_article_is_accessible_for_free: 'Yes'
+entity_type: node
+bundle: article
+path:
+  - '*'

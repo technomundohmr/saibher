@@ -1,6 +1,6 @@
 uuid: 8a113f94-08e1-492f-ab14-adcec419d914
 langcode: es
-status: false
+status: true
 dependencies: {  }
 _core:
   default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
@@ -8,4 +8,5 @@ id: front
 label: 'Front page'
 tags:
   canonical_url: '[site:url]'
+  og_url: '[site:url]'
   shortlink: '[site:url]'

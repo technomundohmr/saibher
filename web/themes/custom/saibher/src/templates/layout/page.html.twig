@@ -9,6 +9,9 @@
   {{ page.left_aside }}
   </aside>
   <main >
+    {# El H1 de las paginas Canvas lo inyecta saibher_preprocess_page() en
+       saibher.theme: aqui url_arguments llega vacio, por lo que no se puede
+       resolver la entidad desde Twig. #}
     {{ page.content }}
   </main>
   <aside>

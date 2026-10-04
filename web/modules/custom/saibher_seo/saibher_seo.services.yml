@@ -1,0 +1,9 @@
+services:
+  image_optimizer:
+    class: Drupal\saibher_seo\ImageOptimizer
+
+  saibher_seo.image_optimizer_subscriber:
+    class: Drupal\saibher_seo\EventSubscriber\ImageOptimizerSubscriber
+    arguments: ['@image_optimizer']
+    tags:
+      - { name: event_subscriber }

@@ -1,0 +1,9 @@
+name: 'Saibher SEO'
+description: 'Ajustes de SEO tecnico aplicados sobre el HTML ya renderizado: optimizacion de imagenes en linea.'
+package: Saibher
+core_version_requirement: ^10 || ^11
+dependencies:
+  - image
+  - file
+  - system
+type: module

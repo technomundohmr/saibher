@@ -14,3 +14,59 @@ function saibher_preprocess_paragraph(&$variables) {
 
     }
 }
+
+/**
+ * Implements template_preprocess_page().
+ *
+ * Las paginas de Canvas (entity.canvas_page.canonical) guardan un titulo pero
+ * no lo renderizan, asi que 9 de 13 se quedaban sin H1 (T-07 del analisis SEO),
+ * incluidas todas las fichas de /proyectos. Se inyecta antes del contenido.
+ *
+ * El H1 va oculto con estilos en linea a proposito: la utilidad .sr-only no
+ * esta compilada en el CSS de distribucion y no se puede rebuildar Tailwind de
+ * forma segura. Para hacerlo visible, quita el atributo style de abajo.
+ *
+ * @param array $variables
+ *   An associative array containing the page variables.
+ */
+function saibher_preprocess_page(&$variables) {
+    if(\Drupal::routeMatch()->getRouteName() !== 'entity.canvas_page.canonical') {
+        return;
+    }
+
+    $title = '';
+    $entity = NULL;
+    foreach (\Drupal::routeMatch()->getParameters() as $parameter) {
+        if (is_object($parameter)
+            && method_exists($parameter, 'getEntityTypeId')
+            && $parameter->getEntityTypeId() === 'canvas_page') {
+            $entity = $parameter;
+            $title = $parameter->label();
+            break;
+        }
+    }
+
+    if ($title === '' || $entity === NULL) {
+        return;
+    }
+
+    // El componente heroBanner ya emite su propio <h1> visible. Si esta
+    // presente, no se inyecta nada para no dejar dos H1 en la misma pagina.
+    if (str_contains((string) json_encode($entity->get('components')->getValue()), 'heroBanner')) {
+        return;
+    }
+
+    $variables['page']['content']['saibher_seo_h1'] = [
+        '#type' => 'html_tag',
+        '#tag' => 'h1',
+        '#value' => $title,
+        '#weight' => -100,
+        '#attributes' => [
+            'style' => 'position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0',
+        ],
+        '#cache' => [
+            'contexts' => ['url.path'],
+            'tags' => ['canvas_page_list'],
+        ],
+    ];
+}

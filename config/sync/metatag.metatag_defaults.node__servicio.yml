@@ -1,0 +1,18 @@
+langcode: es
+status: true
+dependencies: {  }
+id: node__servicio
+label: 'Node  servicio'
+tags:
+  schema_service_name: '[node:title]'
+  schema_service_id: '[current-page:url]'
+  schema_service_url: '[current-page:url]'
+  schema_service_type: Service
+  schema_service_description: '[node:summary]'
+  schema_service_image: '[node:field_main_image:url]'
+  schema_service_brand: Saibher
+  schema_service_area_served: Colombia
+entity_type: node
+bundle: servicio
+path:
+  - '*'
